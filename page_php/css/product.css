@@ -1,0 +1,19 @@
+.product-exp {
+    margin: 20px auto;
+}
+
+.product-exp .button-link {
+    text-align: left;
+}
+
+.product-exp .button-link a {
+    display: inline-block;
+}
+
+.button-back a {
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {}
