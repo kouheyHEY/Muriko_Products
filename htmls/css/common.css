@@ -1,0 +1,159 @@
+/* 全ページ共通設定 */
+
+/* フォント */
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/Ubuntu-R.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Italic';
+    src: url('../fonts/Ubuntu-RI.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../fonts/Ubuntu-M.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold-Italic';
+    src: url('../fonts/Ubuntu-MI.ttf');
+}
+
+/* 全タグ */
+* {
+    box-sizing: border-box;
+}
+
+/* htmlタグ */
+html {
+    background:
+        linear-gradient(135deg,
+            #c9d9e9 21px,
+            #daeafa 22px,
+            #daeafa 24px,
+            transparent 24px,
+            transparent 67px,
+            #daeafa 67px,
+            #daeafa 69px,
+            transparent 69px),
+        linear-gradient(225deg,
+            #c9d9e9 21px,
+            #daeafa 22px,
+            #daeafa 24px,
+            transparent 24px,
+            transparent 67px,
+            #daeafa 67px,
+            #daeafa 69px,
+            transparent 69px)0 64px;
+    background-color: #c9d9e9;
+    background-size: 64px 128px;
+}
+
+/* bodyタグ */
+body {
+    margin: 5px 15px;
+    font-family: 'Ubuntu-Regular';
+}
+
+/* headerタグ */
+header {
+    margin: 10px 0 20px;
+}
+
+/* mainタグ */
+main {
+    max-width: 960px;
+    min-width: 170px;
+    min-height: 480px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* aタグ */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ulタグ */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* 汎用ボタン */
+.button-link {
+    text-align: center;
+}
+
+.button-link a {
+    background-color: #efefff;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    display: block;
+    padding: 5px 10px;
+}
+
+/* タイトル */
+.header-title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Ubuntu-Bold';
+}
+
+.header-title {
+    font-size: 3rem;
+}
+
+/* コンテンツタイトル */
+.content-title {
+    height: 3rem;
+    margin: 10px 0 20px;
+    padding-bottom: 5px;
+    line-height: 3rem;
+
+    background-image:
+        linear-gradient(90deg,
+            #0050dd 0 5px,
+            transparent 5px 15px,
+            #808080 15px);
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    background-position: bottom;
+}
+
+.content-title span {
+    font-family: 'Ubuntu-Bold';
+    font-size: 1.5rem;
+}
+
+/* フッター 権利表記 */
+.footer-right {
+    text-align: center;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* タイトル */
+    .header-title {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+
+    /* タイトル */
+    .header-title {
+        font-size: 1.75rem;
+    }
+
+    /* コンテンツタイトル */
+    .content-title span {
+        font-family: 'Ubuntu-Bold';
+        font-size: 1.25rem;
+    }
+}
