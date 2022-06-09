@@ -8,8 +8,9 @@
 
     <!-- ナビゲーションバー -->
     <ul class="product-navbar">
-        <li class="button-link"><a href="#">GAMES</a></li>
-        <li class="button-link"><a href="#">TOOLS</a></li>
+        <?php foreach (CATEGORIES as $category) : ?>
+            <li class="button-link"><a href="<?= $category ?>"><?= $category ?></a></li>
+        <?php endforeach ?>
     </ul>
 
     <!-- コンテンツタイトル -->

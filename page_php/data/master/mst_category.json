@@ -1,0 +1,10 @@
+{
+    "CATEGORIES": [
+        "GAMES",
+        "TOOLS"
+    ],
+    "CATEGORY_DISP_NAME": {
+        "GAMES": "Game",
+        "TOOLS": "Tool"
+    }
+}

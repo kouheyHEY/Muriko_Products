@@ -1,0 +1,3 @@
+db user
+id      : vbbeat_user001
+pass    : user001pass

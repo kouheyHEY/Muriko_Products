@@ -1,3 +1,10 @@
+<!-- 各phpファイル読み込み -->
+<?php
+    require_once('./functions/const.php');
+    require_once('./functions/ioUtil.php');
+    require_once('./functions/initialize.php');
+?>
+
 <!-- ヘッダー読み込み -->
 <?php include("./inc/page/header.php"); ?>
 
