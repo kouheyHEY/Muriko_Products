@@ -1,5 +1,5 @@
+<!-- 各phpファイル読み込み -->
 <?php
-    // 各phpファイル読み込み
     require_once('./functions/const.php');
     require('./functions/ioUtil.php');
     require('./functions/categoryUtil.php');

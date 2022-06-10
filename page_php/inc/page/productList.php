@@ -1,10 +1,6 @@
+<!-- 各phpファイル読み込み -->
 <?php
-    // カテゴリの設定
-    if(isset($_GET["CATEGORY"])){
-        $_SESSION["CATEGORY"] = $_GET["CATEGORY"];
-    }else{
-        initCategory();
-    }
+    include("./inc/logic/productList_logic.php");
 ?>
 
 <!-- メイン -->
@@ -33,10 +29,9 @@
     <form action="./product.php" method="get">
         <ul class="product-list">
             <!-- プロダクトブロック -->
-            <li class="product-block button-link"><button type="submit" name="game1" value="game1">ゲーム1</button></li>
-            <li class="product-block button-link"><button type="submit" name="game2" value="game2">ゲーム2</button></li>
-            <li class="product-block button-link"><button type="submit" name="game3" value="game3">ゲーム3</button></li>
-            <li class="product-block button-link"><button type="submit" name="game4" value="game4">ゲーム4</button></li>
+            <?php for ($i = 0; $i < count($product_list); $i++) : ?>
+                <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $i ?>"><?= $product_list[$i] ?></button></li>
+            <?php endfor ?>
         </ul>
     </form>
 </main>

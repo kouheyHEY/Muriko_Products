@@ -3,6 +3,6 @@
     define('FILEPATH_SYSTEM_MASTER', './data/master/mst_system.json');
     define('FILEPATH_CATEGORY_MASTER', './data/master/mst_category.json');
 
-    define('DIRPATH_PRODUCT_GAME', './data/product/games');
-    define('DIRPATH_PRODUCT_TOOL', './data/product/tools');
+    define('FILEPATH_PRODUCT_LIST', './data/product/product_list.json');
+    define('DIRPATH_PRODUCT_JSON', './data/product');
 ?>
