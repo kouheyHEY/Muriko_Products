@@ -24,7 +24,7 @@
         </div>
     </div>
     <div class="button-back button-link">
-        <a href="index.php">Back</a>
+        <a href="./index.php">Back</a>
     </div>
 
 </main>

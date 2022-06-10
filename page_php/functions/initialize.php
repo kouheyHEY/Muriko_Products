@@ -15,8 +15,14 @@
         // カテゴリマスタファイルを読み込む
         $CATEGORY_MASTER_INFO = jsonToObj(FILEPATH_CATEGORY_MASTER);
 
-        // タイトルとバージョン情報を定義する
+        // カテゴリ情報を定義する
         define('CATEGORIES', $CATEGORY_MASTER_INFO['CATEGORIES']);
+        define('CATEGORY_DISP_NAME', $CATEGORY_MASTER_INFO['CATEGORY_DISP_NAME']);
+
+        // カテゴリを「GAME」で初期化する
+        if(!isset($_SESSION['CATEGORY'])){
+            $_SESSION['CATEGORY'] = CATEGORIES[0];
+        }
     }
 
     getMaster();

@@ -88,13 +88,24 @@ ul {
     text-align: center;
 }
 
+.button-link button,
 .button-link a {
+    padding: 5px 10px;
     background-color: #efefff;
     border: 2px solid black;
     border-radius: 5px;
 
     display: block;
-    padding: 5px 10px;
+}
+
+.button-link button {
+    width: 100%;
+}
+
+.button-link button:hover,
+.button-link a:hover {
+    background-color: #d0d0ef;
+
 }
 
 /* タイトル */
