@@ -1,8 +1,7 @@
 {
-    "title": "ゲーム1",
-    "exp": "ゲーム1です。上下左右ボタンで移動できます。<br>あいうえお<br>かきくけこ<br>あいうえお<br>あいうえおあいうえお<br>あいうえおあいうえおあいうえお<br>",
+    "title": "うさシューティング",
+    "exp": "ウサギのキャラをマウス（orタッチ）で操作して敵を倒すシューティングゲームです。<br>時々降ってくるアイテムでプレイヤーを強化できます。<br>右下のゲージが一定以上の場合にマウスを離すと、体力が1増えます。",
     "links": {
-        "git": "https://github.com/kouheyHEY/Muriko_Products",
-        "site": "https://ページ"
+        "site": "./productPage/game/0/rabbitShooting.html"
     }
 }

@@ -1,7 +1,7 @@
 {
-    "title": "ツール1",
-    "exp": "ツール1です。上下左右ボタンで移動できます。<br>あいうえお<br>かきくけこ<br>あいうえお<br>あいうえおあいうえお<br>あいうえおあいうえおあいうえお<br>",
+    "title": "カードゲームデッキマネージャ",
+    "exp": "某カードゲームのデッキマネージャです。<br>カードの枚数、名称を登録してデッキを管理できます。",
     "links": {
-        "git": "https://github.com/kouheyHEY/Muriko_Products"
+        "site": "./productPage/tool/0/PokeCaManager.php"
     }
 }

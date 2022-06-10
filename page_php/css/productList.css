@@ -16,7 +16,6 @@
 /* メイン プロダクト一覧 */
 .product-list {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
     list-style: none;

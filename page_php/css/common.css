@@ -97,6 +97,7 @@ ul {
 
     display: block;
     font-size: 1rem;
+    font-weight: bold;
 }
 
 .button-link button {
@@ -144,8 +145,8 @@ ul {
 }
 
 .content-title span {
-    font-family: 'Ubuntu-Bold';
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* フッター 権利表記 */
