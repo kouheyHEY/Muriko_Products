@@ -5,4 +5,7 @@
 
     define('FILEPATH_PRODUCT_LIST', './data/product/product_list.json');
     define('DIRPATH_PRODUCT_JSON', './data/product');
+
+    // 各メッセージの定義
+    define('MSG_NO_PRODUCT_ID', 'product id is not set.');
 ?>

@@ -7,20 +7,24 @@
 <!-- メイン -->
 <main>
 
-    <!-- コンテンツタイトル -->
-    <div class="content-title">
-        <span><?= $product_info_json["title"] ?></span>
-    </div>
+    <?php if($product_id === "") : ?>
+        <div class="msg_alert"><?= MSG_NO_PRODUCT_ID ?></div>
+    <?php else : ?>
+        <!-- コンテンツタイトル -->
+        <div class="content-title">
+            <span><?= $product_info_json["title"] ?></span>
+        </div>
 
-    <!-- プロダクト説明 -->
-    <div class="product-exp">
-        <p><?= $product_info_json["exp"] ?></p>
-        <?php if(isset($product_info_json["links"]["git"])) : ?>
-            <div class="button-link">
-                <a href="<?= $product_info_json['links']['git'] ?>">GitHub</a>
-            </div>
-        <?php endif; ?>
-    </div>
+        <!-- プロダクト説明 -->
+        <div class="product-exp">
+            <p><?= $product_info_json["exp"] ?></p>
+            <?php if(isset($product_info_json["links"]["git"])) : ?>
+                <div class="button-link">
+                    <a href="<?= $product_info_json['links']['git'] ?>">GitHub</a>
+                </div>
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
     <div class="button-back button-link">
         <a href="./index.php">Back</a>
     </div>

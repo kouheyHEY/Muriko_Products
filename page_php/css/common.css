@@ -152,6 +152,12 @@ ul {
     text-align: center;
 }
 
+/* メッセージ */
+.msg_alert {
+    margin-top: 30px;
+    font-size: 1.25rem;
+}
+
 @media screen and (max-width: 768px) {
 
     /* タイトル */
