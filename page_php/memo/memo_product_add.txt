@@ -1,0 +1,10 @@
+add product
+product info :
+    ./data/product/["game" or "tool"]/[n].json
+
+product page dir :
+    ./productPage/["game" or "tool"]/[n]
+
+thumbnail :
+    ./img/product/["game or "tool"]/[n].gif
+
