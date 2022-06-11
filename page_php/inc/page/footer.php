@@ -1,6 +1,6 @@
     <!-- フッター -->
     <footer>
-        <p class="footer-right">&copy; 2022 <span>Muriko Products</span></p>
+        <p class="footer-right">&copy; 2022 <span><?= $_SESSION["SYSTEM_TITLE"] ?></span></p>
     </footer>
 </body>
 

@@ -3,6 +3,6 @@
      * カテゴリを「GAME」に初期化する
      */
     function initCategory(){
-        $_SESSION["CATEGORY"] = CATEGORIES[0];
+        $_SESSION["CATEGORY"] = $_SESSION["CATEGORIES"][0];
     }
 ?>

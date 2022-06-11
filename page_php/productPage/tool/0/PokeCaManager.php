@@ -1,5 +1,5 @@
 <?php
-    require_once "commonUtil.php";
+    include_once( "commonUtil.php";
 
     // デッキ作成画面から遷移した場合
     if (isset($_POST["isRegisted"])){

@@ -1087,8 +1087,8 @@
      * 大文字・小文字は区別されます。
      *
      * ### Example
-     *     "This is a string.".include("is"); // => true
-     *     "This is a string.".include("was"); // => false
+     *     "This is a string.".include_once("is"); // => true
+     *     "This is a string.".include_once("was"); // => false
      *
      * @param {String} str 調べる文字列
      * @return {Boolean} 含まれているかどうか

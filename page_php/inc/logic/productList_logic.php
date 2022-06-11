@@ -2,7 +2,7 @@
     // カテゴリの設定
     if(isset($_GET["CATEGORY"])){
         $_SESSION["CATEGORY"] = $_GET["CATEGORY"];
-    }else{
+    }else if(!isset($_SESSION["CATEGORY"])){
         initCategory();
     }
 

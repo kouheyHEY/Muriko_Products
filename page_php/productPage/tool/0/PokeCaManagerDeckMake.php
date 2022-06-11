@@ -1,5 +1,5 @@
 <?php
-    require_once "commonUtil.php";
+    include_once( "commonUtil.php";
 	$deckContentArray = array();
 	$deckMaker = "";
 	$deckName = "";

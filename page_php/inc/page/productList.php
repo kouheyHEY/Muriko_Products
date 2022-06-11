@@ -1,6 +1,6 @@
 <!-- 各phpファイル読み込み -->
 <?php
-    include("./inc/logic/productList_logic.php");
+    include_once("./inc/logic/productList_logic.php");
 ?>
 
 <!-- メイン -->
@@ -14,7 +14,7 @@
     <!-- ナビゲーションバー -->
     <form action="./index.php" method="get">
         <ul class="product-navbar">
-            <?php foreach (CATEGORIES as $category) : ?>
+            <?php foreach ($_SESSION["CATEGORIES"] as $category) : ?>
                 <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>"><?= $category ?></button></li>
             <?php endforeach ?>
         </ul>
@@ -22,7 +22,7 @@
 
     <!-- コンテンツタイトル -->
     <div class="content-title">
-        <span><?= CATEGORY_DISP_NAME[$_SESSION['CATEGORY']] ?> Products</span>
+        <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
     </div>
 
     <!-- プロダクト一覧 -->

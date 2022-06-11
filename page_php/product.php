@@ -1,8 +1,8 @@
 <!-- ヘッダー読み込み -->
-<?php include("./inc/page/header.php"); ?>
+<?php include_once("./inc/page/header.php"); ?>
 
 <!-- 各phpファイル読み込み -->
-<?php include("./inc/logic/product_logic.php"); ?>
+<?php include_once("./inc/logic/product_logic.php"); ?>
 
 <!-- メイン -->
 <main>
@@ -44,4 +44,4 @@
 </main>
 
 <!-- フッター読み込み -->
-<?php include("./inc/page/footer.php"); ?>
+<?php include_once("./inc/page/footer.php"); ?>
