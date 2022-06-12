@@ -1,5 +1,5 @@
 <?php
-    include_once( "commonUtil.php";
+    include_once( "commonUtil.php");
 
     // デッキ作成画面から遷移した場合
     if (isset($_POST["isRegisted"])){
@@ -16,7 +16,6 @@
 
 <head>
     <link rel="stylesheet" href="css/PokeCaManager.css" type="text/css">
-    <link rel="stylesheet" href="../common.css" type="text/css">
     <meta charset="utf-8" http-equiv="content-type">
 </head>
 

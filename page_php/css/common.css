@@ -91,6 +91,7 @@ ul {
 .button-link button,
 .button-link a {
     padding: 5px 10px;
+    color: black;
     background-color: #efefff;
     border: 2px solid black;
     border-radius: 5px;
