@@ -3,5 +3,7 @@
     "exp": "某カードゲームのデッキマネージャです。<br>カードの枚数、名称を登録してデッキを管理できます。",
     "links": {
         "site": "./productPage/tool/0/PokeCaManager.php"
-    }
+    },
+    "updDate": "2022-06-14",
+    "updUser": "Muriko"
 }

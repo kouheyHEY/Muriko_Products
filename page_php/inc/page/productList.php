@@ -29,9 +29,9 @@
     <form action="./product.php" method="get">
         <ul class="product-list">
             <!-- プロダクトブロック -->
-            <?php for ($i = 0; $i < count($product_list); $i++) : ?>
-                <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $i ?>"><?= $product_list[$i] ?></button></li>
-            <?php endfor ?>
+            <?php foreach($product_list as $product) : ?>
+                <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button></li>
+            <?php endforeach ?>
         </ul>
     </form>
 </main>

@@ -21,6 +21,9 @@
 
         // カテゴリを「GAME」で初期化する
         $_SESSION['CATEGORY'] = $_SESSION["CATEGORIES"][0];
+
+        // プロダクト一覧を読み込む
+        $_SESSION['PRODUCT_LIST_JSON'] = jsonToObj(FILEPATH_PRODUCT_LIST);
     }
 
     // [分岐]セッションの開始状況によって分岐する

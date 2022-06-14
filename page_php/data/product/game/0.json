@@ -3,5 +3,7 @@
     "exp": "ウサギのキャラをマウス（orタッチ）で操作して敵を倒すシューティングゲームです。<br>時々降ってくるアイテムでプレイヤーを強化できます。<br>右下のゲージが一定以上の場合にマウスを離すと、体力が1増えます。",
     "links": {
         "site": "./productPage/game/0/rabbitShooting.html"
-    }
+    },
+    "updDate": "2022-06-13",
+    "updUser": "Muriko"
 }

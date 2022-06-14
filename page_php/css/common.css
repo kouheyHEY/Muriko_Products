@@ -158,6 +158,7 @@ ul {
 /* メッセージ */
 .msg_alert {
     margin-top: 30px;
+    margin-bottom: 10px;
     font-size: 1.25rem;
 }
 
@@ -179,6 +180,12 @@ ul {
     /* コンテンツタイトル */
     .content-title span {
         font-family: 'Ubuntu-Bold';
-        font-size: 1.25rem;
+        font-size: 1.0rem;
     }
+
+    .button-link button,
+    .button-link a {
+        font-size: 0.75rem;
+    }
+
 }

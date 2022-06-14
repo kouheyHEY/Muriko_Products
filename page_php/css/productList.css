@@ -32,7 +32,7 @@
     margin-left: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 960px) {
 
     /* メイン プロダクトブロック */
     .product-block {
