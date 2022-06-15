@@ -16,8 +16,13 @@
     <link rel="stylesheet" href="../css/common.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 
+    <!-- cssファイルの読み込み -->
     <link rel="stylesheet" href="../css/productList.css">
     <link rel="stylesheet" href="../css/product.css">
+    <link rel="stylesheet" href="../css/postProduct.css">
+
+    <!-- jsファイルの読み込み -->
+    <script type="text/javascript" src="../script/commonScript.js"></script>
 </head>
 
 <body>

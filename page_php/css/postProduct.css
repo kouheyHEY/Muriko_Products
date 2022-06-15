@@ -1,0 +1,55 @@
+/* 入力フォームタイトル */
+.input-title {
+    width: 160px;
+    display: inline-block;
+
+    vertical-align: top;
+}
+
+/* 入力フォーム */
+.product-info input[type="text"],
+.product-info textarea {
+    /* 初期化用 */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    font: inherit;
+    outline: none;
+}
+
+.product-info input[type="text"],
+.product-info textarea {
+    /* デザイン用 */
+    border: 2px solid black;
+    background-color: white;
+}
+
+.product-info input[type="text"]:focus,
+.product-info textarea:focus {
+    border-color: #000088;
+    background-color: #EFFAFF;
+}
+
+/* ファイルアップロードボタン */
+.file-upload-button {
+    padding: 5px 10px;
+    color: black;
+    background-color: #efefff;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.file-upload-button:hover {
+    background-color: #d0d0ef;
+}
+
+.product-details input[type="file"] {
+    display: none;
+}
