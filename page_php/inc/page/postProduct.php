@@ -53,23 +53,27 @@
         <div class="product-details">
 
             <!-- サムネイル -->
-            <p>
+            <p class="fileChoose">
                 <label class="input-title">thumbnail</label>
                 <label class="file-upload-button">
-                    select files<input type="file" name="thumbnail">
+                    select files<input type="file" name="thumbnail" onchange="selectFile('thumbnail', this)">
                 </label>
-                <span class="file-name">ファイルが選択されていません</span>
+                <span class="file-name" id="thumbnail">ファイルが選択されていません</span>
             </p>
 
             <!-- プロダクトファイル -->
-            <p>
+            <p class="fileChoose">
                 <label class="input-title">product files</label>
                 <label class="file-upload-button">
-                    select files<input type="file" name="productFile">
+                    select files<input type="file" name="productFile" onchange="selectFile('productFile', this)" multiple>
                 </label>
-                <span class="file-name">ファイルが選択されていません</span>
+                <span class="file-name" id="productFile">ファイルが選択されていませんああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</span>
             </p>
 
+        </div>
+
+        <div class="button-post button-link">
+            <button type="submit" name="postProduct" value="post">Post</button>
         </div>
 
     </form>

@@ -20,6 +20,11 @@
     outline: none;
 }
 
+/* 入力フォーム ファイル名 */
+.file-name {
+    line-height: 2rem;
+}
+
 .product-info input[type="text"],
 .product-info textarea {
     /* デザイン用 */
@@ -52,4 +57,10 @@
 
 .product-details input[type="file"] {
     display: none;
+}
+
+/* 投稿ボタン */
+.button-post {
+    text-align: left;
+    display: inline-block;
 }
