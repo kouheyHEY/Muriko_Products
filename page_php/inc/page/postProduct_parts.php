@@ -1,13 +1,8 @@
-<!-- 各phpファイル読み込み -->
-<?php
-    include_once("./inc/logic/productList_logic.php");
-?>
-
 <!-- メイン -->
 <main>
 
     <!-- プロダクト情報入力 -->
-    <form action="#" method="post" enctype="multipart/form-data" class="product-info">
+    <form action="./postProductComplete.php" method="post" enctype="multipart/form-data" class="product-info">
 
         <!-- コンテンツタイトル -->
         <div class="content-title">
@@ -58,16 +53,21 @@
                 <label class="file-upload-button">
                     select files<input type="file" name="thumbnail" onchange="selectFile('thumbnail', this)">
                 </label>
+            </p>
+            <p>
                 <span class="file-name" id="thumbnail">ファイルが選択されていません</span>
             </p>
+            <br>
 
             <!-- プロダクトファイル -->
             <p class="fileChoose">
                 <label class="input-title">product files</label>
                 <label class="file-upload-button">
-                    select files<input type="file" name="productFile" onchange="selectFile('productFile', this)" multiple>
+                    select files<input type="file" name="productFile[]" onchange="selectFile('productFile', this)" webkitdirectory multiple>
                 </label>
-                <span class="file-name" id="productFile">ファイルが選択されていませんああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああああ</span>
+            </p>
+            <p>
+                <span class="file-name" id="productFile">ファイルが選択されていません</span>
             </p>
 
         </div>

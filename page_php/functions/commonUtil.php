@@ -58,4 +58,32 @@
         }
 
     }
+
+    /**
+     * ファイルサイズを適切な単位に変換する
+     * 
+     */
+    function setFileSize($fileSize){
+        $kb = 1024;
+        $mb = pow($kb, 2);
+        $gb = pow($kb, 3);
+
+        if($fileSize >= $gb){
+            $target = $gb;
+            $unit = "GB";
+        }else if($fileSize >= $mb){
+            $target = $mb;
+            $unit = "MB";
+        }else if($fileSize >= $kb){
+            $target = $kb;
+            $unit = "KB";
+        }else{
+            $target = 1;
+            $unit = "B";
+        }
+
+        $setSize = floor(($fileSize / $target) * 100) / 100;
+
+        return $setSize . $unit;
+    }
 ?>
