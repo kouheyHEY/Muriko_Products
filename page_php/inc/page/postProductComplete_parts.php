@@ -76,10 +76,6 @@
 
     </div>
 
-    <div class="button-post button-link">
-        <button type="submit" name="postProduct" value="post">Post</button>
-    </div>
-
     <div class="button-back button-link">
         <a href="./index.php">Back</a>
     </div>

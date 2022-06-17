@@ -1,8 +1,13 @@
+<!-- phpファイル読み込み -->
+<?php
+    include_once("./inc/logic/postProduct_logic.php");
+?>
+
 <!-- メイン -->
 <main>
 
     <!-- プロダクト情報入力 -->
-    <form action="./postProductComplete.php" method="post" enctype="multipart/form-data" class="product-info">
+    <form action="./postProduct.php" method="post" enctype="multipart/form-data" class="product-info">
 
         <!-- コンテンツタイトル -->
         <div class="content-title">
@@ -63,7 +68,7 @@
             <p class="fileChoose">
                 <label class="input-title">product files</label>
                 <label class="file-upload-button">
-                    select files<input type="file" name="productFile[]" onchange="selectFile('productFile', this)" webkitdirectory multiple>
+                    select files<input type="file" name="productFile[]" onchange="selectFile('productFile', this)" multiple>
                 </label>
             </p>
             <p>

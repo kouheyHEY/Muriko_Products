@@ -18,4 +18,14 @@
         return $dataJson;
     }
 
+    /**
+     * 連想配列をjsonファイルに変換する
+     * @param $obj 連想配列
+     * @param $filePath 変換後のjsonファイルパス
+     */
+    function objToJson($obj, $filePath){
+        $jsonStr = json_encode($obj, JSON_UNESCAPED_UNICODE);
+        file_put_contents($filePath, $jsonStr);
+    }
+
 ?>
