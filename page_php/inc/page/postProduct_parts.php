@@ -22,6 +22,7 @@
                 <label class="input-title">Product Category </label>
                 <input type="radio" name="category" value="GAME" checked>GAME
                 <input type="radio" name="category" value="TOOL">TOOL
+                <input type="radio" name="category" value="OTHER">OTHER
             </p>
             <p>
                 <label class="input-title">Product Title</label>

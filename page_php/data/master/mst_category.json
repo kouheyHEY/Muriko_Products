@@ -1,10 +1,12 @@
 {
     "CATEGORIES": [
         "GAME",
-        "TOOL"
+        "TOOL",
+        "OTHER"
     ],
     "CATEGORY_DISP_NAME": {
         "GAME": "Game",
-        "TOOL": "Tool"
+        "TOOL": "Tool",
+        "OTHER": "Other"
     }
 }
