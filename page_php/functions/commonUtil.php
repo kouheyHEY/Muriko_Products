@@ -21,7 +21,8 @@
             }else{
                 // ソート済み配列が空でない場合
 
-                for($i = 0; $i < count($sortedObjIdAry); $i++){
+                $aryCnt = count($sortedObjIdAry);
+                for($i = 0; $i < $aryCnt; $i++){
                     if($targetObj[$sortKey] < $targetObjAry[$sortedObjIdAry[$i]][$sortKey]){
                         // ソート済み配列の値よりも小さい場合
 

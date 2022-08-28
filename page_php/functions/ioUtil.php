@@ -28,4 +28,12 @@
         file_put_contents($filePath, $jsonStr);
     }
 
+    /**
+     * スプレッドシートを読み込み、連想配列に変換する
+     */
+    // function SpshToObj($sheetPath){
+    //     // スプレッドシートの読み込み
+    //     $dataJson = file_get_contents('https://spreadsheets.google.com/feeds/list/' +  + '/od6/public/basic?alt=json');
+    // }
+
 ?>
