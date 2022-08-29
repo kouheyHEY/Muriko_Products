@@ -1,0 +1,56 @@
+{
+    "MST_SYSTEM": {
+        "SYSTEM_TITLE": "Muriko Products",
+        "SYSTEM_VERSION": "1.1.0"
+    },
+    "MST_CATEGORY": {
+        "CATEGORIES": [
+            "GAME",
+            "TOOL",
+            "OTHER"
+        ],
+        "CATEGORY_DISP_NAME": {
+            "GAME": "Game",
+            "TOOL": "Tool",
+            "OTHER": "Other"
+        }
+    },
+    "PRODUCT_LIST": {
+        "GAME": [
+            {
+                "title": "うさシューティング",
+                "id": "0",
+                "updDate": "2022-06-13",
+                "updUser": "Muriko"
+            },
+            {
+                "title": "反転パズル",
+                "id": "1",
+                "updDate": "2022-08-28",
+                "updUser": "Muriko"
+            }
+        ],
+        "TOOL": [
+            {
+                "title": "カードゲームデッキマネージャ",
+                "id": "0",
+                "updDate": "2022-06-14",
+                "updUser": "Muriko"
+            },
+            {
+                "title": "コ〇パスステージメーカーツール",
+                "id": "1",
+                "updDate": "2022-06-13",
+                "updUser": "Muriko"
+            }
+        ],
+        "OTHER": [
+            {
+                "title": "技術系ブログ「Zenn」",
+                "id": "0",
+                "updDate": "2022-07-25",
+                "updUser": "Muriko"
+            }
+        ]
+    }
+}

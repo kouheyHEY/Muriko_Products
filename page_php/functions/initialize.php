@@ -5,25 +5,22 @@
      * 
      */
     function getMaster(){
-        // システムマスタファイルを読み込む
-        $SYSTEM_MASTER_INFO = jsonToObj(FILEPATH_SYSTEM_MASTER);
+        // 各マスタファイルを読み込む
+        $MASTER_INFO = jsonToObj(FILEPATH_MASTER);
 
         // タイトルとバージョン情報を定義する
-        $_SESSION["SYSTEM_TITLE"] = $SYSTEM_MASTER_INFO['SYSTEM_TITLE'];
-        $_SESSION["SYSTEM_VERSION"] = $SYSTEM_MASTER_INFO['SYSTEM_VERSION'];
-
-        // カテゴリマスタファイルを読み込む
-        $CATEGORY_MASTER_INFO = jsonToObj(FILEPATH_CATEGORY_MASTER);
+        $_SESSION["SYSTEM_TITLE"] = $MASTER_INFO['MST_SYSTEM']['SYSTEM_TITLE'];
+        $_SESSION["SYSTEM_VERSION"] = $MASTER_INFO['MST_SYSTEM']['SYSTEM_VERSION'];
 
         // カテゴリ情報を定義する
-        $_SESSION["CATEGORIES"] = $CATEGORY_MASTER_INFO['CATEGORIES'];
-        $_SESSION["CATEGORY_DISP_NAME"] = $CATEGORY_MASTER_INFO['CATEGORY_DISP_NAME'];
+        $_SESSION["CATEGORIES"] = $MASTER_INFO['MST_CATEGORY']['CATEGORIES'];
+        $_SESSION["CATEGORY_DISP_NAME"] = $MASTER_INFO['MST_CATEGORY']['CATEGORY_DISP_NAME'];
 
         // カテゴリを「GAME」で初期化する
         $_SESSION['CATEGORY'] = $_SESSION["CATEGORIES"][0];
 
         // プロダクト一覧を読み込む
-        $_SESSION['PRODUCT_LIST_JSON'] = jsonToObj(FILEPATH_PRODUCT_LIST);
+        $_SESSION['PRODUCT_LIST_JSON'] = $MASTER_INFO['PRODUCT_LIST'];
     }
 
     // [分岐]セッションの開始状況によって分岐する
