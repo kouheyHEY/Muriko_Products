@@ -23,7 +23,7 @@
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Murikoが制作したプロダクトを紹介しています。" />
     <meta property="og:site_name" content="Muriko Products" />
-    <meta property="og:image" content="/img/other/eyecatch1.png" />
+    <meta property="og:image" content="http://vbbeat.php.xdomain.jp/img/other/eyecatch1.png" />
     <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@Murimuriko_" />
 
