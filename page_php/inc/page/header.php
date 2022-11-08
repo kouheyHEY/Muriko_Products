@@ -23,7 +23,7 @@
     <meta property="og:description" content="Murikoが制作したプロダクトを紹介しています。" />
     <meta property="og:site_name" content="Muriko Products" />
     <meta property="og:image" content="http://vbbeat.php.xdomain.jp/img/other/eyecatch1.png" />
-    <meta name="twitter:card" content="summery" />
+    <meta name="twitter:card" content="summary" />
     <meta name="twitter:site" content="@Murimuriko_" />
 
     <!-- cssファイルの読み込み -->
