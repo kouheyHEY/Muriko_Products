@@ -19,6 +19,7 @@
     <!-- OGPの設定 -->
     <head prefix="og: http://ogp.me/ns#">
     <meta property="og:url" content="http://vbbeat.php.xdomain.jp/index.php" />
+    <meta property="og:title" content="Muriko Products" />
     <meta property="og:type" content="website" />
     <meta property="og:description" content="Murikoが制作したプロダクトを紹介しています。" />
     <meta property="og:site_name" content="Muriko Products" />
