@@ -15,6 +15,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../css/common.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    
+    <!-- OGPの設定 -->
+    <head prefix="og: http://ogp.me/ns#">
+    <meta property="og:url" content="http://vbbeat.php.xdomain.jp/index.php" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Murikoが制作したプロダクトを紹介しています。" />
+    <meta property="og:site_name" content="Muriko Products" />
+    <meta property="og:image" content="http://vbbeat.php.xdomain.jp/img/other/eyecatch1.png" />
+    <meta name="twitter:card" content="summery" />
+    <meta name="twitter:site" content="@Murimuriko_" />
 
     <!-- cssファイルの読み込み -->
     <link rel="stylesheet" href="../css/productList.css">
@@ -23,6 +33,7 @@
 
     <!-- jsファイルの読み込み -->
     <script type="text/javascript" src="../script/commonScript.js"></script>
+
 </head>
 
 <body>

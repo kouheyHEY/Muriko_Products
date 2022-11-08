@@ -1,5 +1,5 @@
 <?php
-    include_once( "commonUtil.php";
+    include_once( "commonUtil.php");
 	$deckContentList = array();
 
 	// デッキ詳細ファイルの読みこみ

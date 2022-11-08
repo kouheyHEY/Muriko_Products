@@ -8,7 +8,7 @@
 
     <!-- コンテンツタイトル -->
     <div class="content-title">
-        <span>Product Category</span>
+        <span>Category</span>
     </div>
 
     <!-- ナビゲーションバー -->
@@ -22,7 +22,7 @@
 
     <!-- コンテンツタイトル -->
     <div class="content-title">
-        <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
+        <span>Products</span>
     </div>
 
     <!-- プロダクト一覧 -->
