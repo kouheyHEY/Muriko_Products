@@ -4,7 +4,7 @@
 ?>
 
 <!-- メイン -->
-<main>
+<main class="fadeDown">
 
     <!-- コンテンツタイトル -->
     <div class="content-title">

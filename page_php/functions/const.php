@@ -4,9 +4,12 @@
     define('DIRPATH_PRODUCT_JSON', './data/product');
     define('DIRPATH_PRODUCT_THUMBNAIL', './img/product');
     define('DIRPATH_PRODUCT_PAGE', './productPage');
+    
+    define('DIRPATH_ARTICLE_JSON', './data/article');
 
     // 各メッセージの定義
     define('MSG_NO_PRODUCT_ID', 'product id is not set.');
+    define('MSG_NO_ARTICLE_ID', 'article id is not set.');
 
     // 各マスタのスプレッドシートのリンクとID
     // define('SHEET_ID_MASTER', '10C9Wiy3GU2a_TF_TtHEFyiWyZjupaCEXnLZxFpizBQ0');
