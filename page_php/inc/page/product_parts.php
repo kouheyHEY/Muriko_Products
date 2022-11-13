@@ -4,7 +4,7 @@
 <!-- メイン -->
 <main>
 
-<div class="fadeDown_slow content-box">
+<div class="fadeDown content-box">
     <?php if($product_id === "") : ?>
         <!-- 注意メッセージ表示 -->
         <div class="msg_alert"><?= MSG_NO_PRODUCT_ID ?></div>

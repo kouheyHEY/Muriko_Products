@@ -107,8 +107,8 @@ ul {
 
 .button-link button:hover,
 .button-link a:hover {
+    transform: translate(0, 5px);
     background-color: #d0d0ef;
-
 }
 
 /* タイトル */
@@ -178,7 +178,7 @@ ul {
     }
 }
 
-.fadeDown_slow {
+/* .fadeDown_slow {
     animation-name: fadeDownAnime_slow;
     animation-duration: 1.8s;
     animation-fill-mode: forwards;
@@ -195,7 +195,7 @@ ul {
         opacity: 1;
         transform: translateY(0);
     }
-}
+} */
 
 
 /* フッター 権利表記 */
