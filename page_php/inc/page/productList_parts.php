@@ -15,14 +15,14 @@
     <form action="./index.php" method="get">
         <ul class="product-navbar">
             <?php foreach ($_SESSION["CATEGORIES"] as $category) : ?>
-                <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>"><?= $category ?></button></li>
+                <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>" id="<?= $category ?>"><?= $category ?></button></li>
             <?php endforeach ?>
         </ul>
     </form>
 
     <!-- コンテンツタイトル -->
     <div class="content-title">
-        <span>Products</span>
+        <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
     </div>
 
     <!-- プロダクト一覧 -->
@@ -35,3 +35,7 @@
         </ul>
     </form>
 </main>
+<!-- 選択中のカテゴリの要素を色付けする -->
+<script>
+    $("#<?= $_SESSION['CATEGORY'] ?>").css('background-color','#d0efd0');
+</script>

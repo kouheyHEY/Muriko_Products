@@ -169,7 +169,7 @@ ul {
 @keyframes fadeDownAnime {
     from {
         opacity: 0;
-        transform: translateY(-30px);
+        transform: translateY(-20px);
     }
 
     to {
@@ -177,26 +177,6 @@ ul {
         transform: translateY(0);
     }
 }
-
-/* .fadeDown_slow {
-    animation-name: fadeDownAnime_slow;
-    animation-duration: 1.8s;
-    animation-fill-mode: forwards;
-    opacity: 0;
-}
-
-@keyframes fadeDownAnime_slow {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-} */
-
 
 /* フッター 権利表記 */
 .footer-right {
