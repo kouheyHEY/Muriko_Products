@@ -55,6 +55,8 @@ html {
 body {
     margin: 5px 15px;
     font-family: 'Ubuntu-Regular';
+
+    transition: all 0.4s;
 }
 
 /* headerタグ */
@@ -99,6 +101,8 @@ ul {
     display: block;
     font-size: 1rem;
     font-weight: bold;
+
+    transition: 0.4s;
 }
 
 .button-link button {

@@ -41,6 +41,11 @@
 
         text-align: center;
     }
+
+    /* メイン プロダクト位置一覧 */
+    .product-list {
+        margin: 0 2% 0;
+    }
 }
 
 @media screen and (max-width: 480px) {

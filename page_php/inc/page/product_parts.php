@@ -2,9 +2,9 @@
 <?php include_once("./inc/logic/product_logic.php"); ?>
 
 <!-- メイン -->
-<main>
+<main class="fadeDown">
 
-<div class="fadeDown content-box">
+<div class="content-box">
     <?php if($product_id === "") : ?>
         <!-- 注意メッセージ表示 -->
         <div class="msg_alert"><?= MSG_NO_PRODUCT_ID ?></div>
