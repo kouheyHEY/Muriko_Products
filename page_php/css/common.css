@@ -55,8 +55,6 @@ html {
 body {
     margin: 5px 15px;
     font-family: 'Ubuntu-Regular';
-
-    transition: all 0.4s;
 }
 
 /* headerタグ */
@@ -85,6 +83,37 @@ ul {
     list-style: none;
 }
 
+/* snsボタンクラス */
+.sns-list {
+    max-width: 300px;
+    width: 50%;
+    min-width: 140px;
+    text-align: center;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sns-link {
+    width: 40%;
+}
+
+.sns-link a {
+    padding: 5px 10px;
+    border: 2px solid;
+    border-radius: 5px;
+
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.sns-link a:hover {
+    transform: translate(0, 5px);
+}
+
 /* 汎用ボタン */
 .button-link {
     text-align: center;
@@ -102,7 +131,7 @@ ul {
     font-size: 1rem;
     font-weight: bold;
 
-    transition: 0.4s;
+    transition: 0.3s;
 }
 
 .button-link button {
@@ -165,7 +194,7 @@ ul {
 /* フェード用要素 */
 .fadeDown {
     animation-name: fadeDownAnime;
-    animation-duration: 1.8s;
+    animation-duration: 1.6s;
     animation-fill-mode: forwards;
     opacity: 0;
 }
@@ -218,6 +247,10 @@ ul {
     .button-link button,
     .button-link a {
         font-size: 0.75rem;
+    }
+
+    .sns-link a {
+        font-size: 0.5rem;
     }
 
 }

@@ -21,6 +21,9 @@
 
         // プロダクト一覧を読み込む
         $_SESSION['PRODUCT_LIST_JSON'] = $MASTER_INFO['PRODUCT_LIST'];
+
+        // SNSボタン情報を読み込む
+        $_SESSION['SNS_BUTTON'] = $MASTER_INFO['SNS_BUTTON'];
     }
 
     // [分岐]セッションの開始状況によって分岐する

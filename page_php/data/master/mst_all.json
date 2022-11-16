@@ -52,5 +52,27 @@
                 "updUser": "Muriko"
             }
         ]
-    }
+    },
+    "SNS_BUTTON": [
+        {
+            "name": "Twitter",
+            "href": "https://twitter.com/VBbeat_bbb",
+            "style": {
+                "button_color_hover": "#00acee",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#00acee"
+            }
+        },
+        {
+            "name": "Github",
+            "href": "https://github.com/kouheyHEY",
+            "style": {
+                "button_color_hover": "#000000",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#000000"
+            }
+        }
+    ]
 }
