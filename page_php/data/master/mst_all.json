@@ -7,12 +7,14 @@
         "CATEGORIES": [
             "GAME",
             "TOOL",
-            "OTHER"
+            "OTHER",
+            "ACTIVITY"
         ],
         "CATEGORY_DISP_NAME": {
             "GAME": "Game",
             "TOOL": "Tool",
-            "OTHER": "Other"
+            "OTHER": "Other",
+            "ACTIVITY": "Activity"
         }
     },
     "PRODUCT_LIST": {
@@ -51,7 +53,8 @@
                 "updDate": "2022-07-25",
                 "updUser": "Muriko"
             }
-        ]
+        ],
+        "ACTIVITY": []
     },
     "SNS_BUTTON": [
         {
@@ -72,6 +75,16 @@
                 "button_color": "#ffffff",
                 "font_color_hover": "#ffffff",
                 "font_color": "#000000"
+            }
+        },
+        {
+            "name": "SoundCloud",
+            "href": "https://soundcloud.com/murakoumur",
+            "style": {
+                "button_color_hover": "ff7700",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#ff7700"
             }
         }
     ]

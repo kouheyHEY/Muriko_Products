@@ -4,36 +4,61 @@
 ?>
 
 <!-- メイン -->
-<main class="fadeDown">
+<main>
 
     <!-- コンテンツタイトル -->
-    <div class="content-title">
+    <div class="content-title fadeDown">
         <span>Category</span>
     </div>
 
     <!-- ナビゲーションバー -->
     <form action="./index.php" method="get">
-        <ul class="product-navbar">
+        <ul class="product-navbar fadeDown">
             <?php foreach ($_SESSION["CATEGORIES"] as $category) : ?>
                 <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>" id="<?= $category ?>"><?= $category ?></button></li>
             <?php endforeach ?>
         </ul>
     </form>
 
-    <!-- コンテンツタイトル -->
-    <div class="content-title">
-        <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
-    </div>
+    <?php if ($_SESSION["CATEGORY"] !== "ACTIVITY") : ?>
+        <!-- カテゴリが「ACTIVITY」以外の場合 -->
 
-    <!-- プロダクト一覧 -->
-    <form action="./product.php" method="get">
-        <ul class="product-list">
-            <!-- プロダクトブロック -->
-            <?php foreach($product_list as $product) : ?>
-                <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button></li>
-            <?php endforeach ?>
-        </ul>
-    </form>
+        <!-- コンテンツタイトル -->
+        <div class="content-title fadeDown_2">
+            <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
+        </div>
+
+        <!-- プロダクト一覧 -->
+        <form action="./product.php" method="get">
+            <ul class="product-list fadeDown_2">
+                <!-- プロダクトブロック -->
+                <?php foreach($product_list as $product) : ?>
+                    <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button></li>
+                <?php endforeach ?>
+            </ul>
+        </form>
+    
+    <?php else : ?>
+        <!-- カテゴリが「ACTIVITY」の場合 -->
+        <div class="fadeDown_2">
+            <div class="content-title">
+                <span>Contributions</span>
+            </div>
+
+            <!-- Githubの草 -->
+            <div class="github-info">
+                <div class="github-link">
+                    <i class="fab fa-github-square"></i>
+                    <a href="https://github.com/kouheyHEY" target="_blank">kouheyHEY</a>
+                </div>
+                <a href="https://github.com/kouheyHEY" target="_blank">
+                    <img class="github-glaph" src="https://grass-graph.appspot.com/images/kouheyHEY.png">
+                </a>
+            </div>
+        </div>
+
+    <?php endif; ?>
+
 </main>
 <!-- 選択中のカテゴリの要素を色付けする -->
 <script>
