@@ -71,6 +71,14 @@ main {
     padding: 0 4%;
 }
 
+/* footerタグ */
+footer {
+    max-width: 960px;
+    min-width: 170px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
 /* aタグ */
 a {
     text-decoration: none;
@@ -85,17 +93,20 @@ ul {
 
 /* snsボタンクラス */
 .sns-list {
-    max-width: 300px;
-    width: 50%;
-    min-width: 140px;
+    max-width: 600px;
+    width: 60%;
+    min-width: 380px;
     text-align: center;
     margin: 5px auto;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 .sns-link {
-    width: 40%;
+    width: 29%;
+    margin: 0 2%;
+    margin-bottom: 2%;
 }
 
 .sns-link a {
@@ -117,13 +128,14 @@ ul {
 /* 汎用ボタン */
 .button-link {
     text-align: center;
+    min-width: 100px;
 }
 
 .button-link button,
 .button-link a {
     padding: 5px 10px;
     color: black;
-    background-color: #efefff;
+    background-color: #ffffff;
     border: 2px solid black;
     border-radius: 5px;
 
@@ -194,9 +206,25 @@ ul {
 /* フェード用要素 */
 .fadeDown {
     animation-name: fadeDownAnime;
-    animation-duration: 1.6s;
+    animation-duration: 1.2s;
     animation-fill-mode: forwards;
     opacity: 0;
+}
+
+.fadeDown_2 {
+    animation-name: fadeDownAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+.fadeDown_3 {
+    animation-name: fadeDownAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
 }
 
 @keyframes fadeDownAnime {
@@ -209,6 +237,26 @@ ul {
         opacity: 1;
         transform: translateY(0);
     }
+}
+
+/* github-linkクラス */
+.github-link {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.github-glaph {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.github-info {
+    transition: 0.3s;
+}
+
+.github-info:hover {
+    transform: translate(0, 5px);
 }
 
 /* フッター 権利表記 */
@@ -229,6 +277,7 @@ ul {
     .header-title {
         font-size: 2rem;
     }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -249,8 +298,17 @@ ul {
         font-size: 0.75rem;
     }
 
+    .sns-list {
+        width: 100%;
+        min-width: 100px;
+    }
+
+    .sns-link {
+        width: 100%;
+    }
+
     .sns-link a {
-        font-size: 0.5rem;
+        font-size: 0.75rem;
     }
 
 }
