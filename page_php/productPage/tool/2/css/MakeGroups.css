@@ -1,0 +1,66 @@
+header * {
+    text-align: center;
+}
+
+/* ボタン */
+.commonButton {
+    margin: 2px;
+    border: 2px solid #004E00;
+    color: #004E00;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ボタン hover */
+.commonButton:hover {
+    color: #FFFFFF;
+    background-color: #004E00;
+}
+
+/* 点線で囲む */
+.contentArea {
+    max-width: 480px;
+    width: 100%;
+    min-width: 360px;
+    margin: 10px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px dashed #22AA22;
+}
+
+/* hタグ */
+.contentArea h3 {
+    margin: 0;
+}
+
+.contentArea ul {
+    margin: 0px;
+    padding: 5px;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.contentArea li {
+    margin: 5px;
+}
+
+/* リスト */
+.group-result-table {
+    border: 2px solid #004E00;
+    border-collapse: collapse;
+}
+
+.group-result-table td {
+    border: 2px solid #004E00;
+}
+
+.group-id {
+    background-color: #88FF88;
+}
+
+.member-list-header {
+    background-color: #ffff55;
+}

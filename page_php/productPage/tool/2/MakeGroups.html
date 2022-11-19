@@ -1,0 +1,119 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/MakeGroups.css" type="text/css">
+    <meta charset="utf-8" http-equiv="content-type">
+</head>
+
+<body>
+    <header>
+        <h1>グループ分けツール</h1>
+        <h3>ver 1.0</h3>
+    </header>
+
+    <div class="contentArea">
+        <h3>対象メンバー</h3>
+        <table id="input-table">
+            <tr>
+                <td class="member-id">
+                    <label>メンバー1：</label>
+                </td>
+                <td class="member-name">
+                    <input type="text" id="1">
+                </td>
+            </tr>
+        </table>
+        <button class="commonButton">追加</button>
+        <button class="commonButton">削除</button>
+    </div>
+
+    <div class="contentArea">
+        <h3>オプション</h3>
+        <table id="input-option">
+            <tr>
+                <td>
+                    <label>グループの人数：</label>
+                </td>
+                <td>
+                    <input type="number">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <label>余ったメンバー：</label>
+                </td>
+                <td>
+                    <select name="remain">
+                        <option value="0" selected>グループとして扱う</option>
+                        <option value="1">余りとして扱う</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button class="commonButton">実行</button>
+    </div>
+
+    <div class="contentArea">
+        <h3>グループ分け結果</h3>
+        <ul>
+            <li>
+                <table class="group-result-table">
+                    <tr>
+                        <td rowspan="4" class="group-id">グループ1</td>
+                        <td class="member-list-header">メンバー一覧</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー1</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー2</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー3</td>
+                    </tr>
+                </table>
+            </li>
+
+            <li>
+                <table class="group-result-table">
+                    <tr>
+                        <td rowspan="4" class="group-id">グループ2</td>
+                        <td class="member-list-header">メンバー一覧</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー1</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー2</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー3</td>
+                    </tr>
+                </table>
+            </li>
+
+            <li>
+                <table class="group-result-table">
+                    <tr>
+                        <td rowspan="4" class="group-id">グループ3</td>
+                        <td class="member-list-header">メンバー一覧</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー1</td>
+                    </tr>
+                    <tr>
+                        <td>メンバー2</td>
+                    </tr>
+                    <tr>
+                        <td>　</td>
+                    </tr>
+                </table>
+            </li>
+        </ul>
+    </div>
+</body>
+
+<script type="text/javascript" src="script/MakeGroups.js"></script>
+
+
+</html>
