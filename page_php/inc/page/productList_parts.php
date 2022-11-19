@@ -1,24 +1,8 @@
 <!-- 各phpファイル読み込み -->
-<?php
-    include_once("./inc/logic/productList_logic.php");
-?>
+<?php include_once("./inc/logic/productList_logic.php"); ?>
 
 <!-- メイン -->
 <main>
-
-    <!-- コンテンツタイトル -->
-    <div class="content-title fadeDown">
-        <span>Category</span>
-    </div>
-
-    <!-- ナビゲーションバー -->
-    <form action="./index.php" method="get">
-        <ul class="product-navbar fadeDown">
-            <?php foreach ($_SESSION["CATEGORIES"] as $category) : ?>
-                <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>" id="<?= $category ?>"><?= $category ?></button></li>
-            <?php endforeach ?>
-        </ul>
-    </form>
 
     <?php if ($_SESSION["CATEGORY"] !== "ACTIVITY") : ?>
         <!-- カテゴリが「ACTIVITY」以外の場合 -->

@@ -4,7 +4,7 @@
 <!-- メイン -->
 <main>
 
-<div class="fadeDown content-box">
+<div class="fadeDown_2">
 
     <?php if($article_id === "") : ?>
 

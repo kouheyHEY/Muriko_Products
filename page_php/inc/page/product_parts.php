@@ -1,10 +1,13 @@
 <!-- 各phpファイル読み込み -->
 <?php include_once("./inc/logic/product_logic.php"); ?>
 
-<!-- メイン -->
-<main class="fadeDown">
+<!-- カテゴリメニュー読み込み -->
+<?php include_once("./inc/page/menu_category.php"); ?>
 
-<div class="content-box">
+<!-- メイン -->
+<main>
+    
+<div class="fadeDown_2">
     <?php if($product_id === "") : ?>
         <!-- 注意メッセージ表示 -->
         <div class="msg_alert"><?= MSG_NO_PRODUCT_ID ?></div>

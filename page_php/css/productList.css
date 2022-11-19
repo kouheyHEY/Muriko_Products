@@ -7,6 +7,12 @@
     justify-content: space-between;
 }
 
+/* ナビゲーションバーのスクロールバー装飾 */
+.product-navbar::-webkit-scrollbar {
+    height: 10px;
+    opacity: 0;
+}
+
 .product-navbar li {
     width: 80%;
     margin: 2%;
@@ -53,13 +59,32 @@
     /* ナビゲーションバー */
     .product-navbar {
         width: 100%;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-evenly;
-        flex-wrap: wrap;
+        flex-wrap: nowrap;
+
+        overflow-x: scroll;
     }
 
+    /* ナビゲーションバーのスクロールバー装飾 */
+    .product-navbar::-webkit-scrollbar {
+        height: 10px;
+    }
+
+    .product-navbar::-webkit-scrollbar-thumb {
+        /* ツマミの色 */
+        background: rgba(160, 160, 160, 0.7);
+        /* ツマミ両端の丸み */
+        border-radius: 7px;
+    }
+
+    .product-navbar::-webkit-scrollbar-track {
+        /* トラックの色 */
+        background: rgba(180, 180, 180, 0);
+        /* トラック両端の丸み */
+        border-radius: 7px;
+    }
+
+    /* ナビゲーションバーの要素 */
     .product-navbar li {
-        width: 100%;
+        min-width: 120px;
     }
 }
