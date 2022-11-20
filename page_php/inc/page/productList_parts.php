@@ -44,7 +44,3 @@
     <?php endif; ?>
 
 </main>
-<!-- 選択中のカテゴリの要素を色付けする -->
-<script>
-    $("#<?= $_SESSION['CATEGORY'] ?>").css('background-color','#d0efd0');
-</script>
