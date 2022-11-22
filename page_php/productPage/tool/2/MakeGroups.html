@@ -2,6 +2,8 @@
 
 <head>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/Variables.js"></script>
+    <script type="text/javascript" src="script/MakeGroups.js"></script>
     <link rel="stylesheet" href="css/MakeGroups.css" type="text/css">
     <meta charset="utf-8" http-equiv="content-type">
 </head>
@@ -52,22 +54,23 @@
                     <label>グループの人数：</label>
                 </td>
                 <td>
-                    <input type="number">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>余ったメンバー：</label>
+                    <input id="memberPerGroup" type="number" max="6" min="3" value="3">
                 </td>
                 <td>
-                    <select name="remain">
-                        <option value="0" selected>グループとして扱う</option>
-                        <option value="1">余りとして扱う</option>
-                    </select>
+                    <label>グループ数の上限：</label>
+                </td>
+                <td>
+                    <input id="groupNum" type="number" max="12" min="2" value="2">
                 </td>
             </tr>
         </table>
-        <button class="commonButton">実行</button>
+        <label>余ったメンバー：</label>
+        <select id="remain">
+            <option value="0" selected>グループとして扱う</option>
+            <option value="1">余りとして扱う</option>
+        </select>
+        <br>
+        <button class="commonButton" onclick="executeGrouping()">実行</button>
     </div>
 
     <div class="contentArea">
@@ -129,8 +132,5 @@
         </ul>
     </div>
 </body>
-
-<script type="text/javascript" src="script/MakeGroups.js"></script>
-
 
 </html>
