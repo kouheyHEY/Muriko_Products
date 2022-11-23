@@ -16,119 +16,45 @@
 
     <div class="contentArea">
         <h3>対象メンバー</h3>
-        <table id="input-table">
-            <tr>
-                <td class="member-id">
-                    <label>メンバー1：</label>
-                </td>
-                <td class="member-name">
-                    <input type="text" class="targetMember">
-                </td>
-            </tr>
-            <tr>
-                <td class="member-id">
-                    <label>メンバー2：</label>
-                </td>
-                <td class="member-name">
-                    <input type="text" class="targetMember">
-                </td>
-            </tr>
-            <tr>
-                <td class="member-id">
-                    <label>メンバー3：</label>
-                </td>
-                <td class="member-name">
-                    <input type="text" class="targetMember">
-                </td>
-            </tr>
-        </table>
-        <button class="commonButton">追加</button>
-        <button class="commonButton">削除</button>
+        <ul id="target-member-list">
+            <li>
+                <label class="member-label">メンバー1：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+            <li>
+                <label class="member-label">メンバー2：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+            <li>
+                <label class="member-label">メンバー3：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+        </ul>
+        <button class="commonButton" onclick="addMemberInput()">追加</button>
+        <button class="commonButton" onclick="removeMemberInput()">削除</button>
+        <button class="commonButton" onclick="clearMemberInput()">クリア</button>
     </div>
 
     <div class="contentArea">
         <h3>オプション</h3>
-        <table id="input-option">
-            <tr>
-                <td>
-                    <label>グループの人数：</label>
-                </td>
-                <td>
-                    <input id="memberPerGroup" type="number" max="6" min="3" value="3">
-                </td>
-                <td>
-                    <label>グループ数の上限：</label>
-                </td>
-                <td>
-                    <input id="groupNum" type="number" max="12" min="2" value="2">
-                </td>
-            </tr>
-        </table>
-        <label>余ったメンバー：</label>
-        <select id="remain">
-            <option value="0" selected>グループとして扱う</option>
-            <option value="1">余りとして扱う</option>
-        </select>
-        <br>
+        <ul id="input-option">
+            <li>
+                <label class="option-label">グループの人数：</label>
+                <input id="memberPerGroup" type="number" max="6" min="3" value="3">
+            </li>
+            <li>
+                <label class="option-label">グループ数の上限：</label>
+                <input id="groupNum" type="number" max="12" min="2" value="2">
+            </li>
+        </ul>
         <button class="commonButton" onclick="executeGrouping()">実行</button>
     </div>
 
     <div class="contentArea">
         <h3>グループ分け結果</h3>
-        <ul>
-            <li>
-                <table class="group-result-table">
-                    <tr>
-                        <td rowspan="4" class="group-id">グループ1</td>
-                        <td class="member-list-header">メンバー一覧</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー1</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー2</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー3</td>
-                    </tr>
-                </table>
-            </li>
-
-            <li>
-                <table class="group-result-table">
-                    <tr>
-                        <td rowspan="4" class="group-id">グループ2</td>
-                        <td class="member-list-header">メンバー一覧</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー1</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー2</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー3</td>
-                    </tr>
-                </table>
-            </li>
-
-            <li>
-                <table class="group-result-table">
-                    <tr>
-                        <td rowspan="4" class="group-id">グループ3</td>
-                        <td class="member-list-header">メンバー一覧</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー1</td>
-                    </tr>
-                    <tr>
-                        <td>メンバー2</td>
-                    </tr>
-                    <tr>
-                        <td>　</td>
-                    </tr>
-                </table>
-            </li>
+        <ul id="grouping-result">
+        </ul>
+        <ul id="remain">
         </ul>
     </div>
 </body>

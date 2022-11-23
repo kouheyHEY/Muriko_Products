@@ -1,6 +1,7 @@
 // グループごとの人数
 const MEMBER_PER_GROUP_MAX = 6;
 const MEMBER_PER_GROUP_MIN = 3;
+
 // グループの数
 const GROUP_NUM_MAX = 12;
 const GROUP_NUM_MIN = 2;
@@ -9,6 +10,6 @@ const GROUP_NUM_MIN = 2;
 const MEMBER_NUM_MIN = 3;
 const MEMBER_NUM_MAX = 30;
 
-// グループ分けオプションのタイプ
-const OPTION_REMAINING_GROUP = 0;
-const OPTION_REMAINING_REST = 1;
+// エラーメッセージ
+const MSG_ERR_CANNOT_ADD_MEMBER = "メンバーはこれ以上追加できません。";
+const MSG_ERR_CANNOT_REMOVE_MEMBER = "メンバーはこれ以上削除できません。";

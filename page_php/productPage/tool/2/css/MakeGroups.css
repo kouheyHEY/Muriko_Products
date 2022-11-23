@@ -34,7 +34,32 @@ header * {
     margin: 0;
 }
 
-.contentArea ul {
+/* ulタグ */
+#target-member-list,
+#input-option {
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+}
+
+#target-member-list li,
+#input-option li {
+    margin: 5px;
+    text-align: left;
+}
+
+.member-label {
+    display: inline-block;
+    min-width: 100px;
+}
+
+.option-label {
+    display: inline-block;
+    width: 40%;
+    min-width: 150px;
+}
+
+#grouping-result {
     margin: 0px;
     padding: 5px;
     list-style: none;
@@ -43,7 +68,8 @@ header * {
     justify-content: space-evenly;
 }
 
-.contentArea li {
+#grouping-result li,
+#remain li {
     margin: 5px;
 }
 
@@ -55,6 +81,7 @@ header * {
 
 .group-result-table td {
     border: 2px solid #004E00;
+    max-width: 260px;
 }
 
 .group-id {
@@ -63,4 +90,22 @@ header * {
 
 .member-list-header {
     background-color: #ffff55;
+}
+
+#remain {
+    margin: 0px;
+    padding: 5px;
+    list-style: none;
+    justify-content: space-evenly;
+}
+
+#remain #remain-header {
+    margin-left: 0px;
+    font-weight: 600;
+    font-size: large;
+}
+
+#remain li {
+    margin: 0px;
+    margin-left: 10px;
 }
