@@ -1,0 +1,116 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/Variables.js"></script>
+    <script type="text/javascript" src="script/PokeTypeChecker.js"></script>
+    <link rel="stylesheet" href="css/PokeTypeChecker.css" type="text/css">
+    <meta charset="utf-8" http-equiv="content-type">
+</head>
+
+<body>
+    <header>
+        <h1>タイプチェックツール</h1>
+        <h3>ver 1.0</h3>
+    </header>
+
+    <div class="contentArea">
+        <h3>チェック対象</h3>
+        <ul id="target-list">
+            <li>
+                <label class="target-label"></label>
+                <div class="target-name">名前</div>
+                <div class="target-type">type1</div>
+                <div class="target-type">type2</div>
+            </li>
+            <li>
+                <label class="target-label">1</label>
+                <input type="text" maxlength="6" size="12" class="target">
+                <select class="target-type">
+                    <option value="-1" selected> </option>
+                    <option value="0">無</option>
+                    <option value="1">炎</option>
+                    <option value="2">水</option>
+                    <option value="3">草</option>
+                    <option value="4">電</option>
+                    <option value="5">飛</option>
+                    <option value="6">岩</option>
+                    <option value="7">地</option>
+                    <option value="8">氷</option>
+                    <option value="9">虫</option>
+                    <option value="10">悪</option>
+                    <option value="11">闘</option>
+                    <option value="12">超</option>
+                    <option value="13">霊</option>
+                    <option value="14">鋼</option>
+                    <option value="15">竜</option>
+                    <option value="16">妖</option>
+                </select>
+                <select class="target-type">
+                    <option value="-1" selected> </option>
+                    <option value="0">無</option>
+                    <option value="1">炎</option>
+                    <option value="2">水</option>
+                    <option value="3">草</option>
+                    <option value="4">電</option>
+                    <option value="5">飛</option>
+                    <option value="6">岩</option>
+                    <option value="7">地</option>
+                    <option value="8">氷</option>
+                    <option value="9">虫</option>
+                    <option value="10">悪</option>
+                    <option value="11">闘</option>
+                    <option value="12">超</option>
+                    <option value="13">霊</option>
+                    <option value="14">鋼</option>
+                    <option value="15">竜</option>
+                    <option value="16">妖</option>
+                </select>
+            </li>
+            <li class="type-info">
+                <label class="target-label"></label>
+                <div class="adv-type">有利：</div>
+                <ul class="type-list">
+                    <li>１１１</li>
+                    <li>２２２</li>
+                    <li>３３３</li>
+                    <li>１１１</li>
+                    <li>２２２</li>
+                    <li>３３３</li>
+                </ul>
+            </li>
+            <li class="type-info">
+                <label class="target-label"></label>
+                <div class="dis-type">不利：</div>
+            </li>
+            <li>
+                <label class="target-label">2</label>
+                <input type="text" maxlength="6" size="12" class="target">
+            </li>
+            <li>
+                <label class="target-label">3</label>
+                <input type="text" maxlength="6" size="12" class="target">
+            </li>
+            <li>
+                <label class="target-label">4</label>
+                <input type="text" maxlength="6" size="12" class="target">
+            </li>
+            <li>
+                <label class="target-label">5</label>
+                <input type="text" maxlength="6" size="12" class="target">
+            </li>
+            <li>
+                <label class="target-label">6</label>
+                <input type="text" maxlength="6" size="12" class="target">
+            </li>
+        </ul>
+        <button class="commonButton" onclick="executeTypeCheck()">実行</button>
+        <button class="commonButton" onclick="clearTarget()">クリア</button>
+    </div>
+
+    <div class="contentArea">
+        <h3>チェック結果</h3>
+    </div>
+</body>
+
+</html>

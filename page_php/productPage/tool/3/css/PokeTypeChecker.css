@@ -1,0 +1,98 @@
+header * {
+    text-align: center;
+}
+
+/* ボタン */
+.commonButton {
+    margin: 2px;
+    border: 2px solid #004E00;
+    color: #004E00;
+    background-color: #FFFFFF;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* ボタン hover */
+.commonButton:hover {
+    color: #FFFFFF;
+    background-color: #004E00;
+}
+
+/* 点線で囲む */
+.contentArea {
+    max-width: 480px;
+    width: 100%;
+    min-width: 360px;
+    margin: 10px auto;
+    padding: 5px;
+    box-sizing: border-box;
+    border: 2px dashed #22AA22;
+}
+
+/* hタグ */
+.contentArea h3 {
+    margin: 0;
+}
+
+#target-list li div {
+    display: inline-block;
+}
+
+/* ulタグ */
+#target-list,
+#input-option {
+    list-style: none;
+    margin: 5px;
+    padding: 5px;
+}
+
+#target-list li,
+#input-option li {
+    margin: 5px;
+    text-align: left;
+}
+
+.type-list {
+    list-style: none;
+    display: inline-block;
+    flex-wrap: wrap;
+    margin-left: 5px;
+    padding: 0px;
+}
+
+.type-list li {
+    display: inline-block;
+}
+
+.type-info {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* 各インプットのヘッダ */
+.target-name {
+    display: inline-block;
+    width: 120px;
+}
+
+.adv-type,
+.dis-type {
+    display: inline-block;
+    min-width: 48px;
+}
+
+.target-type {
+    display: inline-block;
+    width: 50px;
+}
+
+.target-label {
+    display: inline-block;
+    min-width: 24px;
+}
+
+.option-label {
+    display: inline-block;
+    width: 40%;
+    min-width: 150px;
+}
