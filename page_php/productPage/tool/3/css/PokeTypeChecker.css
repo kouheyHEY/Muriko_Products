@@ -96,3 +96,9 @@ header * {
     width: 40%;
     min-width: 150px;
 }
+
+.type-block {
+    width: 36px;
+    display: inline-block;
+    text-align: center;
+}
