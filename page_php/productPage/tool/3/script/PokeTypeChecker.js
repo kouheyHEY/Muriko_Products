@@ -51,11 +51,21 @@ function executeTypeCheck() {
         for (let j = 1; j <= TYPE_NUM; j++) {
             if (typeInfoList[j] < 1.0) {
                 $("#adv-" + t + " .type-list").append(
-                    "<span class='type-block'>" + TYPE_LIST[j][IDX_TYPE_NAME] + "</span>"
+                    "<span class='type-block' style='background-color: " +
+                    TYPE_LIST[j][IDX_TYPE_COLOR] +
+                    "; color: " + TYPE_LIST[j][IDX_TYPE_FCOLOR] +
+                    ";'>" +
+                    TYPE_LIST[j][IDX_TYPE_NAME] +
+                    "</span>"
                 );
             } else if (typeInfoList[j] > 1.0) {
                 $("#dis-" + t + " .type-list").append(
-                    "<span class='type-block'>" + TYPE_LIST[j][IDX_TYPE_NAME] + "</span>"
+                    "<span class='type-block' style='background-color: " +
+                    TYPE_LIST[j][IDX_TYPE_COLOR] +
+                    "; color: " + TYPE_LIST[j][IDX_TYPE_FCOLOR] +
+                    ";'>" +
+                    TYPE_LIST[j][IDX_TYPE_NAME] +
+                    "</span>"
                 );
             }
         }
