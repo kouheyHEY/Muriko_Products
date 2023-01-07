@@ -1,0 +1,11 @@
+{
+    "id": "2",
+    "title": "反転パズル ver2.0",
+    "exp": "3×3のパズルをひっくり返して全パネルを同じ色にすればクリアです。<br>難しさや反転モードを変更できます。",
+    "links": {
+        "site": "https://kouheyhey.github.io/RevPuzzle_Phaser3/",
+        "git": ""
+    },
+    "updDate": "2023-01-07",
+    "updUser": "Muriko"
+}
