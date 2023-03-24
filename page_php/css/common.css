@@ -24,10 +24,13 @@
 /* 全タグ */
 * {
     box-sizing: border-box;
+    color: #ffffff;
 }
 
 /* htmlタグ */
 html {
+    /* オシャな背景 */
+    /*
     background:
         linear-gradient(135deg,
             #c9d9e9 21px,
@@ -49,6 +52,12 @@ html {
             transparent 69px)0 64px;
     background-color: #c9d9e9;
     background-size: 64px 128px;
+    */
+    /* シンプル背景 */
+    background:
+        linear-gradient(to bottom,
+            #003020,
+            #000c0c);
 }
 
 /* bodyタグ */
@@ -188,6 +197,8 @@ ul {
     padding-bottom: 5px;
     line-height: 3rem;
 
+    /* オシャタイトル装飾 */
+    /*
     background-image:
         linear-gradient(90deg,
             #0050dd 0 5px,
@@ -196,6 +207,10 @@ ul {
     background-repeat: no-repeat;
     background-size: 100% 5px;
     background-position: bottom;
+    */
+
+    /* 普通タイトル装飾 */
+    border-bottom: #ffffff 2px solid;
 }
 
 .content-title span {
