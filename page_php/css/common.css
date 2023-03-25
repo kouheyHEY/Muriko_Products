@@ -173,13 +173,57 @@ ul {
     background-color: #d0d0ef;
 }
 
+/* 汎用ボタン２ */
+.button-link-linear {
+    text-align: center;
+    min-width: 100px;
+}
+
+.button-link-linear button,
+.button-link-linear a {
+    background: none;
+    border: none;
+
+    position: relative;
+
+    display: block;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    font-family: 'Ubuntu-Regular';
+    font-weight: 600;
+}
+
+.button-link-linear button {
+    width: 100%;
+}
+
+.button-link-linear button::after,
+.button-link-linear a::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #ffffff;
+    transition: width 0.3s ease-out;
+}
+
+.button-link-linear button:hover::after,
+.button-link-linear a:hover::after {
+    width: 100%;
+}
+
 /* タイトル */
 .header-title {
     width: 100%;
     margin: 0 auto;
     text-align: center;
     font-family: 'Ubuntu-Bold';
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .header-version {

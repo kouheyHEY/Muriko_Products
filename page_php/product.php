@@ -1,6 +1,9 @@
 <!-- ヘッダー読み込み -->
 <?php include_once("./inc/page/header.php"); ?>
 
+<!-- コンテンツメニュー読み込み -->
+<?php include_once("./inc/page/menu_content.php"); ?>
+
 <!-- カテゴリメニュー読み込み -->
 <?php include_once("./inc/page/menu_category.php"); ?>
 

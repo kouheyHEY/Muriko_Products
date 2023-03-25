@@ -8,10 +8,12 @@
 }
 
 /* ナビゲーションバーのスクロールバー装飾 */
+/*
 .product-navbar::-webkit-scrollbar {
     height: 10px;
     opacity: 0;
 }
+*/
 
 .product-navbar li {
     width: 80%;

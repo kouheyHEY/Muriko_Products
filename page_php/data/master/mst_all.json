@@ -3,6 +3,22 @@
         "SYSTEM_TITLE": "Muriko Products",
         "SYSTEM_VERSION": "1.1.0"
     },
+
+    "MST_CONTENT": {
+        "CONTENTS": [
+            "ABOUT",
+            "NOTES",
+            "PRODUCTS",
+            "CONTACT"
+        ],
+        "CONTENT_DISP_NAME": {
+            "ABOUT": "About",
+            "NOTES": "Note",
+            "PRODUCTS": "Product",
+            "CONTACT": "Contact"
+        }
+    },
+
     "MST_CATEGORY": {
         "CATEGORIES": [
             "GAME",
@@ -17,6 +33,40 @@
             "ACTIVITY": "Activity"
         }
     },
+
+    "SNS_BUTTON": [
+        {
+            "name": "Twitter",
+            "href": "https://twitter.com/VBbeat_bbb",
+            "style": {
+                "button_color_hover": "#00acee",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#00acee"
+            }
+        },
+        {
+            "name": "Github",
+            "href": "https://github.com/kouheyHEY",
+            "style": {
+                "button_color_hover": "#000000",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#000000"
+            }
+        },
+        {
+            "name": "SoundCloud",
+            "href": "https://soundcloud.com/murakoumur",
+            "style": {
+                "button_color_hover": "ff7700",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#ff7700"
+            }
+        }
+    ],
+
     "PRODUCT_LIST": {
         "GAME": [
             {
@@ -73,37 +123,5 @@
             }
         ],
         "ACTIVITY": []
-    },
-    "SNS_BUTTON": [
-        {
-            "name": "Twitter",
-            "href": "https://twitter.com/VBbeat_bbb",
-            "style": {
-                "button_color_hover": "#00acee",
-                "button_color": "#ffffff",
-                "font_color_hover": "#ffffff",
-                "font_color": "#00acee"
-            }
-        },
-        {
-            "name": "Github",
-            "href": "https://github.com/kouheyHEY",
-            "style": {
-                "button_color_hover": "#000000",
-                "button_color": "#ffffff",
-                "font_color_hover": "#ffffff",
-                "font_color": "#000000"
-            }
-        },
-        {
-            "name": "SoundCloud",
-            "href": "https://soundcloud.com/murakoumur",
-            "style": {
-                "button_color_hover": "ff7700",
-                "button_color": "#ffffff",
-                "font_color_hover": "#ffffff",
-                "font_color": "#ff7700"
-            }
-        }
-    ]
+    }
 }
