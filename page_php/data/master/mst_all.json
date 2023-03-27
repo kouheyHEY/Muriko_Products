@@ -16,6 +16,12 @@
             "NOTES": "Note",
             "PRODUCTS": "Product",
             "CONTACT": "Contact"
+        },
+        "CONTENT_URL_NAME": {
+            "ABOUT": "about",
+            "NOTES": "note",
+            "PRODUCTS": "productList",
+            "CONTACT": "contact"
         }
     },
 

@@ -6,7 +6,7 @@
         </div>
 
         <!-- ナビゲーションバー -->
-        <form action="./index.php" method="get">
+        <form action="./productList.php" method="get">
             <ul class="product-navbar fadeDown">
                 <?php foreach ($_SESSION["CATEGORIES"] as $category) : ?>
                     <li class="button-link"><button type="submit" name="CATEGORY" value="<?= $category ?>" id="<?= $category ?>"><?= $category ?></button></li>

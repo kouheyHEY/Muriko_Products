@@ -44,7 +44,7 @@
     <header>
         <!-- タイトル -->
         <h1 class="header-title">
-            <a href="../article.php?article_id=about"><span id="system_title"><?= $_SESSION["SYSTEM_TITLE"] ?></span></a>
+            <a href="./index.php"><span id="system_title"><?= $_SESSION["SYSTEM_TITLE"] ?></span></a>
         </h1>
         <h2 class="header-version">ver <span id="system_version"><?= $_SESSION["SYSTEM_VERSION"] ?></span></h2>
     </header>

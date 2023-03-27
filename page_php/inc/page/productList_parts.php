@@ -4,7 +4,7 @@
 <!-- メイン -->
 <main>
 
-    <?php if ($_SESSION["CATEGORY"] !== "ACTIVITY") : ?>
+    <?php if ($_SESSION["CATEGORY"] != "ACTIVITY") : ?>
         <!-- カテゴリが「ACTIVITY」以外の場合 -->
 
         <!-- コンテンツタイトル -->
