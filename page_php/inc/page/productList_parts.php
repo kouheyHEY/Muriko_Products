@@ -1,6 +1,3 @@
-<!-- 各phpファイル読み込み -->
-<?php include_once("./inc/logic/productList_logic.php"); ?>
-
 <!-- メイン -->
 <main>
 
@@ -17,7 +14,9 @@
             <ul class="product-list fadeDown_2">
                 <!-- プロダクトブロック -->
                 <?php foreach($product_list as $product) : ?>
-                    <li class="product-block button-link"><button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button></li>
+                    <li class="product-block button-link-linear">
+                        <button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button>
+                    </li>
                 <?php endforeach ?>
             </ul>
         </form>

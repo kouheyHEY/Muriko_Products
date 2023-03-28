@@ -36,10 +36,13 @@
 
     <!-- 後処理-->
     <script type="text/javascript" src="../script/initialize_footer.js"></script>
+
     <!-- 選択中のカテゴリの要素を色付けする -->
+    <!--
     <script>
         $("#<?= $_SESSION['CATEGORY'] ?>").css('background-color','#d0efd0');
     </script>
+    -->
 </body>
 
 </html>

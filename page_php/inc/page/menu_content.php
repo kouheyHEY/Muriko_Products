@@ -6,9 +6,9 @@
     <form action="./index.php" method="get">
         <ul class="product-navbar fadeDown">
             <?php foreach ($_SESSION["CONTENTS"] as $content) : ?>
-                <?php $transparent = ($content !== $_SESSION["CONTENT"]) ? 'font-transparent' : '' ?>
-                <li class="button-link-linear">
-                    <button class="<?= $transparent ?>" type="submit" name="CONTENT" value="<?= $content ?>" id="<?= $content ?>"><?= $content ?></button>
+                <?php $selectContent = ($content == $_SESSION["CONTENT"]) ? '-selected' : '' ?>
+                <li class="button-link-linear<?= $selectContent ?>">
+                    <button type="submit" name="CONTENT" value="<?= $content ?>" id="<?= $content ?>"><?= $content ?></button>
                 </li>
             <?php endforeach ?>
         </ul>

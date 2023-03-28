@@ -87,6 +87,6 @@
 
     /* ナビゲーションバーの要素 */
     .product-navbar li {
-        min-width: 120px;
+        /* min-width: 120px; */
     }
 }
