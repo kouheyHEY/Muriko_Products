@@ -23,6 +23,8 @@
 
 /* メイン プロダクト一覧 */
 .product-list {
+    margin: 10px 2% 0;
+
     display: flex;
     flex-wrap: wrap;
 
@@ -31,30 +33,15 @@
 
 /* メイン プロダクトブロック */
 .product-block {
-    width: 32%;
-    margin-left: 2%;
+    width: 100%;
     margin-bottom: 2%;
 }
 
-.product-block:nth-child(3n+1) {
-    margin-left: 0;
+.product-block button {
+    text-align: left;
 }
 
-@media screen and (max-width: 960px) {
-
-    /* メイン プロダクトブロック */
-    .product-block {
-        width: 100%;
-        margin-left: 0;
-
-        text-align: center;
-    }
-
-    /* メイン プロダクト位置一覧 */
-    .product-list {
-        margin: 0 2% 0;
-    }
-}
+@media screen and (max-width: 960px) {}
 
 @media screen and (max-width: 768px) {
 

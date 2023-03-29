@@ -29,7 +29,7 @@
             </div>
 
             <!-- Githubの草 -->
-            <div class="github-info">
+            <div class="product-exp github-info">
                 <div class="github-link">
                     <i class="fab fa-github-square"></i>
                     <a href="https://github.com/kouheyHEY" target="_blank">kouheyHEY</a>
