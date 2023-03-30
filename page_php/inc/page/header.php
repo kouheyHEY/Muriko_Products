@@ -19,6 +19,7 @@
     <meta name="twitter:site" content="@Murimuriko_" />
 
     <!-- cssファイルの読み込み -->
+    <!-- <link rel="stylesheet" href="../css/reset.css"> -->
     <link rel="stylesheet" href="../css/productList.css">
     <link rel="stylesheet" href="../css/product.css">
     <link rel="stylesheet" href="../css/postProduct.css">
