@@ -15,3 +15,27 @@ function selectFile(id, input) {
 
     document.getElementById(id).innerHTML = fileNames;
 }
+
+/**
+ * zennの記事をjson形式で取得する
+ * @returns zennの記事（json形式）
+ */
+function readArticleListZenn() {
+    let result = "";
+    // zenn apiのurlからjsonの値を取得する
+    fetch(`${ZENN_API_URL}/${ZENN_API_QUERY}`)
+        .then(response => {
+            result = response.json();
+        })
+        .then(data => {
+            console.log(data);
+        })
+        .catch(error => {
+            console.log("失敗しました");
+            console.log(error);
+        });
+
+    console.log(result);
+
+    return result;
+}

@@ -9,7 +9,6 @@
             "ABOUT",
             "PRODUCTS"
         ],
-
         "CONTENTS_NOTUSE": [
             "NOTES",
             "CONTACT"
@@ -19,10 +18,16 @@
             "ABOUT": "About",
             "PRODUCTS": "Product"
         },
+        "CONTENT_DISP_NAME_NOTUSE": {
+            "NOTES": "Notes"
+        },
 
         "CONTENT_URL_NAME": {
             "ABOUT": "about",
             "PRODUCTS": "productList"
+        },
+        "CONTENT_URL_NAME_NOTUSE": {
+            "NOTES": "articleList"
         }
     },
 
