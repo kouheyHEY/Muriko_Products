@@ -1,10 +1,8 @@
 <!-- メイン -->
 <main>
 
-    <script>
-        // zennの記事をjson形式で取得
-        readArticleListZenn();
-    </script>
+    <!-- 各phpファイル読み込み -->
+    <?php include_once("./inc/logic/articleList_logic.php"); ?>
 
     <!-- 記事タイトル -->
     <div class="content-title fadeDown_2">

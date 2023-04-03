@@ -1,4 +1,3 @@
-
 /** 
  * ファイル選択時のファイル名表示処理
  * @param id ファイル選択フォームのid
@@ -20,22 +19,31 @@ function selectFile(id, input) {
  * zennの記事をjson形式で取得する
  * @returns zennの記事（json形式）
  */
-function readArticleListZenn() {
-    let result = "";
+async function readArticleListZenn() {
     // zenn apiのurlからjsonの値を取得する
-    fetch(`${ZENN_API_URL}/${ZENN_API_QUERY}`)
-        .then(response => {
-            result = response.json();
-        })
+    let proxyURL = './functions/' + PROXY_PHP + '?url=' + ZENN_API_URL + '/' + ZENN_API_QUERY;
+    let dataJson = '';
+
+    await fetch(proxyURL, { mode: 'cors' })
+        .then(
+            function (response) {
+                responseClone = response.clone();
+                return response.json();
+            }
+            // response => response.json()
+        )
         .then(data => {
+            dataJson = data;
             console.log(data);
         })
         .catch(error => {
-            console.log("失敗しました");
+            console.log('エラーが発生しました。');
+            console.log(responseClone.ok);
+            console.log(responseClone.status);
+            console.log(responseClone.statusText);
+            console.log(responseClone.text());
             console.log(error);
         });
 
-    console.log(result);
-
-    return result;
+    return dataJson;
 }

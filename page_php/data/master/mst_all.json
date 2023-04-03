@@ -7,6 +7,7 @@
     "MST_CONTENT": {
         "CONTENTS": [
             "ABOUT",
+            "NOTES",
             "PRODUCTS"
         ],
         "CONTENTS_NOTUSE": [
@@ -16,7 +17,8 @@
 
         "CONTENT_DISP_NAME": {
             "ABOUT": "About",
-            "PRODUCTS": "Product"
+            "PRODUCTS": "Product",
+            "NOTES": "Notes"
         },
         "CONTENT_DISP_NAME_NOTUSE": {
             "NOTES": "Notes"
@@ -24,7 +26,8 @@
 
         "CONTENT_URL_NAME": {
             "ABOUT": "about",
-            "PRODUCTS": "productList"
+            "PRODUCTS": "productList",
+            "NOTES": "articleList"
         },
         "CONTENT_URL_NAME_NOTUSE": {
             "NOTES": "articleList"
