@@ -3,7 +3,7 @@
     "title": "タイプチェックツール",
     "exp": "某ゲームでのポケモンのタイプ相性確認用ツールです。<br>チェックしたい対象を入力し、タイプを選択して実行ボタンを押してください。<br>",
     "links": {
-        "site": "./productPage/tool/3/PokeTypeChecker.html"
+        "site": "/productPage/tool/3/PokeTypeChecker.html"
     },
     "updDate": "2022-11-28",
     "updUser": "Muriko"

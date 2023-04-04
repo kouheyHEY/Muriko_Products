@@ -1,42 +1,22 @@
+<!-- 各phpファイル読み込み -->
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/articleList_logic.php"); ?>
+
 <!-- メイン -->
 <main>
 
-    <!-- 各phpファイル読み込み -->
-    <?php include_once("./inc/logic/articleList_logic.php"); ?>
-
-    <!-- 記事タイトル -->
+    <!-- コンテンツタイトル -->
     <div class="content-title fadeDown_2">
-        <span><?= $_SESSION["CATEGORY_DISP_NAME"][$_SESSION['CATEGORY']] ?> Products</span>
+        <span><?= $_SESSION["SERVICE_ALIAS"][$_SESSION['SERVICE']] ?></span>
     </div>
 
-    <!-- プロダクト一覧 -->
-    <form action="./product.php" method="get">
-        <ul class="product-list fadeDown_2">
-            <!-- プロダクトブロック -->
-            <?php foreach($product_list as $product) : ?>
-                <li class="product-block button-link-linear">
-                    <button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button>
-                </li>
-            <?php endforeach ?>
-        </ul>
-    </form>
-
-    <div class="fadeDown_2">
-        <div class="content-title">
-            <span>Contributions</span>
-        </div>
-
-        <!-- Githubの草 -->
-        <div class="product-exp github-info">
-            <div class="github-link">
-                <i class="fab fa-github-square"></i>
-                <a href="https://github.com/kouheyHEY" target="_blank">kouheyHEY</a>
-            </div>
-            <a href="https://github.com/kouheyHEY" target="_blank">
-                <img class="github-glaph" src="https://grass-graph.appspot.com/images/kouheyHEY.png">
-            </a>
-        </div>
-    </div>
-
+    <!-- 記事一覧 -->
+    <ul class="article-list fadeDown_2">
+        <!-- 記事ブロック -->
+        <?php foreach($article_list as $article) : ?>
+            <li class="article-block button-link-linear">
+                <a href="<?= $_SESSION['SERVICE_URL'][$_SESSION['SERVICE']] . $article['path'] ?>"><?= $article["title"] ?></a>
+            </li>
+        <?php endforeach ?>
+    </ul>
 
 </main>

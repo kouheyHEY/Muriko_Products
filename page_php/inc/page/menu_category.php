@@ -1,7 +1,7 @@
 <!-- カテゴリメニュー -->
 
 <!-- 各phpファイル読み込み -->
-<?php include_once("./inc/logic/productList_logic.php"); ?>
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/productList_logic.php"); ?>
 
 <!-- コンテンツタイトル -->
 <div class="menu-category">

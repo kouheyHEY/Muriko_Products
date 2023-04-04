@@ -1,6 +1,8 @@
+<!-- 各phpファイル読み込み -->
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "./inc/logic/product_logic.php"); ?>
+
 <!-- メイン -->
 <main>
-
     <?php if ($_SESSION["CATEGORY"] != "ACTIVITY") : ?>
         <!-- カテゴリが「ACTIVITY」以外の場合 -->
 

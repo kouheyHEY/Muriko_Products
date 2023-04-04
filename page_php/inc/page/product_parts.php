@@ -1,8 +1,5 @@
 <!-- 各phpファイル読み込み -->
-<?php include_once("./inc/logic/product_logic.php"); ?>
-
-<!-- カテゴリメニュー読み込み -->
-<?php include_once("./inc/page/menu_category.php"); ?>
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "./inc/logic/product_logic.php"); ?>
 
 <!-- メイン -->
 <main>
@@ -39,7 +36,7 @@
         </div>
     <?php endif; ?>
     <div class="button-back button-link-linear">
-        <a href="./index.php">Back</a>
+        <a href="/index.php">Back</a>
     </div>
 
 </div>

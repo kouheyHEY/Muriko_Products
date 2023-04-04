@@ -1,0 +1,19 @@
+/* 記事一覧 */
+.article-list {
+    margin: 10px 2% 0;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    list-style: none;
+}
+
+/* 記事ブロック */
+.article-block {
+    width: 100%;
+    margin-bottom: 2%;
+}
+
+.article-block a {
+    text-align: left;
+}

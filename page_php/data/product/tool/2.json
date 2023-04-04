@@ -3,7 +3,7 @@
     "title": "グループ分けツール",
     "exp": "グループ分け用のツールです。<br>グループ分け対象のメンバー名を入力し、実行ボタンを押してください。<br>",
     "links": {
-        "site": "./productPage/tool/2/MakeGroups.html"
+        "site": "/productPage/tool/2/MakeGroups.html"
     },
     "updDate": "2022-11-23",
     "updUser": "Muriko"

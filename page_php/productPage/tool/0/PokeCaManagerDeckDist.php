@@ -3,7 +3,7 @@
 	$deckContentList = array();
 
 	// デッキ詳細ファイルの読みこみ
-	$deckFilePath = "./userData/deckData/" . $_GET["deckId"] . ".csv";
+	$deckFilePath = $_SERVER["DOCUMENT_ROOT"] . "/userData/deckData/" . $_GET["deckId"] . ".csv";
 	$handle = fopen($deckFilePath, 'r');
 	$idx = 0;
 	while($deckCardInfoList = fgetcsv($handle)){

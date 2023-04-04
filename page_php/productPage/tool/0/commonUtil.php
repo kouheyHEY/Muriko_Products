@@ -26,12 +26,12 @@
     const VERSION = "version";
 
     function getSystemInfo($infoKey){
-        $systemInfoJson = json_decode(file_get_contents("./masterData/systemMaster.json"), true);
+        $systemInfoJson = json_decode(file_get_contents($_SERVER["DOCUMENT_ROOT"] . "/masterData/systemMaster.json"), true);
         return $systemInfoJson[$infoKey];
     }
 
     function registDeck($cardDataArray, $deckId, $deckName, $deckMaker, $isEdit){
-        $deckFilePath_deckDist = "./userData/deckData/" . $deckId . ".csv";
+        $deckFilePath_deckDist = $_SERVER["DOCUMENT_ROOT"] . "/userData/deckData/" . $deckId . ".csv";
         $handle_deckDist = fopen($deckFilePath_deckDist, 'w+');
 
         for($i = 0; $i < count(CARD_TYPE_VALUE); $i++){
@@ -57,7 +57,7 @@
         }
         $result_deckDist = fclose($handle_deckDist);
 
-        $deckFilePath_deckList = "./userData/deckList.csv";
+        $deckFilePath_deckList = $_SERVER["DOCUMENT_ROOT"] . "/userData/deckList.csv";
         $handle_deckList = fopen($deckFilePath_deckList, 'r');
         $deckInfoList = array();
         $index = 0;
@@ -66,7 +66,7 @@
         endwhile;
         fclose($handle_deckList);
 
-        $deckFilePath_deckList_new = "./userData/deckList_new.csv";
+        $deckFilePath_deckList_new = $_SERVER["DOCUMENT_ROOT"] . "/userData/deckList_new.csv";
         $handle_deckList_new = fopen($deckFilePath_deckList_new, 'w+');
         for($i = 0; $i < count($deckInfoList); $i++){
             if($i + 1 == $deckId){

@@ -1,5 +1,5 @@
 <!-- 各phpファイル読み込み -->
-<?php include_once("./inc/logic/about_logic.php"); ?>
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/about_logic.php"); ?>
 
 <!-- メイン -->
 <main>

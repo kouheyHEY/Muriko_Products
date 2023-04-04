@@ -1,6 +1,6 @@
 <!-- 各phpファイル読み込み -->
 <?php
-    include_once("./inc/logic/postProductComplete_logic.php");
+    include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/postProductComplete_logic.php");
 ?>
 
 <!-- メイン -->
@@ -77,7 +77,7 @@
     </div>
 
     <div class="button-back button-link">
-        <a href="./index.php">Back</a>
+        <a href="<?= $_SERVER['DOCUMENT_ROOT'] . '/index.php' ?>">Back</a>
     </div>
 
 </main>

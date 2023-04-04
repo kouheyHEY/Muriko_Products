@@ -27,6 +27,14 @@
         // カテゴリを「GAME」で初期化する
         $_SESSION['CATEGORY'] = $_SESSION["CATEGORIES"][0];
 
+        // 記事投稿情報を定義する
+        $_SESSION['SERVICES'] = $MASTER_INFO['MST_ARTICLE']['SERVICES'];
+        $_SESSION['SERVICE_ALIAS'] = $MASTER_INFO['MST_ARTICLE']['SERVICE_ALIAS'];
+        $_SESSION['SERVICE_URL'] = $MASTER_INFO['MST_ARTICLE']['SERVICE_URL'];
+
+        // 記事一覧参照先を「Zenn.dev」で初期化する
+        $_SESSION['SERVICE'] = $_SESSION['SERVICES'][0];
+
         // プロダクト一覧を読み込む
         $_SESSION['PRODUCT_LIST_JSON'] = $MASTER_INFO['PRODUCT_LIST'];
 

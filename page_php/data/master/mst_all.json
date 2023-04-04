@@ -1,7 +1,7 @@
 {
     "MST_SYSTEM": {
         "SYSTEM_TITLE": "Muriko Products",
-        "SYSTEM_VERSION": "1.1.0"
+        "SYSTEM_VERSION": "2.0.0"
     },
 
     "MST_CONTENT": {
@@ -46,6 +46,18 @@
             "TOOL": "Tool",
             "OTHER": "Other",
             "ACTIVITY": "Activity"
+        }
+    },
+
+    "MST_ARTICLE": {
+        "SERVICES": [
+            "ZENN"
+        ],
+        "SERVICE_ALIAS": {
+            "ZENN": "Zenn.dev"
+        },
+        "SERVICE_URL": {
+            "ZENN": "https://zenn.dev"
         }
     },
 

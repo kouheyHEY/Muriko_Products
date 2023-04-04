@@ -1,11 +1,11 @@
 <?php
     // 各パス（マスタファイル、各プロダクトファイル）の定義
-    define('FILEPATH_MASTER', './data/master/mst_all.json');
-    define('DIRPATH_PRODUCT_JSON', './data/product');
-    define('DIRPATH_PRODUCT_THUMBNAIL', './img/product');
-    define('DIRPATH_PRODUCT_PAGE', './productPage');
+    define('FILEPATH_MASTER', $_SERVER["DOCUMENT_ROOT"] . '/data/master/mst_all.json');
+    define('DIRPATH_PRODUCT_JSON', $_SERVER["DOCUMENT_ROOT"] . '/data/product');
+    define('DIRPATH_PRODUCT_THUMBNAIL', $_SERVER["DOCUMENT_ROOT"] . '/img/product');
+    define('DIRPATH_PRODUCT_PAGE', $_SERVER["DOCUMENT_ROOT"] . '/productPage');
     
-    define('DIRPATH_ARTICLE_JSON', './data/article');
+    define('DIRPATH_ARTICLE_JSON', $_SERVER["DOCUMENT_ROOT"] . '/data/article');
 
     // 各メッセージの定義
     define('MSG_NO_PRODUCT_ID', 'product id is not set.');
