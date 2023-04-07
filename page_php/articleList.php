@@ -23,7 +23,10 @@
 <!-- コンテンツメニュー読み込み -->
 <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/page/menu_content.php"); ?>
 
-<!-- プロダクト一覧ページ読み込み -->
+<!-- 記事メニュー読み込み -->
+<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/page/menu_article.php"); ?>
+
+<!-- 記事一覧ページ読み込み -->
 <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/page/articleList_parts.php"); ?>
 
 <!-- フッター読み込み -->

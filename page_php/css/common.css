@@ -170,9 +170,9 @@ ul {
 }
 
 /* 汎用ボタン２ */
-
 .button-link-linear button,
-.button-link-linear a {
+.button-link-linear a,
+.button-link-linear a span {
     background: none;
     border: none;
 
@@ -190,6 +190,10 @@ ul {
         font-size 0.3s ease-out;
 }
 
+.button-link-linear a span {
+    padding: 0.25rem 0;
+}
+
 .button-link button,
 .button-link-linear button,
 .button-link-linear-selected button {
@@ -197,7 +201,8 @@ ul {
 }
 
 .button-link-linear button:hover,
-.button-link-linear a:hover {
+.button-link-linear a:hover,
+.button-link-linear a:hover span {
     color: rgba(255, 255, 255, 1);
     transition: color 0.4s ease-out;
 }
@@ -224,7 +229,7 @@ ul {
 
 /* 汎用ボタン２（選択中） */
 .button-link-linear-selected button,
-.button-link-linear-selected a {
+.button-link-linear-selected a * {
     background: none;
     border: none;
 
@@ -385,18 +390,28 @@ ul {
         font-size: 2rem;
     }
 
+    .block-updtime {
+        font-size: 0.75rem;
+    }
+
     /* コンテンツタイトル */
     .button-link button,
     .button-link a,
     .button-link-linear button,
     .button-link-linear a,
+    .button-link-linear a span,
     .button-link-linear-selected button,
-    .button-link-linear-selected a {
+    .button-link-linear-selected a,
+    .button-link-linear-selected a span {
         padding: 5px;
         font-size: 1rem;
         transition:
             color 0.4s ease-out,
             font-size 0.3s ease-out;
+    }
+
+    .button-link-linear a span {
+        padding: 3px 0;
     }
 
     /* snsボタンクラス */
@@ -446,9 +461,15 @@ ul {
     .button-link a,
     .button-link-linear button,
     .button-link-linear a,
+    .button-link-linear a span,
     .button-link-linear-selected button,
-    .button-link-linear-selected a {
-        font-size: 0.9rem;
+    .button-link-linear-selected a,
+    .button-link-linear-selected a span {
+        font-size: 0.85rem;
+    }
+
+    .button-link-linear a span {
+        padding: 5px 0;
     }
 
     .sns-list {

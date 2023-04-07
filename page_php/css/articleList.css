@@ -11,9 +11,43 @@
 /* 記事ブロック */
 .article-block {
     width: 100%;
+    height: 120%;
     margin-bottom: 2%;
 }
 
 .article-block a {
     text-align: left;
+    height: auto;
+}
+
+.article-block a span.block-title {
+    height: 4rem;
+
+    display: flex;
+    align-items: center;
+}
+
+/* 記事ブロックの文字サイズ */
+.block-updtime {
+    font-size: 0.75rem !important;
+}
+
+@media screen and (max-width: 768px) {
+    .block-updtime {
+        font-size: 0.5rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .block-updtime {
+        font-size: 0.25rem !important;
+    }
+
+    .article-block a span.block-title {
+        height: 3rem;
+
+        display: flex;
+        align-items: center;
+    }
+
 }

@@ -51,13 +51,16 @@
 
     "MST_ARTICLE": {
         "SERVICES": [
-            "ZENN"
+            "ZENN",
+            "MURIPRO"
         ],
         "SERVICE_ALIAS": {
-            "ZENN": "Zenn.dev"
+            "ZENN": "Zenn.dev",
+            "MURIPRO": "Muriko Products"
         },
         "SERVICE_URL": {
-            "ZENN": "https://zenn.dev"
+            "ZENN": "https://zenn.dev",
+            "MURIPRO": "."
         }
     },
 

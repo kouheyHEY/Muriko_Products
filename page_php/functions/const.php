@@ -10,6 +10,7 @@
     // 各メッセージの定義
     define('MSG_NO_PRODUCT_ID', 'product id is not set.');
     define('MSG_NO_ARTICLE_ID', 'article id is not set.');
+    define('MSG_NO_ARTICLE', 'article not posted.');
 
     // 各マスタのスプレッドシートのリンクとID
     // define('SHEET_ID_MASTER', '10C9Wiy3GU2a_TF_TtHEFyiWyZjupaCEXnLZxFpizBQ0');

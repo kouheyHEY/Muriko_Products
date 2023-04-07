@@ -4,5 +4,6 @@
     include_once($_SERVER["DOCUMENT_ROOT"] . '/functions/commonUtil.php');
     include_once($_SERVER["DOCUMENT_ROOT"] . '/functions/ioUtil.php');
     include_once($_SERVER["DOCUMENT_ROOT"] . '/functions/categoryUtil.php');
+    include_once($_SERVER["DOCUMENT_ROOT"] . '/functions/articleUtil.php');
     include_once($_SERVER["DOCUMENT_ROOT"] . '/functions/initialize.php');
 ?>
