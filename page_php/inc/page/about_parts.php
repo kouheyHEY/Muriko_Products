@@ -8,12 +8,12 @@
 
     <!-- コンテンツタイトル -->
     <div class="content-title">
-        <span><?= $article_info_json["title"] ?></span>
+        <span><?= $about_info_json["title"] ?></span>
     </div>
 
     <!-- 当サイト説明 -->
     <div class="product-exp">
-        <p><?= $article_info_json["exp"] ?></p>
+        <p><?= $about_info_json["exp"] ?></p>
     </div>
     
 </div>

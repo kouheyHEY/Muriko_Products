@@ -65,6 +65,11 @@ body {
     margin: 5px 15px;
     font-family: 'Ubuntu-Regular';
     overflow-y: scroll;
+
+    /* 文字サイズの自動調整を無効化 */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
 }
 
 /* headerタグ */
@@ -390,6 +395,10 @@ ul {
         font-size: 2rem;
     }
 
+    .header-version {
+        font-size: 0.8rem;
+    }
+
     .block-updtime {
         font-size: 0.75rem;
     }
@@ -447,6 +456,11 @@ ul {
     /* タイトル */
     .header-title {
         font-size: 1.75rem;
+        transition: font-size 0.3s ease-out;
+    }
+
+    .header-version {
+        font-size: 0.8rem;
         transition: font-size 0.3s ease-out;
     }
 
