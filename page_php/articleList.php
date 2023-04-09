@@ -3,12 +3,14 @@
     include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/initialize_logic.php");
 
     // 記事が読み込まれていない場合
-    if (!isset($_SESSION['articleList'])) {
+    if (!isset($_SESSION['ARTICLE_LIST'])) {
 
-        // JSONデータが受信できた場合
-        if(isset($_POST['articleList'])){
-            // セッション変数に格納
-            $_SESSION['articleList'] = json_decode($_POST['articleList'], true);
+        // JSONデータを受信した場合
+        if(isset($_POST['ARTICLE_LIST'])){
+            // 記事一覧を降順にソートし、セッション変数に格納
+            $article_list_tmp = json_decode($_POST['ARTICLE_LIST'], true);
+            $article_list = sortObjAryZenn($article_list_tmp['articles'], false);
+            $_SESSION['ARTICLE_LIST'] = $article_list;
         }else{
             // 記事の取得ロジックを実行
             header('Location: ./functions/getArticleList.php');

@@ -177,6 +177,7 @@ ul {
 /* 汎用ボタン２ */
 /* 通常状態 */
 .button-link-linear button,
+.button-link-linear button span,
 .button-link-linear a,
 .button-link-linear a span {
     background: none;
@@ -196,8 +197,10 @@ ul {
         font-size 0.3s ease-out;
 }
 
-.button-link-linear a span {
+.button-link-linear a span,
+.button-link-linear button span {
     padding: 0.25rem 0;
+    font-size: 1.0rem;
 }
 
 .button-link button,
@@ -208,6 +211,7 @@ ul {
 
 /* マウスオーバー時 */
 .button-link-linear button:hover,
+.button-link-linear button:hover span,
 .button-link-linear a:hover,
 .button-link-linear a:hover span {
     color: rgba(255, 255, 255, 1);

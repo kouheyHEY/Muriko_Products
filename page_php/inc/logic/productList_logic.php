@@ -6,6 +6,10 @@
         initCategory();
     }
 
-    // プロダクト一覧のソート
-    $product_list = sortObjAry($_SESSION["PRODUCT_LIST_JSON"][$_SESSION["CATEGORY"]], "updDate", true);
+    // 該当のカテゴリのプロダクト一覧が取得済みでない場合
+    if(!isset($_SESSION["PRODUCT_LIST"][$_SESSION["CATEGORY"]])){
+        // プロダクト一覧をソートし、セッション変数に格納する
+        $_SESSION["PRODUCT_LIST"][$_SESSION["CATEGORY"]] =
+            sortObjAry($_SESSION["PRODUCT_LIST_JSON"][$_SESSION["CATEGORY"]], false);
+    }
 ?>

@@ -3,7 +3,7 @@
     include_once("../inc/logic/initialize_logic.php");
 
     // セッションにデータが格納されている場合
-    if (isset($_SESSION['articleList'])) {
+    if (isset($_SESSION['ARTICLE_LIST'])) {
         header('Location: ../articleList.php');
         exit;
     }
@@ -16,7 +16,7 @@
     <body>
         <!-- 記事一覧送信用のフォーム -->
         <form action="../articleList.php" method="post" enctype="application/json" name="articleListForm">
-            <input type="hidden" name="articleList">
+            <input type="hidden" name="ARTICLE_LIST">
         </form>
 
         <script type="text/javascript">
@@ -26,7 +26,7 @@
                 console.log(articleList);
 
                 // formに値を設定
-                document.forms["articleListForm"].elements["articleList"].value = articleList;
+                document.forms["articleListForm"].elements["ARTICLE_LIST"].value = articleList;
                 // formを送信
                 document.forms["articleListForm"].submit();
             }

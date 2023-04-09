@@ -41,6 +41,15 @@
     text-align: left;
 }
 
+.product-block button span.block-title {
+    display: flex;
+    align-items: center;
+}
+
+.block-updtime {
+    font-size: 0.85rem !important;
+}
+
 @media screen and (max-width: 960px) {}
 
 @media screen and (max-width: 768px) {
@@ -75,5 +84,20 @@
     /* ナビゲーションバーの要素 */
     .product-navbar li {
         /* min-width: 120px; */
+    }
+
+    .block-updtime {
+        font-size: 0.85rem !important;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+    .product-block button span.block-title {
+        height: 3rem;
+    }
+
+    .block-updtime {
+        font-size: 0.5rem !important;
     }
 }

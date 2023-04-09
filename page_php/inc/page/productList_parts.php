@@ -15,10 +15,11 @@
         <form action="./product.php" method="get">
             <ul class="product-list fadeDown_2">
                 <!-- プロダクトブロック -->
-                <?php foreach($product_list as $product) : ?>
+                <?php foreach($_SESSION["PRODUCT_LIST"][$_SESSION["CATEGORY"]] as $product) : ?>
                     <li class="product-block button-link-linear">
                         <button class="button-under-line" type="submit" name="product_id" value="<?= $product["id"] ?>">
-                            <?= $product["title"] ?>
+                            <span class="block-title"><?= $product["title"] ?></span>
+                            <span class="block-updtime"><?= $product["updDate"] ?></span>
                         </button>
                     </li>
                 <?php endforeach ?>
@@ -26,23 +27,7 @@
         </form>
     
     <?php else : ?>
-        <!-- カテゴリが「ACTIVITY」の場合 -->
-        <div class="fadeDown_2">
-            <div class="content-title">
-                <span>Contributions</span>
-            </div>
-
-            <!-- Githubの草 -->
-            <div class="product-exp github-info">
-                <div class="github-link">
-                    <i class="fab fa-github-square"></i>
-                    <a href="https://github.com/kouheyHEY" target="_blank"><span id="github-name">kouheyHEY</span></a>
-                </div>
-                <a href="https://github.com/kouheyHEY" target="_blank">
-                    <img class="github-glaph" src="https://grass-graph.appspot.com/images/kouheyHEY.png">
-                </a>
-            </div>
-        </div>
+        <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/page/github_info.php"); ?>
 
     <?php endif; ?>
 
