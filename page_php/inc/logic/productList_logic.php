@@ -12,4 +12,5 @@
         $_SESSION["PRODUCT_LIST"][$_SESSION["CATEGORY"]] =
             sortObjAry($_SESSION["PRODUCT_LIST_JSON"][$_SESSION["CATEGORY"]], false);
     }
+
 ?>
