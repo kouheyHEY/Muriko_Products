@@ -45,9 +45,6 @@
 
     .article-block a span.block-title {
         height: 3rem;
-
-        display: flex;
-        align-items: center;
     }
 
 }

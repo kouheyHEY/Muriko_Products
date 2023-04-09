@@ -22,21 +22,27 @@
             <!-- githubボタン表示 -->
             <?php if(isset($product_info_json["links"]["git"])) : ?>
                 <div class="button-link-linear button-github">
-                    <a href="<?= $product_info_json['links']['git'] ?>">GitHub</a>
+                    <a class="button-under-line" href="<?= $product_info_json['links']['git'] ?>">
+                        GitHub
+                    </a>
                 </div>
             <?php endif; ?>
 
             <!-- ページ遷移ボタン表示 -->
             <?php if(isset($product_info_json["links"]["site"])) : ?>
                 <div class="button-link-linear button-topage">
-                    <a href="<?= $product_info_json['links']['site'] ?>">ページを表示</a>
+                    <a class="button-under-line" href="<?= $product_info_json['links']['site'] ?>">
+                        ページを表示
+                    </a>
                 </div>
             <?php endif; ?>
 
         </div>
     <?php endif; ?>
     <div class="button-back button-link-linear">
-        <a href="/index.php">Back</a>
+        <a class="button-under-line" href="/index.php">
+            Back
+        </a>
     </div>
 
 </div>

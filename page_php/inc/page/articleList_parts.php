@@ -16,7 +16,7 @@
         <?php if($_SESSION["SERVICE"] == "ZENN") : ?>
             <?php foreach($article_list as $article) : ?>
                 <li class="article-block button-link-linear">
-                    <a href="<?= $_SESSION['SERVICE_URL'][$_SESSION['SERVICE']] . $article['path'] ?>">
+                    <a class="button-under-line" href="<?= $_SESSION['SERVICE_URL'][$_SESSION['SERVICE']] . $article['path'] ?>">
                         <!-- タイトルを出力 -->
                         <span class="block-title"><?php echo($article["title"]); ?></span>
 

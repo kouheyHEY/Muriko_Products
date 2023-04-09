@@ -17,7 +17,9 @@
                 <!-- プロダクトブロック -->
                 <?php foreach($product_list as $product) : ?>
                     <li class="product-block button-link-linear">
-                        <button type="submit" name="product_id" value="<?= $product["id"] ?>"><?= $product["title"] ?></button>
+                        <button class="button-under-line" type="submit" name="product_id" value="<?= $product["id"] ?>">
+                            <?= $product["title"] ?>
+                        </button>
                     </li>
                 <?php endforeach ?>
             </ul>
@@ -34,7 +36,7 @@
             <div class="product-exp github-info">
                 <div class="github-link">
                     <i class="fab fa-github-square"></i>
-                    <a href="https://github.com/kouheyHEY" target="_blank">kouheyHEY</a>
+                    <a href="https://github.com/kouheyHEY" target="_blank"><span id="github-name">kouheyHEY</span></a>
                 </div>
                 <a href="https://github.com/kouheyHEY" target="_blank">
                     <img class="github-glaph" src="https://grass-graph.appspot.com/images/kouheyHEY.png">
