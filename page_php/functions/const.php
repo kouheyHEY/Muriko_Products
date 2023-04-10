@@ -1,6 +1,7 @@
 <?php
     // 各パス（マスタファイル、各プロダクトファイル）の定義
     define('FILEPATH_MASTER', $_SERVER["DOCUMENT_ROOT"] . '/data/master/mst_all.json');
+    define('FILEPATH_MASTER_PAGING', $_SERVER["DOCUMENT_ROOT"] . '/data/master/mst_paging.json');
     define('DIRPATH_PRODUCT_JSON', $_SERVER["DOCUMENT_ROOT"] . '/data/product');
     define('DIRPATH_PRODUCT_THUMBNAIL', $_SERVER["DOCUMENT_ROOT"] . '/img/product');
     define('DIRPATH_PRODUCT_PAGE', $_SERVER["DOCUMENT_ROOT"] . '/productPage');

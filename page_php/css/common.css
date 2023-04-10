@@ -337,6 +337,10 @@ ul {
 
 }
 
+.invisible {
+    visibility: hidden;
+}
+
 /* フェード用要素 */
 .fadeDown {
     animation-name: fadeDownAnime;

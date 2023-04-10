@@ -7,6 +7,7 @@
     function getMaster(){
         // 各マスタファイルを読み込む
         $MASTER_INFO = jsonToObj(FILEPATH_MASTER);
+        $MASTER_PAGING = jsonToObj(FILEPATH_MASTER_PAGING);
 
         // タイトルとバージョン情報を定義する
         $_SESSION["SYSTEM_TITLE"] = $MASTER_INFO['MST_SYSTEM']['SYSTEM_TITLE'];
@@ -40,6 +41,9 @@
 
         // SNSボタン情報を読み込む
         $_SESSION['SNS_BUTTON'] = $MASTER_INFO['SNS_BUTTON'];
+
+        // ページング機能に関する情報を読み込む
+        $_SESSION['CONTENT_PER_PAGE'] = $MASTER_PAGING['MST_PAGING']['CONTENT_PER_PAGE'];
     }
 
     // [分岐]セッションの開始状況によって分岐する

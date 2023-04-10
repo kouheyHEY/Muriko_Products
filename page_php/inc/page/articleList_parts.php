@@ -15,9 +15,10 @@
         <!-- 「Zenn.dev」の場合 -->
         <?php if($_SESSION["SERVICE"] == "ZENN") : ?>
 
-            <?php foreach($_SESSION['ARTICLE_LIST'] as $article) : ?>
+            <?php foreach($articleList as $article) : ?>
                 <li class="article-block button-link-linear">
                     <a class="button-under-line" href="<?= $_SESSION['SERVICE_URL'][$_SESSION['SERVICE']] . $article['path'] ?>">
+
                         <!-- タイトルを出力 -->
                         <span class="block-title"><?php echo($article["title"]); ?></span>
 
@@ -35,11 +36,59 @@
                         </span>
                     </a>
                 </li>
-            <?php endforeach ?>
+            <?php endforeach; ?>
+
         <?php else: ?>
+
         <!-- 「Zenn.dev」以外の場合 -->
             <div class="msg_alert"><?= MSG_NO_ARTICLE ?></div>
         <?php endif; ?>
     </ul>
+
+    <div id="page-link" class="fadeDown_3">
+        <!-- 前のページのリンク -->
+        <form action="" method="get" class="to-next-prev">
+            <!-- 前のページが存在するかどうか -->
+            <?php $exPrev = ($currentPage > 1) ?>
+
+            <input type="hidden" name="page" value="<?= $currentPage - 1 ?>">
+            <div class="button-link-linear">
+                <button <?= !$exPrev ? "class='invisible' disabled" : "type='submit'" ?>>
+                    PREV
+                </button>
+            </div>
+        </form>
+
+        <?php for($i = 1; $i <= ceil($totalCount / $_SESSION["CONTENT_PER_PAGE"]); $i++) : ?>
+            <?php if($i == $currentPage) : ?>
+                <!-- 現在のページの番号 -->
+                <div class="button-link-linear-selected"><button disabled><?= $i ?></button></div>
+
+            <?php else: ?>
+                <!-- ページのリンク -->
+                <form action="" method="get">
+                    <input type="hidden" name="page" value="<?= $i ?>">
+                    <div class="button-link-linear">
+                        <button type="submit"><?= $i ?></button>
+                    </div>
+                </form>
+
+            <?php endif; ?>
+
+        <?php endfor; ?>
+
+        <!-- 次のページのリンク -->
+        <form action="" method="get" class="to-next-prev">
+            <!-- 次のページが存在するかどうか -->
+            <?php $exNext = $currentPage < ceil($totalCount / $_SESSION["CONTENT_PER_PAGE"]) ?>
+
+            <input type="hidden" name="page" value="<?= $currentPage + 1 ?>">
+            <div class="button-link-linear">
+                <button type="submit" <?= !$exNext ? "class='invisible' disabled" : "" ?>>
+                    NEXT
+                </button>
+            </div>
+        </form>
+    </div>
 
 </main>

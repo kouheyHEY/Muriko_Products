@@ -6,5 +6,5 @@ function addClassName(_elmList, _className) {
 }
 
 // フェードアニメーションを各要素に適用する
-addClassName(document.getElementsByTagName("button"), "fadeDown_slow");
+// addClassName(document.getElementsByTagName("button"), "fadeDown_slow");
 addClassName(document.getElementsByClassName("button-link"), "fadeDown_slow");
