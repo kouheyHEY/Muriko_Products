@@ -21,19 +21,19 @@
 
     <!-- cssファイルの読み込み -->
     <!-- <link rel="stylesheet" href="../css/reset.css"> -->
-    <link rel="stylesheet" href="../css/pageLink.css">
-    <link rel="stylesheet" href="../css/productList.css">
-    <link rel="stylesheet" href="../css/product.css">
-    <link rel="stylesheet" href="../css/postProduct.css">
-    <link rel="stylesheet" href="../css/articleList.css">
-    <link rel="stylesheet" href="../css/common.css">
+    <link rel="stylesheet" href="/css/pageLink.css">
+    <link rel="stylesheet" href="/css/productList.css">
+    <link rel="stylesheet" href="/css/product.css">
+    <link rel="stylesheet" href="/css/postProduct.css">
+    <link rel="stylesheet" href="/css/articleList.css">
+    <link rel="stylesheet" href="/css/common.css">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
         integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
     <!-- タイトル設定 -->
     <title>
-        <?= $_SESSION["SYSTEM_TITLE"] ?>
+        <?= Config::getMasterData("SYSTEM_TITLE") ?>
     </title>
 
 </head>

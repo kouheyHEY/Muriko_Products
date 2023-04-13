@@ -1,6 +1,6 @@
 <!-- 各種SNSボタンを設定 -->
 <ul class="sns-list fadeDown_3">
-    <?php foreach ($_SESSION["SNS_BUTTON"] as $btn): ?>
+    <?php foreach (Config::getMasterData("SNS_BUTTON") as $btn): ?>
         <li class="sns-link">
             <a id="<?= $btn['name'] ?>" href="<?= $btn['href'] ?>"><?= $btn["name"] ?></a>
         </li>

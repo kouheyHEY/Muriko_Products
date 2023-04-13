@@ -1,7 +1,7 @@
 <html lang="ja">
 
 <!-- headタグ読み込み -->
-<?php include_once("partials/header-meta.php"); ?>
+<?php include_once("header-meta.php"); ?>
 
 <body>
 
@@ -9,12 +9,12 @@
     <header>
         <!-- タイトル -->
         <h1 class="header-title">
-            <a href="./index.php"><span id="system_title">
-                    <?= $_SESSION["SYSTEM_TITLE"] ?>
+            <a href="/about"><span id="system_title">
+                    <?= Config::getMasterData("SYSTEM_TITLE") ?>
                 </span></a>
         </h1>
         <!-- バージョン -->
         <h2 class="header-version">ver <span id="system_version">
-                <?= $_SESSION["SYSTEM_VERSION"] ?>
+                <?= Config::getMasterData("SYSTEM_VERSION") ?>
             </span></h2>
     </header>

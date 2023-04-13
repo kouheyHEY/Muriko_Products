@@ -3,22 +3,22 @@
 /* フォント */
 @font-face {
     font-family: 'Ubuntu-Regular';
-    src: url('../fonts/Ubuntu-R.ttf');
+    src: url('/fonts/Ubuntu-R.ttf');
 }
 
 @font-face {
     font-family: 'Ubuntu-Italic';
-    src: url('../fonts/Ubuntu-RI.ttf');
+    src: url('/fonts/Ubuntu-RI.ttf');
 }
 
 @font-face {
     font-family: 'Ubuntu-Bold';
-    src: url('../fonts/Ubuntu-M.ttf');
+    src: url('/fonts/Ubuntu-M.ttf');
 }
 
 @font-face {
     font-family: 'Ubuntu-Bold-Italic';
-    src: url('../fonts/Ubuntu-MI.ttf');
+    src: url('/fonts/Ubuntu-MI.ttf');
 }
 
 /* 全タグ */

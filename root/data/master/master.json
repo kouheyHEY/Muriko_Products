@@ -1,0 +1,101 @@
+{
+    "SYSTEM_TITLE": "Muriko Products",
+    "SYSTEM_VERSION": "2.0.0",
+
+
+
+    "CONTENTS": [
+        "ABOUT",
+        "NOTES",
+        "PRODUCTS"
+    ],
+    "CONTENTS_NOTUSE": [
+        "NOTES",
+        "CONTACT"
+    ],
+    "CONTENT_DISP_NAME": {
+        "ABOUT": "About",
+        "PRODUCTS": "Product",
+        "NOTES": "Notes"
+    },
+    "CONTENT_DISP_NAME_NOTUSE": {
+        "NOTES": "Notes"
+    },
+    "CONTENT_URL_NAME": {
+        "ABOUT": "about",
+        "PRODUCTS": "productList",
+        "NOTES": "articleList"
+    },
+    "CONTENT_URL_NAME_NOTUSE": {
+        "NOTES": "articleList"
+    },
+
+
+
+    "CATEGORIES": [
+        "GAME",
+        "TOOL",
+        "OTHER",
+        "ACTIVITY"
+    ],
+    "CATEGORY_DISP_NAME": {
+        "GAME": "Game",
+        "TOOL": "Tool",
+        "OTHER": "Other",
+        "ACTIVITY": "Activity"
+    },
+
+
+
+    "SERVICES": [
+        "ZENN",
+        "MURIPRO"
+    ],
+    "SERVICE_ALIAS": {
+        "ZENN": "Zenn.dev",
+        "MURIPRO": "Muriko Products"
+    },
+    "SERVICE_URL": {
+        "ZENN": "https://zenn.dev",
+        "MURIPRO": "."
+    },
+
+
+
+    "CONTENT_PER_PAGE": 6,
+
+
+
+    "SNS_BUTTON": [
+        {
+            "name": "Twitter",
+            "href": "https://twitter.com/VBbeat_bbb",
+            "style": {
+                "button_color_hover": "#00acee",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#00acee"
+            }
+        },
+        {
+            "name": "Github",
+            "href": "https://github.com/kouheyHEY",
+            "style": {
+                "button_color_hover": "#000000",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#000000"
+            }
+        },
+        {
+            "name": "SoundCloud",
+            "href": "https://soundcloud.com/murakoumur",
+            "style": {
+                "button_color_hover": "ff7700",
+                "button_color": "#ffffff",
+                "font_color_hover": "#ffffff",
+                "font_color": "#ff7700"
+            }
+        }
+    ]
+}
