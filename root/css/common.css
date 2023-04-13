@@ -1,0 +1,535 @@
+/* 全ページ共通設定 */
+
+/* フォント */
+@font-face {
+    font-family: 'Ubuntu-Regular';
+    src: url('../fonts/Ubuntu-R.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Italic';
+    src: url('../fonts/Ubuntu-RI.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold';
+    src: url('../fonts/Ubuntu-M.ttf');
+}
+
+@font-face {
+    font-family: 'Ubuntu-Bold-Italic';
+    src: url('../fonts/Ubuntu-MI.ttf');
+}
+
+/* 全タグ */
+* {
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+/* htmlタグ */
+html {
+    /* オシャな背景 */
+    /*
+    background:
+        linear-gradient(135deg,
+            #c9d9e9 21px,
+            #daeafa 22px,
+            #daeafa 24px,
+            transparent 24px,
+            transparent 67px,
+            #daeafa 67px,
+            #daeafa 69px,
+            transparent 69px),
+        linear-gradient(225deg,
+            #c9d9e9 21px,
+            #daeafa 22px,
+            #daeafa 24px,
+            transparent 24px,
+            transparent 67px,
+            #daeafa 67px,
+            #daeafa 69px,
+            transparent 69px)0 64px;
+    background-color: #c9d9e9;
+    background-size: 64px 128px;
+    */
+    /* シンプル背景 */
+    background:
+        linear-gradient(to bottom,
+            #003020,
+            #000c0c);
+}
+
+/* bodyタグ */
+body {
+    margin: 5px 15px;
+    font-family: 'Ubuntu-Regular';
+    overflow-y: scroll;
+
+    /* 文字サイズの自動調整を無効化 */
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    text-size-adjust: none;
+}
+
+/* headerタグ */
+header {
+    margin: 10px 0 20px;
+}
+
+/* mainタグ */
+main {
+    max-width: 960px;
+    min-width: 170px;
+    min-height: 360px;
+    margin: 0 auto;
+    padding: 10px 4% 0;
+}
+
+/* カテゴリメニュー */
+.menu-category {
+    max-width: 960px;
+    min-width: 170px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* footerタグ */
+footer {
+    max-width: 960px;
+    min-width: 170px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* aタグ */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* ulタグ */
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+/* snsボタンクラス */
+.sns-list {
+    max-width: 600px;
+    width: 60%;
+    min-width: 380px;
+    text-align: center;
+    margin: 5px auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sns-link {
+    width: 29%;
+    margin: 0 2%;
+    margin-bottom: 2%;
+}
+
+.sns-link a {
+    padding: 5px 10px;
+    border: 2px solid;
+    border-radius: 5px;
+
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.sns-link a:hover {
+    transform: translate(0, 5px);
+}
+
+/* 汎用ボタン */
+.button-link,
+.button-link-linear {
+    text-align: center;
+}
+
+.button-link button,
+.button-link a {
+    padding: 5px 10px;
+    color: black;
+    background-color: #ffffff;
+    border: 2px solid black;
+    border-radius: 5px;
+
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.button-link button:hover,
+.button-link a:hover {
+    transform: translate(0, 5px);
+    background-color: #d0d0ef;
+}
+
+/* 汎用ボタン２ */
+/* 通常状態 */
+.button-link-linear button,
+.button-link-linear button span,
+.button-link-linear a,
+.button-link-linear a span {
+    background: none;
+    border: none;
+
+    position: relative;
+
+    display: block;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    font-family: 'Ubuntu-Regular';
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 0.3);
+    transition:
+        color 0.4s ease-out,
+        font-size 0.3s ease-out;
+}
+
+.button-link-linear a span,
+.button-link-linear button span {
+    padding: 0.25rem 0;
+    font-size: 1.0rem;
+}
+
+.button-link button,
+.button-link-linear button,
+.button-link-linear-selected button {
+    width: 100%;
+}
+
+/* マウスオーバー時 */
+.button-link-linear button:hover,
+.button-link-linear button:hover span,
+.button-link-linear a:hover,
+.button-link-linear a:hover span {
+    color: rgba(255, 255, 255, 1);
+    transition: color 0.4s ease-out;
+}
+
+/* 疑似要素after */
+.button-link-linear button::after,
+.button-link-linear a::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    bottom: -5px;
+
+    width: 0;
+    height: 2px;
+
+    background-color: #ffffff;
+    transition: width 0.3s ease-out;
+}
+
+.button-link-linear button:hover::after,
+.button-link-linear a:hover::after {
+    width: 100%;
+}
+
+/* ボタンの下線表示 */
+.button-under-line::before {
+    content: "";
+    position: absolute;
+
+    left: 0;
+    bottom: -5px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* 汎用ボタン２（選択中） */
+.button-link-linear-selected button,
+.button-link-linear-selected a * {
+    background: none;
+    border: none;
+
+    position: relative;
+
+    display: block;
+    padding: 5px 10px;
+    font-size: 1.25rem;
+    font-family: 'Ubuntu-Regular';
+    font-weight: 600;
+
+    color: rgba(255, 255, 255, 1);
+}
+
+.button-link-linear-selected button::after,
+.button-link-linear-selected a::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    bottom: -5px;
+
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+}
+
+
+/* タイトル */
+.header-title {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Ubuntu-Bold';
+    font-size: 2.5rem;
+}
+
+.header-version {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Ubuntu-Bold';
+    font-size: 1rem;
+}
+
+/* コンテンツタイトル */
+.content-title {
+    height: 1.5rem;
+    margin: 10px 0;
+    line-height: 1.25rem;
+
+    /* オシャタイトル装飾 */
+    /*
+    background-image:
+        linear-gradient(90deg,
+            #0050dd 0 5px,
+            transparent 5px 15px,
+            #808080 15px);
+    background-repeat: no-repeat;
+    background-size: 100% 5px;
+    background-position: bottom;
+    */
+
+    /* 普通タイトル装飾 */
+    /* border-bottom: #ffffff 2px solid; */
+}
+
+.content-title span {
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: font-size 0.3s ease-out;
+}
+
+/* コンテンツ背景 */
+.content-box {
+    padding: 5px 15px 15px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.55);
+
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+/* フェード用要素 */
+.fadeDown {
+    animation-name: fadeDownAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.fadeDown_2 {
+    animation-name: fadeDownAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.3s;
+}
+
+.fadeDown_3 {
+    animation-name: fadeDownAnime;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+    animation-delay: 0.6s;
+}
+
+@keyframes fadeDownAnime {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* github-linkクラス */
+.github-link {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#github-name {
+    color: #ffffff;
+}
+
+.github-glaph {
+    width: 100%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.github-info {
+    transition: 0.3s;
+}
+
+.github-info:hover {
+    transform: translate(0, 5px);
+}
+
+/* フッター 権利表記 */
+.footer-right {
+    text-align: center;
+}
+
+/* メッセージ */
+.msg_alert {
+    margin-top: 30px;
+    margin-bottom: 10px;
+    font-size: 1.25rem;
+}
+
+* {
+    transition: all 0.3s ease-out;
+}
+
+@media screen and (max-width: 768px) {
+
+    /* タイトル */
+    .header-title {
+        font-size: 2rem;
+    }
+
+    .header-version {
+        font-size: 0.8rem;
+    }
+
+    .block-updtime {
+        font-size: 0.75rem;
+    }
+
+    /* コンテンツタイトル */
+    .button-link button,
+    .button-link a,
+    .button-link-linear button,
+    .button-link-linear a,
+    .button-link-linear a span,
+    .button-link-linear-selected button,
+    .button-link-linear-selected a,
+    .button-link-linear-selected a span {
+        padding: 5px;
+        font-size: 1rem;
+        transition:
+            color 0.4s ease-out,
+            font-size 0.3s ease-out;
+    }
+
+    .button-link-linear a span {
+        padding: 3px 0;
+    }
+
+    /* snsボタンクラス */
+    .sns-list {
+        width: 100%;
+        text-align: center;
+    }
+
+    .sns-link {
+        width: 29%;
+        margin: 0 2%;
+        margin-bottom: 2%;
+    }
+
+    .sns-link a {
+        padding: 5px;
+        border: 2px solid;
+        border-radius: 5px;
+
+        display: block;
+        font-size: 1rem;
+        font-weight: bold;
+    }
+
+    * {
+        transition: all 0.3s ease-out;
+    }
+
+}
+
+@media screen and (max-width: 480px) {
+
+    /* タイトル */
+    .header-title {
+        font-size: 1.75rem;
+        transition: font-size 0.3s ease-out;
+    }
+
+    .header-version {
+        font-size: 0.8rem;
+        transition: font-size 0.3s ease-out;
+    }
+
+    /* コンテンツタイトル */
+    .content-title span {
+        /* font-family: 'Ubuntu-Bold'; */
+        font-size: 1.25rem;
+        transition: font-size 0.3s ease-out;
+    }
+
+    .button-link button,
+    .button-link a,
+    .button-link-linear button,
+    .button-link-linear a,
+    .button-link-linear a span,
+    .button-link-linear-selected button,
+    .button-link-linear-selected a,
+    .button-link-linear-selected a span {
+        font-size: 0.85rem;
+    }
+
+    .button-link-linear a span {
+        padding: 5px 0;
+    }
+
+    .sns-list {
+        min-width: auto;
+        justify-content: left;
+    }
+
+    .sns-link {
+        width: 45%;
+    }
+
+    .sns-link a {
+        font-size: 0.75rem;
+    }
+
+    * {
+        transition: all 0.3s ease-out;
+    }
+
+}

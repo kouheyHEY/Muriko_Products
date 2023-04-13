@@ -1,0 +1,11 @@
+{
+    "id": "1",
+    "title": "反転パズル",
+    "exp": "3×3のパズルをひっくり返して全パネルを同じ色にすればクリアです。<br>難しさを選択することができます。全モードをクリアすると。。。？",
+    "links": {
+        "site": "/productPage/game/1/ReversiblePuzzle/ReversiblePuzzle.html",
+        "git": ""
+    },
+    "updDate": "2022-08-28",
+    "updUser": "Muriko"
+}

@@ -1,0 +1,21 @@
+.product-exp {
+    margin: 20px 2%;
+}
+
+.product-exp .button-link-linear {
+    margin: 10px 0;
+    text-align: left;
+}
+
+.product-exp .button-link-linear a,
+.button-back a {
+    display: inline-block;
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 480px) {
+    .product-exp {
+        font-size: 0.8rem;
+    }
+}
