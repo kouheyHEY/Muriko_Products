@@ -15,9 +15,8 @@ class BaseView
         extract($params);
         ob_start();
         include $this->view_path . $template . '.php';
-        $content = ob_get_clean();
+        $mainContent = ob_get_clean();
         include $this->view_path . 'layout.php';
     }
-
 }
 ?>

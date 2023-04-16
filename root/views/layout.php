@@ -1,10 +1,25 @@
-<?php
-// ヘッダー読み込み
-include_once("partials/header.php");
+<!-- ヘッダー読み込み -->
+<?php include_once("partials/header.php"); ?>
 
-// メインコンテンツ読み込み
-echo ($content);
+<!-- コンテンツメニュー -->
+<!-- タイトル -->
+<div class="menu-content">
 
-// フッター読み込み
-include_once("partials/footer.php");
-?>
+    <!-- ナビゲーションバー -->
+    <form action="./index.php" method="get">
+        <ul class="product-navbar fadeDown">
+            <?php foreach (Config::getMasterData("CONTENTS") as $content): ?>
+                <?php $selectContent = ($content == $_SESSION["CONTENT"]) ? '-selected' : '' ?>
+                <li class="button-link-linear<?= $selectContent ?>">
+                    <button type="submit" name="CONTENT" value="<?= $content ?>" id="<?= $content ?>"><?= $content ?></button>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </form>
+</div>
+
+<!-- メインコンテンツ読み込み -->
+<?= $mainContent ?>
+
+<!-- フッター読み込み -->
+<?php include_once("partials/footer.php"); ?>

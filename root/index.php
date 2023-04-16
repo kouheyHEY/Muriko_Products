@@ -24,8 +24,8 @@ if (!isset($parameters[1])) {
     $controller_name = ucfirst($parameters[1]) . 'Controller';
 }
 
-if ($parameters[1] === 'about') {
-    // ~/about にアクセスした場合
+if ($parameters[1] === 'about' || $parameters[1] === 'index.php') {
+    // ~/about にアクセスした場合, またはドメイン名のみだった場合
     $action_name = 'index';
 
 } elseif ($parameters[1] === 'product') {
