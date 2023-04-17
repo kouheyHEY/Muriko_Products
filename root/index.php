@@ -20,7 +20,7 @@ $controller_name = 'AboutController';
 $action_name = 'index';
 
 // URLパラメータに応じて、コントローラとアクションを設定する
-if (!isset($parameters[1])) {
+if (isset($parameters[1])) {
     $controller_name = ucfirst($parameters[1]) . 'Controller';
 }
 

@@ -205,7 +205,8 @@ ul {
 
 .button-link button,
 .button-link-linear button,
-.button-link-linear-selected button {
+.button-link-linear-selected button,
+.button-link-linear-selected a {
     width: 100%;
 }
 
@@ -255,7 +256,8 @@ ul {
 
 /* 汎用ボタン２（選択中） */
 .button-link-linear-selected button,
-.button-link-linear-selected a * {
+/* .button-link-linear-selected a *, */
+.button-link-linear-selected a {
     background: none;
     border: none;
 

@@ -6,16 +6,14 @@
 <div class="menu-content">
 
     <!-- ナビゲーションバー -->
-    <form action="./index.php" method="get">
-        <ul class="product-navbar fadeDown">
-            <?php foreach (Config::getMasterData("CONTENTS") as $content): ?>
-                <?php $selectContent = ($content == "ABOUT") ? '-selected' : '' ?>
-                <li class="button-link-linear<?= $selectContent ?>">
-                    <button type="submit" name="CONTENT" value="<?= $content ?>" id="<?= $content ?>"><?= $content ?></button>
-                </li>
-            <?php endforeach ?>
-        </ul>
-    </form>
+    <ul class="product-navbar fadeDown">
+        <?php foreach (Config::getMasterData("CONTENTS") as $content): ?>
+            <?php $selectContent = ($content == $currentContent) ? '-selected' : '' ?>
+            <li class="button-link-linear<?= $selectContent ?>">
+                <a href="/<?= Config::getMasterData("CONTENT_URL_NAME")[$content] ?>"><?= $content ?></a>
+            </li>
+        <?php endforeach ?>
+    </ul>
 </div>
 
 <!-- メインコンテンツ読み込み -->

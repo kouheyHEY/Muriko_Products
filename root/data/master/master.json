@@ -23,8 +23,8 @@
     },
     "CONTENT_URL_NAME": {
         "ABOUT": "about",
-        "PRODUCTS": "productList",
-        "NOTES": "articleList"
+        "PRODUCTS": "product",
+        "NOTES": "article"
     },
     "CONTENT_URL_NAME_NOTUSE": {
         "NOTES": "articleList"
