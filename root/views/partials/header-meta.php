@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- jsの読み込み -->
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../script/common.js"></script>
-    <script type="text/javascript" src="../script/commonScript.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="../js/common.js"></script>
+    <script type="text/javascript" src="../js/commonScript.js"></script>
 
     <!-- OGPの設定 -->
     <meta property="og:url" content="http://vbbeat.php.xdomain.jp/index.php" />
