@@ -1,6 +1,12 @@
 RewriteEngine On
-RewriteRule ^about$ /index.php [L]
-RewriteRule ^product/([^/]+)/(\d+)$ /index.php?category=$1&id=$2 [L]
-RewriteRule ^product/([^/]+)$ /index.php?category=$1 [L]
-RewriteRule ^article/([^/]+)/(\d+)$ /index.php?service=$1&id=$2 [L]
-RewriteRule ^article/([^/]+)$ /index.php?service=$1 [L]
+RewriteBase /
+
+# RewriteRule ^about$ /index.php [L]
+# RewriteRule ^product/([^/]+)/(\d+)$ /index.php?category=$1&id=$2 [L]
+# RewriteRule ^product/([^/]+)$ /index.php?category=$1 [L]
+# RewriteRule ^article/([^/]+)/(\d+)$ /index.php?service=$1&id=$2 [L]
+# RewriteRule ^article/([^/]+)$ /index.php?service=$1 [L]
+
+RewriteRule ^(about|product|article)/([^/]+)/([^/]+)$ /index.php?param1=$1&param2=$2&param3=$3 [L]
+RewriteRule ^(about|product|article)/([^/]+)$ /index.php?param1=$1&param2=$2 [L]
+RewriteRule ^(about|product|article)$ /index.php?param1=$1 [L]
