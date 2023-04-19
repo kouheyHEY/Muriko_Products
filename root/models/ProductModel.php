@@ -15,14 +15,8 @@ class ProductModel extends BaseModel
 
     public function getProductsByCategory($category)
     {
-        $products = [];
-        $data = $this->getData();
-        foreach ($data['products'] as $product) {
-            if ($product['category'] == $category) {
-                $products[] = $product;
-            }
-        }
-        return $products;
+        $data = $this->getData('data/product/product_list.json');
+        return $data[strtoupper($category)];
     }
 }
 

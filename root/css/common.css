@@ -149,7 +149,8 @@ ul {
 
 /* 汎用ボタン */
 .button-link,
-.button-link-linear {
+.button-link-linear,
+.button-link-linear-selected {
     text-align: center;
 }
 

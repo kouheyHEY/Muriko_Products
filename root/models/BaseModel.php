@@ -7,7 +7,7 @@ class BaseModel
     {
     }
 
-    protected function getData($filePath = 'data/mst_all.json')
+    protected function getData($filePath = 'data/master/master.json')
     {
         $data = file_get_contents($filePath);
         return json_decode($data, true);

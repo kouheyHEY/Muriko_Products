@@ -10,7 +10,7 @@ class AboutController extends BaseController
         // 現在の表示コンテンツを設定
         $exParams['currentContent'] = 'ABOUT';
         // 画面の描画
-        $this->render('about', $exParams);
+        $this->render('about', array_merge($exParams, $params));
     }
 }
 ?>

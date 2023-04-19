@@ -2,7 +2,7 @@
 <main>
 
     <div class="fadeDown_2">
-        <?php if ($product_id === ""): ?>
+        <?php if ($id === ""): ?>
             <!-- 注意メッセージ表示 -->
             <div class="msg_alert">
                 <?= MSG_NO_PRODUCT_ID ?>
@@ -12,29 +12,29 @@
             <!-- コンテンツタイトル -->
             <div class="content-title">
                 <span>
-                    <?= $product_info_json["title"] ?>
+                    <?= $title ?>
                 </span>
             </div>
 
             <!-- プロダクト説明 -->
             <div class="product-exp">
                 <p>
-                    <?= $product_info_json["exp"] ?>
+                    <?= $exp ?>
                 </p>
 
                 <!-- githubボタン表示 -->
-                <?php if (isset($product_info_json["links"]["git"])): ?>
+                <?php if (isset($links["git"])): ?>
                     <div class="button-link-linear button-github">
-                        <a class="button-under-line" href="<?= $product_info_json['links']['git'] ?>">
+                        <a class="button-under-line" href="<?= $links['git'] ?>">
                             GitHub
                         </a>
                     </div>
                 <?php endif; ?>
 
                 <!-- ページ遷移ボタン表示 -->
-                <?php if (isset($product_info_json["links"]["site"])): ?>
+                <?php if (isset($links["site"])): ?>
                     <div class="button-link-linear button-topage">
-                        <a class="button-under-line" href="<?= $product_info_json['links']['site'] ?>">
+                        <a class="button-under-line" href="<?= $links['site'] ?>">
                             ページを表示
                         </a>
                     </div>

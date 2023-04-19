@@ -1,6 +1,6 @@
 {
-    "PRODUCT_LIST": {
-        "GAME": [
+    "GAME": {
+        "productList": [
             {
                 "title": "うさシューティング",
                 "id": "0",
@@ -19,9 +19,10 @@
                 "updDate": "2023-01-07",
                 "updUser": "Muriko"
             }
-
-        ],
-        "TOOL": [
+        ]
+    },
+    "TOOL": {
+        "productList" : [
             {
                 "title": "カードゲームデッキマネージャ",
                 "id": "0",
@@ -46,16 +47,19 @@
                 "updDate": "2022-11-28",
                 "updUser": "Muriko"
             }
-        ],
-        "OTHER": [
+        ]
+    },
+    "OTHER": {
+        "productList": [
             {
                 "title": "技術系ブログ「Zenn」",
                 "id": "0",
                 "updDate": "2022-07-25",
                 "updUser": "Muriko"
             }
-
-        ],
-        "ACTIVITY": []
+        ]
+    },
+    "ACTIVITY": {
+        "productList": []
     }
 }
