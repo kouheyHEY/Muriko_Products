@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/Variables.js"></script>
+    <link rel="stylesheet" href="css/PokeTypeChecker.css" type="text/css">
+    <meta charset="utf-8" http-equiv="content-type">
+</head>
+
+<body>
+    <header>
+        <h1>タイプチェックツール</h1>
+        <h3>ver 1.0</h3>
+    </header>
+
+    <div class="contentArea">
+        <h3>チェック対象</h3>
+        <ul id="target-list">
+            <li class="target-header">
+                <label class="target-label"></label>
+                <div class="target-name">名前</div>
+                <div class="target-type">type1</div>
+                <div class="target-type">type2</div>
+            </li>
+        </ul>
+        <button class="commonButton" onclick="executeTypeCheck()">実行</button>
+        <button class="commonButton" onclick="clearTarget()">クリア</button>
+    </div>
+
+    <script type="text/javascript" src="script/PokeTypeChecker.js"></script>
+</body>
+
+</html>

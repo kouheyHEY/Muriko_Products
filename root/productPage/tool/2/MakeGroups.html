@@ -1,0 +1,62 @@
+<html>
+
+<head>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="script/Variables.js"></script>
+    <script type="text/javascript" src="script/MakeGroups.js"></script>
+    <link rel="stylesheet" href="css/MakeGroups.css" type="text/css">
+    <meta charset="utf-8" http-equiv="content-type">
+</head>
+
+<body>
+    <header>
+        <h1>グループ分けツール</h1>
+        <h3>ver 1.0</h3>
+    </header>
+
+    <div class="contentArea">
+        <h3>対象メンバー</h3>
+        <ul id="target-member-list">
+            <li>
+                <label class="member-label">メンバー1：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+            <li>
+                <label class="member-label">メンバー2：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+            <li>
+                <label class="member-label">メンバー3：</label>
+                <input type="text" maxlength="12" class="targetMember">
+            </li>
+        </ul>
+        <button class="commonButton" onclick="addMemberInput()">追加</button>
+        <button class="commonButton" onclick="removeMemberInput()">削除</button>
+        <button class="commonButton" onclick="clearMemberInput()">クリア</button>
+    </div>
+
+    <div class="contentArea">
+        <h3>オプション</h3>
+        <ul id="input-option">
+            <li>
+                <label class="option-label">グループの人数：</label>
+                <input id="memberPerGroup" type="number" max="6" min="2" value="2">
+            </li>
+            <li>
+                <label class="option-label">グループ数の上限：</label>
+                <input id="groupNum" type="number" max="12" min="2" value="2">
+            </li>
+        </ul>
+        <button class="commonButton" onclick="executeGrouping()">実行</button>
+    </div>
+
+    <div class="contentArea">
+        <h3>グループ分け結果</h3>
+        <ul id="grouping-result">
+        </ul>
+        <ul id="remain">
+        </ul>
+    </div>
+</body>
+
+</html>

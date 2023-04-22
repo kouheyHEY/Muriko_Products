@@ -51,6 +51,8 @@ if ($parameters[1] === 'about' || $parameters[1] === 'index.php') {
         // ~/article/[文字列] にアクセスした場合
         $action_name = 'index';
     }
+} else {
+    return;
 }
 
 // コントローラのファイルを読み込む

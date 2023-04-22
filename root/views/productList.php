@@ -28,23 +28,22 @@
         </div>
 
         <!-- プロダクト一覧 -->
-        <form action="./product.php" method="get">
-            <ul class="product-list fadeDown_2">
-                <!-- プロダクトブロック -->
-                <?php foreach (sortObjAry($productList, false) as $product): ?>
-                    <li class="product-block button-link-linear">
-                        <button class="button-under-line" type="submit" name="product_id" value="<?= $product["id"] ?>">
-                            <span class="block-title">
-                                <?= $product["title"] ?>
-                            </span>
-                            <span class="block-updtime">
-                                <?= $product["updDate"] ?>
-                            </span>
-                        </button>
-                    </li>
-                <?php endforeach ?>
-            </ul>
-        </form>
+        <ul class="product-list fadeDown_2">
+            <!-- プロダクトブロック -->
+            <?php foreach (sortObjAry($productList, false) as $product): ?>
+                <li class="product-block button-link-linear">
+                    <a class="button-under-line aline-left"
+                        href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
+                        <span class="block-title">
+                            <?= $product["title"] ?>
+                        </span>
+                        <span class="block-updtime">
+                            <?= $product["updDate"] ?>
+                        </span>
+                    </a>
+                </li>
+            <?php endforeach ?>
+        </ul>
 
     <?php else: ?>
         <!-- カテゴリが「ACTIVITY」の場合 -->

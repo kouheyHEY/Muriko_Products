@@ -6,8 +6,8 @@
 
     <!-- jsの読み込み -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script type="text/javascript" src="../js/common.js"></script>
-    <script type="text/javascript" src="../js/commonScript.js"></script>
+    <script type="text/javascript" src="/js/common.js"></script>
+    <script type="text/javascript" src="/js/commonScript.js"></script>
 
     <!-- OGPの設定 -->
     <meta property="og:url" content="http://vbbeat.php.xdomain.jp/index.php" />

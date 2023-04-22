@@ -1,19 +1,32 @@
 <?php
 class ProductController extends BaseController
 {
-    public function show($category, $id = null)
+    public function detail($params)
     {
+        // モデルを取得
         $this->loadModel('ProductModel');
-        $products = $this->model->getProducts($category, $id);
-        $this->render('product', ['products' => $products]);
+        // カテゴリ
+        $category = $params[2];
+        // プロダクトID
+        $productId = $params[3];
+
+        // プロダクト取得
+        $productData = $this->model->getProductById($category, $productId);
+        // 画面の描画
+        $this->render(
+            'product',
+            [
+                'product' => $productData,
+                'currentCategory' => strtolower($category),
+                'currentContent' => 'PRODUCTS'
+            ]
+        );
     }
 
     public function index($params)
     {
         // モデルを取得
         $this->loadModel('ProductModel');
-        $category = '';
-        $modelParams = '';
         // カテゴリが設定されていない場合
         if (!isset($params[2])) {
             // カテゴリを初期化する
@@ -21,13 +34,19 @@ class ProductController extends BaseController
         } else {
             $category = $params[2];
         }
-        $modelParams = $this->model->getProductsByCategory($category);
-        // 現在の表示コンテンツを設定
-        $modelParams['currentContent'] = 'PRODUCTS';
-        // プロダクトのカテゴリを設定
-        $modelParams['currentCategory'] = strtolower($category);
+
+        // プロダクト一覧取得
+        $productList = $this->model->getProductsByCategory($category);
         // 画面の描画
-        $this->render('productList', array_merge($params, $modelParams));
+        $this->render(
+            'productList',
+            [
+                'productList' => $productList,
+                'currentCategory' => strtolower($category),
+                'currentContent' => 'PRODUCTS'
+            ]
+        );
+
     }
 }
 

@@ -4,13 +4,10 @@ class ProductModel extends BaseModel
 {
     public function getProductById($category, $id)
     {
-        $data = $this->getData();
-        foreach ($data['products'] as $product) {
-            if ($product['category'] == $category && $product['id'] == $id) {
-                return $product;
-            }
-        }
-        return null;
+        $filePath = 'data/product/' . strtoupper($category) . '/' . $id . '.json';
+        $data = $this->getData($filePath);
+        return $data;
+
     }
 
     public function getProductsByCategory($category)
