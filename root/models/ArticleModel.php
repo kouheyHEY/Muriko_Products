@@ -5,25 +5,16 @@ class ArticleModel extends BaseModel
 {
     public function getArticleById($service, $id)
     {
-        $data = $this->getData();
-        foreach ($data['articles'] as $article) {
-            if ($article['service'] == $service && $article['id'] == $id) {
-                return $article;
-            }
-        }
-        return null;
+        $filePath = 'data/article/' . strtoupper($service) . '/' . $id . '.json';
+        $data = $this->getData($filePath);
+        return $data;
+
     }
 
     public function getArticlesByService($service)
     {
-        $articles = [];
-        $data = $this->getData();
-        foreach ($data['articles'] as $article) {
-            if ($article['service'] == $service) {
-                $articles[] = $article;
-            }
-        }
-        return $articles;
+        $data = $this->getData('data/article/article_list.json');
+        return $data[strtoupper($service)];
     }
 }
 ?>

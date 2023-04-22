@@ -20,17 +20,15 @@ $parameters = explode('/', $request_uri);
 $controller_name = 'AboutController';
 $action_name = 'index';
 
-// URLパラメータに応じて、コントローラとアクションを設定する
-if (isset($parameters[1])) {
+// URLパラメータの1項目目に応じて、コントローラとアクションを設定する
+if ($parameters[1] === 'about') {
+    // ~/about にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
-}
-
-if ($parameters[1] === 'about' || $parameters[1] === 'index.php') {
-    // ~/about にアクセスした場合, またはドメイン名のみだった場合
     $action_name = 'index';
 
 } elseif ($parameters[1] === 'product') {
     // ~/product にアクセスした場合
+    $controller_name = ucfirst($parameters[1]) . 'Controller';
     if (isset($parameters[2]) && isset($parameters[3])) {
         // ~/product/[文字列]/[数字] にアクセスした場合
         $action_name = 'detail';
@@ -42,7 +40,7 @@ if ($parameters[1] === 'about' || $parameters[1] === 'index.php') {
     }
 } elseif ($parameters[1] === 'article') {
     // ~/article にアクセスした場合
-
+    $controller_name = ucfirst($parameters[1]) . 'Controller';
     if (isset($parameters[2]) && isset($parameters[3])) {
         // ~/article/[文字列]/[数字] にアクセスした場合
         $action_name = 'detail';
