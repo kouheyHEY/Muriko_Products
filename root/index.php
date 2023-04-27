@@ -4,6 +4,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . '/config/config.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/config/config-master.php');
 require_once($_SERVER['DOCUMENT_ROOT'] . '/config/config-util.php');
+require_once($_SERVER['DOCUMENT_ROOT'] . '/config/config-article.php');
 
 // ベースとなるファイルの読み込み
 require_once($_SERVER['DOCUMENT_ROOT'] . '/controllers/BaseController.php');
