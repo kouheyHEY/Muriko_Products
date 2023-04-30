@@ -1,6 +1,6 @@
 <?php
 
-class ArticleList
+class ConfigArticle
 {
     // 記事リストを格納する変数
     private static $articleList = [];
@@ -14,6 +14,15 @@ class ArticleList
         } else {
             return null;
         }
+    }
+
+    public static function setArticleData($service, $article)
+    {
+        if (!isset($articleList[$service])) {
+            $articleList[$service] = $article;
+        }
+
+        return $articleList[$service];
     }
 
 }

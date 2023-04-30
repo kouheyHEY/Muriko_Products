@@ -13,8 +13,13 @@ class ArticleModel extends BaseModel
 
     public function getArticlesByService($service)
     {
-        $data = $this->getData('data/article/article_list.json');
-        return $data[strtoupper($service)];
+        if ($service === 'zenn') {
+            $data = ConfigArticle::getArticleData('zenn');
+            return $data;
+        } else {
+            $data = $this->getData('data/article/article_list.json');
+            return $data[strtoupper($service)];
+        }
     }
 }
 ?>

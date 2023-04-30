@@ -49,6 +49,12 @@ if ($parameters[1] === 'about') {
     } elseif (isset($parameters[2])) {
         // ~/article/[文字列] にアクセスした場合
         $action_name = 'index';
+
+        // 記事一覧を取得後の場合
+        if (isset($_POST['articleList'])) {
+            ConfigArticle::setArticleData($parameters[2], $_POST['articleList']);
+            exit;
+        }
     }
 } else {
     return;

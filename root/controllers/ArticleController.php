@@ -32,23 +32,35 @@ class ArticleController extends BaseController
         $service = '';
         if (!isset($params[2])) {
             // 記事サービスを初期化する
-            $service = Config::getMasterData('SERVICES')[0];
+            $service = strtolower(Config::getMasterData('SERVICES')[0]);
         } else {
             $service = $params[2];
         }
 
         // 記事一覧取得
         $articleList = $this->model->getArticlesByService($service);
-        // 画面の描画
-        $this->render(
-            'articleList',
-            [
-                'articleList' => $articleList,
-                'currentService' => strtolower($service),
-                'currentContent' => 'NOTES'
-            ]
-        );
 
+        // サービスが「zenn」の場合、かつ記事一覧が取得されていない場合
+        if ($service === 'zenn' && !isset($articleList)) {
+            // 記事一覧取得用のphpを実行
+            $this->render(
+                'getArticleList',
+                [
+                    'currentService' => strtolower($service),
+                    'currentContent' => 'NOTES'
+                ]
+            );
+        } else {
+            // 画面の描画
+            $this->render(
+                'articleList',
+                [
+                    'articleList' => $articleList,
+                    'currentService' => strtolower($service),
+                    'currentContent' => 'NOTES'
+                ]
+            );
+        }
     }
 }
 

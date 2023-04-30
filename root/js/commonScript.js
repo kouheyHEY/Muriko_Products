@@ -21,8 +21,10 @@ function selectFile(id, input) {
  */
 async function readArticleListZenn() {
     // zenn apiのurlからjsonの値を取得する
-    let proxyURL = './' + PROXY_PHP + '?url=' + ZENN_API_URL + '/' + ZENN_API_QUERY;
+    let proxyURL = '/libraries/' + PROXY_PHP + '?url=' + ZENN_API_URL + '/' + ZENN_API_QUERY;
     let dataJson = '';
+
+    console.log(proxyURL);
 
     await fetch(proxyURL, { mode: 'cors' })
         .then(

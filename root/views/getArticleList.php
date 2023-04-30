@@ -7,7 +7,6 @@
     // 記事一覧を取得する
     async function getArticleListZenn() {
         let articleList = await readArticleListZenn();
-        console.log(articleList);
 
         // formに値を設定
         document.forms["articleListForm"].elements["articleList"].value = articleList;
