@@ -69,8 +69,6 @@ if ($parameters[1] === 'about') {
             }
         }
     }
-} else {
-    return;
 }
 
 // コントローラのファイルを読み込む

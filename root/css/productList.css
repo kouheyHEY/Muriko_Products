@@ -83,9 +83,9 @@
     }
 
     /* ナビゲーションバーの要素 */
-    .product-navbar li {
-        /* min-width: 120px; */
-    }
+    /* .product-navbar li {
+        min-width: 120px;
+    } */
 
     .block-updtime {
         font-size: 0.85rem !important;
