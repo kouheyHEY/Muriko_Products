@@ -47,9 +47,12 @@
 
 
 
-    "SERVICES": [
+    "SERVICES_BK": [
         "ZENN",
         "MURIPRO"
+    ],
+    "SERVICES": [
+        "ZENN"
     ],
     "SERVICE_ALIAS": {
         "ZENN": "Zenn.dev",
@@ -60,11 +63,7 @@
         "MURIPRO": "."
     },
 
-
-
     "CONTENT_PER_PAGE": 6,
-
-
 
     "SNS_BUTTON": [
         {

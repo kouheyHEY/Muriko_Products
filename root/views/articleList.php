@@ -1,29 +1,48 @@
-<!-- 各phpファイル読み込み -->
-<?php include_once($_SERVER["DOCUMENT_ROOT"] . "/inc/logic/articleList_logic.php"); ?>
-
 <!-- メイン -->
 <main>
 
     <!-- コンテンツタイトル -->
+    <div class="menu-category">
+        <div class="content-title fadeDown">
+            <span>Service</span>
+        </div>
+
+        <!-- ナビゲーションバー -->
+        <ul class="product-navbar fadeDown">
+            <?php foreach (Config::getMasterData("SERVICES") as $service): ?>
+                <?php $selectService = ($service == $currentService) ? '-selected' : '' ?>
+                <li class="button-link-linear<?= $selectService ?>">
+                    <a href="/article/<?= $service ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
+                </li>
+            <?php endforeach ?>
+        </ul>
+    </div>
+
+    <!-- コンテンツタイトル -->
     <div class="content-title fadeDown_2">
-        <span><?= $_SESSION["SERVICE_ALIAS"][$_SESSION['SERVICE']] ?></span>
+        <span>
+            <?= Config::getMasterData("SERVICE_ALIAS")[strtoupper($currentService)] ?>
+        </span>
     </div>
 
     <!-- 記事一覧 -->
     <ul class="article-list fadeDown_2">
         <!-- 記事ブロック -->
         <!-- 「Zenn.dev」の場合 -->
-        <?php if($_SESSION["SERVICE"] == "ZENN") : ?>
+        <?php if ($currentService === "zenn"): ?>
 
-            <?php foreach($articleList as $article) : ?>
+            <?php foreach ($articleList as $article): ?>
                 <li class="article-block button-link-linear">
-                    <a class="button-under-line" href="<?= $_SESSION['SERVICE_URL'][$_SESSION['SERVICE']] . $article['path'] ?>">
+                    <a class="button-under-line"
+                        href="<?= Config::getMasterData('SERVICE_URL')[strtoupper($currentService)] . $article['path'] ?>">
 
                         <!-- タイトルを出力 -->
-                        <span class="block-title"><?php echo($article["title"]); ?></span>
+                        <span class="block-title">
+                            <?php echo ($article["title"]); ?>
+                        </span>
 
                         <span class="block-updtime">
-                        <?php 
+                            <?php
                             // 投稿日時と最終更新日を取得
                             $updTime = $article["body_updated_at"];
                             $postTime = $article["published_at"];
@@ -31,8 +50,8 @@
                             $lastUpdTime = $updTime ?? $postTime;
                             $lastUpdTime = (new DateTime($lastUpdTime))->format('Y-m-d');
                             // 最終更新日を出力
-                            echo($lastUpdTime);
-                        ?>
+                            echo ($lastUpdTime);
+                            ?>
                         </span>
                     </a>
                 </li>
@@ -40,55 +59,58 @@
 
         <?php else: ?>
 
-        <!-- 「Zenn.dev」以外の場合 -->
-            <div class="msg_alert"><?= MSG_NO_ARTICLE ?></div>
+            <!-- 「Zenn.dev」以外の場合 -->
+            <div class="msg_alert">
+                <?= MSG_NO_ARTICLE ?>
+            </div>
         <?php endif; ?>
     </ul>
 
     <div id="page-link" class="fadeDown_3">
         <!-- 前のページのリンク -->
-        <form action="" method="get" class="to-next-prev">
+        <div class="to-next-prev">
             <!-- 前のページが存在するかどうか -->
             <?php $exPrev = ($currentPage > 1) ?>
 
             <input type="hidden" name="page" value="<?= $currentPage - 1 ?>">
             <div class="button-link-linear">
-                <button <?= !$exPrev ? "class='invisible' disabled" : "type='submit'" ?>>
+                <a href="/article/<?= $currentService . "/" . ($currentPage - 1) ?>" <?= !$exPrev ? "class='invisible' disabled" : "type='submit'" ?>>
                     PREV
-                </button>
+                </a>
             </div>
-        </form>
+        </div>
 
-        <?php for($i = 1; $i <= ceil($totalCount / $_SESSION["CONTENT_PER_PAGE"]); $i++) : ?>
-            <?php if($i == $currentPage) : ?>
+        <?php for ($i = 1; $i <= ceil($totalCount / Config::getMasterData("CONTENT_PER_PAGE")); $i++): ?>
+            <?php if ($i == $currentPage): ?>
                 <!-- 現在のページの番号 -->
-                <div class="button-link-linear-selected"><button disabled><?= $i ?></button></div>
+                <div class="button-link-linear-selected"><button disabled>
+                        <?= $i ?>
+                    </button></div>
 
             <?php else: ?>
                 <!-- ページのリンク -->
-                <form action="" method="get">
-                    <input type="hidden" name="page" value="<?= $i ?>">
-                    <div class="button-link-linear">
-                        <button type="submit"><?= $i ?></button>
-                    </div>
-                </form>
+                <div class="button-link-linear">
+                    <a href="/article/<?= $currentService . "/" . $i ?>">
+                        <?= $i ?>
+                    </a>
+                </div>
 
             <?php endif; ?>
 
         <?php endfor; ?>
 
         <!-- 次のページのリンク -->
-        <form action="" method="get" class="to-next-prev">
+        <div class="to-next-prev">
             <!-- 次のページが存在するかどうか -->
-            <?php $exNext = $currentPage < ceil($totalCount / $_SESSION["CONTENT_PER_PAGE"]) ?>
+            <?php $exNext = $currentPage < ceil($totalCount / Config::getMasterData("CONTENT_PER_PAGE")) ?>
 
             <input type="hidden" name="page" value="<?= $currentPage + 1 ?>">
             <div class="button-link-linear">
-                <button type="submit" <?= !$exNext ? "class='invisible' disabled" : "" ?>>
+                <a href="/article/<?= $currentService . "/" . ($currentPage + 1) ?>" <?= !$exNext ? "class='invisible' disabled" : "" ?>>
                     NEXT
-                </button>
+                </a>
             </div>
-        </form>
+        </div>
     </div>
 
 </main>

@@ -7,6 +7,7 @@
     justify-content: space-between;
 }
 
+
 /* ナビゲーションバーのスクロールバー装飾 */
 /*
 .product-navbar::-webkit-scrollbar {
@@ -17,8 +18,8 @@
 
 .product-navbar li {
     width: 80%;
-    margin: 2%;
-    margin-top: 0;
+    padding: 2%;
+    margin: 0 auto;
 }
 
 /* メイン プロダクト一覧 */

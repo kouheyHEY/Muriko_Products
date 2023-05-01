@@ -42,18 +42,31 @@ if ($parameters[1] === 'about') {
 } elseif ($parameters[1] === 'article') {
     // ~/article にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
+
     if (isset($parameters[2]) && isset($parameters[3])) {
-        // ~/article/[文字列]/[数字] にアクセスした場合
-        $action_name = 'detail';
+        if (!is_numeric($parameters[3])) {
+            // ~/article/[文字列]/[文字列] にアクセスした場合
+            $action_name = 'detail';
+        } else {
+            // ~/article/[文字列]/[数字] にアクセスした場合
+            $action_name = 'index';
+        }
 
     } elseif (isset($parameters[2])) {
         // ~/article/[文字列] にアクセスした場合
         $action_name = 'index';
 
-        // 記事一覧を取得後の場合
+        // 記事一覧をPOSTメソッドで取得後の場合
         if (isset($_POST['articleList'])) {
-            ConfigArticle::setArticleData($parameters[2], $_POST['articleList']);
-            exit;
+            if ($parameters[2] === 'zenn') {
+                $articles_tmp = json_decode($_POST['articleList'], true);
+                $articles = sortObjAryZenn($articles_tmp['articles'], false);
+
+                ConfigArticle::setArticleData(
+                    $parameters[2],
+                    $articles
+                );
+            }
         }
     }
 } else {

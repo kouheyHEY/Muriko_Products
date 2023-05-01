@@ -28,36 +28,49 @@ class ArticleController extends BaseController
     {
         // モデルを取得
         $this->loadModel('ArticleModel');
-        // 記事サービスが設定されていない場合
-        $service = '';
-        if (!isset($params[2])) {
-            // 記事サービスを初期化する
-            $service = strtolower(Config::getMasterData('SERVICES')[0]);
-        } else {
+
+        // 記事サービスを設定する
+        $service = strtolower(Config::getMasterData('SERVICES')[0]);
+        if (isset($params[2])) {
             $service = $params[2];
+        }
+        // 現在のページを取得
+        $currentPage = 1;
+        if (isset($params[3])) {
+            $currentPage = $params[3];
         }
 
         // 記事一覧取得
-        $articleList = $this->model->getArticlesByService($service);
+        $articleListTmp = $this->model->getArticlesByService($service);
 
         // サービスが「zenn」の場合、かつ記事一覧が取得されていない場合
-        if ($service === 'zenn' && !isset($articleList)) {
+        if ($service === 'zenn' && !isset($articleListTmp)) {
             // 記事一覧取得用のphpを実行
             $this->render(
                 'getArticleList',
                 [
                     'currentService' => strtolower($service),
-                    'currentContent' => 'NOTES'
+                    'currentContent' => 'NOTES',
                 ]
             );
         } else {
+            // 記事数
+            $totalCount = count($articleListTmp);
+
+            // ページ番号に応じて表示する記事の範囲を決定する
+            $offset = ($currentPage - 1) * Config::getMasterData("CONTENT_PER_PAGE");
+            $limit = Config::getMasterData("CONTENT_PER_PAGE");
+            $articleList = array_slice($articleListTmp, $offset, $limit);
+
             // 画面の描画
             $this->render(
                 'articleList',
                 [
                     'articleList' => $articleList,
                     'currentService' => strtolower($service),
-                    'currentContent' => 'NOTES'
+                    'currentContent' => 'NOTES',
+                    'currentPage' => $currentPage,
+                    'totalCount' => $totalCount
                 ]
             );
         }

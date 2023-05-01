@@ -3,7 +3,11 @@
     flex-wrap: nowrap;
     justify-content: center;
 
-    padding-top: 20px;
+    padding: 10px 0;
+}
+
+#page-link a {
+    padding: 5px;
 }
 
 #page-link .to-next-prev {

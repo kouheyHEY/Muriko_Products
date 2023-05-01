@@ -9,8 +9,8 @@ class Config
     public static function getMasterData($key)
     {
         // キャッシュにデータがあれば、それを返す
-        if (isset(self::$cache[$key])) {
-            return self::$cache[$key];
+        if (isset($_SESSION['master'][$key])) {
+            return $_SESSION['master'][$key];
         }
 
         // マスターファイルを読み込む
@@ -25,8 +25,8 @@ class Config
         }
 
         // 取得したデータをキャッシュに保存して返す
-        self::$cache[$key] = $masterData[$key];
-        return self::$cache[$key];
+        $_SESSION['master'][$key] = $masterData[$key];
+        return $_SESSION['master'][$key];
     }
 }
 
