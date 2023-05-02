@@ -12,7 +12,7 @@
             <?php foreach (Config::getMasterData("SERVICES") as $service): ?>
                 <?php $selectService = ($service == $currentService) ? '-selected' : '' ?>
                 <li class="button-link-linear<?= $selectService ?>">
-                    <a href="/article/<?= $service ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
+                    <a href="/article/<?= strtolower($service) ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
                 </li>
             <?php endforeach ?>
         </ul>
@@ -83,9 +83,11 @@
         <?php for ($i = 1; $i <= ceil($totalCount / Config::getMasterData("CONTENT_PER_PAGE")); $i++): ?>
             <?php if ($i == $currentPage): ?>
                 <!-- 現在のページの番号 -->
-                <div class="button-link-linear-selected"><button disabled>
+                <div class="button-link-linear-selected">
+                    <a href="/article/<?= $currentService . "/" . $i ?>">
                         <?= $i ?>
-                    </button></div>
+                    </a>
+                </div>
 
             <?php else: ?>
                 <!-- ページのリンク -->

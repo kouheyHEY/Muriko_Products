@@ -28,9 +28,9 @@
 }
 
 /* htmlタグ */
-html {
-    /* オシャな背景 */
-    /*
+/* html { */
+/* オシャな背景 */
+/*
     background:
         linear-gradient(135deg,
             #c9d9e9 21px,
@@ -53,11 +53,22 @@ html {
     background-color: #c9d9e9;
     background-size: 64px 128px;
     */
+/* } */
+
+html:after {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    content: "";
+
     /* シンプル背景 */
     background:
         linear-gradient(to bottom,
             #003020,
             #000c0c);
+    z-index: -1;
 }
 
 /* bodyタグ */
