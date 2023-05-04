@@ -10,7 +10,7 @@
         <!-- ナビゲーションバー -->
         <ul class="product-navbar fadeDown">
             <?php foreach (Config::getMasterData("SERVICES") as $service): ?>
-                <?php $selectService = ($service == $currentService) ? '-selected' : '' ?>
+                <?php $selectService = (strtolower($service) === $currentService) ? '-selected' : '' ?>
                 <li class="button-link-linear<?= $selectService ?>">
                     <a href="/article/<?= strtolower($service) ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
                 </li>
