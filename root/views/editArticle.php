@@ -16,12 +16,18 @@
 
         <?php endif; ?>
 
-        <!-- プロダクト説明 -->
+        <!-- タイトル入力欄 -->
         <div class="product-exp">
             <input type="text" placeholder="Title" />
 
         </div>
 
+		<!-- 本文入力欄 -->
+        <div class="product-exp">
+            <input type="text" placeholder="Content" />
+
+        </div>
+        
         <div class="button-back button-link-linear">
             <a class="button-under-line" href="/product/<?= strtolower($currentCategory) ?>">
                 Back
