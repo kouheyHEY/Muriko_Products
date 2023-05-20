@@ -69,6 +69,10 @@ if ($parameters[1] === 'about') {
             }
         }
     }
+} elseif ($parameters[1] === 'edit') {
+    // ~/edit にアクセスした場合
+    $controller_name = ucfirst($parameters[1]) . 'Controller';
+    $action_name = 'index';
 }
 
 // コントローラのファイルを読み込む

@@ -3,6 +3,7 @@
 define('FILEPATH_MASTER', $_SERVER["DOCUMENT_ROOT"] . '/data/master/master.json');
 define('FILEPATH_PRODUCT_LIST', $_SERVER["DOCUMENT_ROOT"] . '/data/product/product_list.json');
 define('FILEPATH_ABOUT', $_SERVER["DOCUMENT_ROOT"] . '/data/article/about.json');
+define('FILEPATH_EDIT', $_SERVER["DOCUMENT_ROOT"] . '/data/master/edit.json');
 
 define('DIRPATH_PRODUCT_JSON', $_SERVER["DOCUMENT_ROOT"] . '/data/product');
 define('DIRPATH_PRODUCT_THUMBNAIL', $_SERVER["DOCUMENT_ROOT"] . '/img/product');

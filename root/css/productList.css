@@ -72,14 +72,14 @@
         /* ツマミの色 */
         background: rgba(160, 160, 160, 0.7);
         /* ツマミ両端の丸み */
-        border-radius: 7px;
+        border-radius: 1px;
     }
 
     .product-navbar::-webkit-scrollbar-track {
         /* トラックの色 */
         background: rgba(180, 180, 180, 0);
         /* トラック両端の丸み */
-        border-radius: 7px;
+        border-radius: 1px;
     }
 
     /* ナビゲーションバーの要素 */
