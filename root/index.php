@@ -72,7 +72,31 @@ if ($parameters[1] === 'about') {
 } elseif ($parameters[1] === 'edit') {
     // ~/edit にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
-    $action_name = 'index';
+
+    if (isset($parameters[2])) {
+        // ~/edit/confirm にアクセスした場合
+        $action_name = 'confirm';
+
+        // 入力済みパラメータ
+        $editInput = array();
+
+        // タイトルが入力済の場合
+        if (isset($_POST['edit-title'])) {
+            $editInput['edit-title'] = $_POST['edit-title'];
+        }
+        // タグが入力済の場合
+        if (isset($_POST['edit-tag'])) {
+            $editInput['edit-tag'] = $_POST['edit-tag'];
+        }
+        // 記事内容が入力済の場合
+        if (isset($_POST['edit-content'])) {
+            $editInput['edit-content'] = $_POST['edit-content'];
+        }
+
+        // パラメータの最後に、入力項目の値を設定
+        array_push($parameters, $editInput);
+    }
+
 }
 
 // コントローラのファイルを読み込む
