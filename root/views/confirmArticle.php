@@ -4,7 +4,7 @@
 <!-- 個別CSSの読み込み -->
 <script type="text/javascript">
     let link = document.createElement('link');
-    link.href = '/css/editArticle.css';
+    link.href = '/css/confirmArticle.css';
     link.rel = 'stylesheet';
     link.type = 'text/css';
     let head = document.getElementsByTagName('head')[0];
@@ -12,30 +12,23 @@
 </script>
 
 <!-- 個別JSの読み込み -->
-<script type="text/javascript" src="/js/editArticle.js"></script>
+<script type="text/javascript" src="/js/confirmArticle.js"></script>
 
 <!-- コンテンツタイトル -->
 <!-- <div class="menu-category">
     <div class="content-title fadeDown">
-        <span>Edit Article</span>
+        <span>Confirm Article</span>
     </div>
 </div> -->
 
 <!-- メイン -->
 <main>
     <div class="fadeDown_2" id="edit-form">
-        <?php if (!isset($title)): ?>
-            <!-- 注意メッセージ表示 -->
-            <!-- <div class="msg_alert">
-                    <?= "* is requied item." ?>
-                </div> -->
-
-        <?php endif; ?>
 
         <!-- 入力内容送信フォーム -->
         <form method="POST" name="editArticleForm" action="/edit/confirm">
 
-            <!-- タイトル入力欄 -->
+            <!-- タイトル表示欄 -->
             <div class="edit-title">
                 <div class="content-title">
                     <span>Title</span>
@@ -43,7 +36,7 @@
                 <input id="edit-title" name="edit-title" type="text" placeholder="【PHP】入力フォームの改良" />
             </div>
 
-            <!-- タグ入力欄 -->
+            <!-- タグ表示欄 -->
             <div class="edit-tag">
                 <div class="content-title">
                     <span>Tag</span>
@@ -51,7 +44,7 @@
                 <input id="edit-tag" name="edit-tag" type="text" placeholder="#PHP,#備忘録,#CSS" />
             </div>
 
-            <!-- 本文入力欄 -->
+            <!-- 本文表示欄 -->
             <div class="edit-content">
                 <div class="content-title">
                     <span>Content</span>
@@ -63,13 +56,10 @@
             <!-- 各種ボタン -->
             <ul class="product-navbar" id="edit-button">
                 <li class="button-link-linear">
-                    <a href="javascript:editArticleForm.submit()">confirm</a>
+                    <a href="javascript:editArticleForm.submit()">post</a>
                 </li>
-                <!-- <li class="button-link-linear">
-                    <a href="/postEdit">preview</a>
-                </li> -->
                 <li class="button-link-linear">
-                    <button onclick="clearInput();">clear</button>
+                    <button onclick="clearInput();">back</button>
                 </li>
             </ul>
         </form>
