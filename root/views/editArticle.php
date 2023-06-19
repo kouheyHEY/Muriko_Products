@@ -4,7 +4,7 @@
 <!-- 個別CSSの読み込み -->
 <script type="text/javascript">
     let link = document.createElement('link');
-    link.href = '/css/editArticle.css';
+    link.href = '/css/confirmArticle.css';
     link.rel = 'stylesheet';
     link.type = 'text/css';
     let head = document.getElementsByTagName('head')[0];
@@ -12,12 +12,12 @@
 </script>
 
 <!-- 個別JSの読み込み -->
-<script type="text/javascript" src="/js/editArticle.js"></script>
+<script type="text/javascript" src="/js/confirmArticle.js"></script>
 
 <!-- コンテンツタイトル -->
 <!-- <div class="menu-category">
     <div class="content-title fadeDown">
-        <span>Edit Article</span>
+        <span>Confirm Article</span>
     </div>
 </div> -->
 
@@ -33,7 +33,7 @@
         <?php endif; ?>
 
         <!-- 入力内容送信フォーム -->
-        <form method="POST" name="editArticleForm" action="/edit/confirm">
+        <form method="POST" name="postArticleForm" action="/edit/post">
 
             <!-- タイトル入力欄 -->
             <div class="edit-title">
