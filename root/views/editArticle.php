@@ -4,7 +4,7 @@
 <!-- 個別CSSの読み込み -->
 <script type="text/javascript">
     let link = document.createElement('link');
-    link.href = '/css/confirmArticle.css';
+    link.href = '/css/editArticle.css';
     link.rel = 'stylesheet';
     link.type = 'text/css';
     let head = document.getElementsByTagName('head')[0];
@@ -12,14 +12,7 @@
 </script>
 
 <!-- 個別JSの読み込み -->
-<script type="text/javascript" src="/js/confirmArticle.js"></script>
-
-<!-- コンテンツタイトル -->
-<!-- <div class="menu-category">
-    <div class="content-title fadeDown">
-        <span>Confirm Article</span>
-    </div>
-</div> -->
+<script type="text/javascript" src="/js/editArticle.js"></script>
 
 <!-- メイン -->
 <main>
@@ -63,11 +56,8 @@
             <!-- 各種ボタン -->
             <ul class="product-navbar" id="edit-button">
                 <li class="button-link-linear">
-                    <a href="javascript:editArticleForm.submit()">confirm</a>
+                    <a href="javascript:postArticleForm.submit()">confirm</a>
                 </li>
-                <!-- <li class="button-link-linear">
-                    <a href="/postEdit">preview</a>
-                </li> -->
                 <li class="button-link-linear">
                     <button onclick="clearInput();">clear</button>
                 </li>

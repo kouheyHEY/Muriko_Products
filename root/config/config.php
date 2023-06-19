@@ -17,4 +17,5 @@ define('MSG_NO_ARTICLE', 'article not posted.');
 
 // １ページ当たりの表示するブロック
 define('PRODUCT_PER_PAGE', '10');
+
 ?>

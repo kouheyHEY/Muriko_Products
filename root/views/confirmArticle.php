@@ -1,6 +1,3 @@
-<!-- 個別PHPの読み込み -->
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/Markdown.inc.php"); ?>
-
 <!-- 個別CSSの読み込み -->
 <script type="text/javascript">
     let link = document.createElement('link');
@@ -15,11 +12,11 @@
 <script type="text/javascript" src="/js/confirmArticle.js"></script>
 
 <!-- コンテンツタイトル -->
-<!-- <div class="menu-category">
+<div class="menu-category">
     <div class="content-title fadeDown">
         <span>Confirm Article</span>
     </div>
-</div> -->
+</div>
 
 <!-- メイン -->
 <main>
@@ -33,7 +30,9 @@
                 <div class="content-title">
                     <span>Title</span>
                 </div>
-                <input id="edit-title" name="edit-title" type="text" placeholder="【PHP】入力フォームの改良" />
+                <div>
+                    <?= $editTitle ?>
+                </div>
             </div>
 
             <!-- タグ表示欄 -->
@@ -41,7 +40,13 @@
                 <div class="content-title">
                     <span>Tag</span>
                 </div>
-                <input id="edit-tag" name="edit-tag" type="text" placeholder="#PHP,#備忘録,#CSS" />
+
+                <?php foreach ($editTag as $tag): ?>
+                    <div>
+                        <?= $tag ?>
+                    </div>
+                <?php endforeach ?>
+
             </div>
 
             <!-- 本文表示欄 -->
@@ -49,8 +54,9 @@
                 <div class="content-title">
                     <span>Content</span>
                 </div>
-                <textarea id="edit-content" name="edit-content" type="textarea"
-                    placeholder="ここに記事内容をMarkDown形式で記載"></textarea>
+                <div>
+                    <?= $editContent ?>
+                </div>
             </div>
 
             <!-- 各種ボタン -->
