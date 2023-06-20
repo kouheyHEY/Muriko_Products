@@ -28,22 +28,19 @@
             <!-- タイトル表示欄 -->
             <div class="edit-title">
                 <div class="content-title">
-                    <span>Title</span>
-                </div>
-                <div>
-                    <?= $editTitle ?>
+                    <span>
+                        <?= $editTitle ?>
+                    </span>
                 </div>
             </div>
 
             <!-- タグ表示欄 -->
             <div class="edit-tag">
-                <div class="content-title">
-                    <span>Tag</span>
-                </div>
-
                 <?php foreach ($editTag as $tag): ?>
-                    <div>
-                        <?= $tag ?>
+                    <div class="edit-tag-block">
+                        <span>
+                            <?= $tag ?>
+                        </span>
                     </div>
                 <?php endforeach ?>
 
@@ -51,9 +48,6 @@
 
             <!-- 本文表示欄 -->
             <div class="edit-content">
-                <div class="content-title">
-                    <span>Content</span>
-                </div>
                 <div>
                     <?= $editContent ?>
                 </div>
@@ -71,7 +65,7 @@
         </form>
 
         <div class="button-back button-link-linear">
-            <a class="button-under-line" href="/product/<?= strtolower($currentCategory) ?>">
+            <a class="button-under-line" href="/about">
                 Back
             </a>
         </div>

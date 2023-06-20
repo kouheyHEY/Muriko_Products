@@ -53,7 +53,7 @@ class EditController extends BaseController
             'confirmArticle',
             [
                 'currentContent' => $exParams['currentContent'],
-                'editTi     tle' => $editTitle,
+                'editTitle' => $editTitle,
                 'editTag' => $editTag,
                 'editContent' => $editContent
             ]
