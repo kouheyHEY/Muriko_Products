@@ -48,7 +48,7 @@
 
             <!-- 本文表示欄 -->
             <div class="edit-content">
-                <div>
+                <div class="article-content">
                     <?= $editContent ?>
                 </div>
             </div>
@@ -59,7 +59,7 @@
                     <a href="javascript:editArticleForm.submit()">post</a>
                 </li>
                 <li class="button-link-linear">
-                    <button onclick="clearInput();">back</button>
+                    <a href="javascript:editArticleForm.submit()">back</a>
                 </li>
             </ul>
         </form>

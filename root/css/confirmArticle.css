@@ -1,3 +1,5 @@
+/* マークダウン形式の記事の表示用CSS */
+
 /* タイトル */
 .edit-title {
     position: relative;
@@ -37,6 +39,35 @@
     font-weight: 600;
 }
 
+/* 記事内容の各htmlタグ装飾 */
+.article-content {
+
+    /* 文字色 */
+    & * {
+        color: #ffffff;
+    }
+
+    /* 各見出しタグ */
+    & h1 {
+        font-size: 1.5rem;
+    }
+
+    & h2 {
+        font-size: 1.25rem;
+    }
+
+    & h3 {
+        font-size: 1.125rem;
+    }
+
+    /* aタグ */
+    & a {
+        text-decoration: underline;
+        color: aqua;
+    }
+}
+
+/* ボタン */
 #edit-button {
     margin: 0;
     justify-content: flex-start;
