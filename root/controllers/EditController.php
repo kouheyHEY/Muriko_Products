@@ -1,8 +1,8 @@
 <?php
 
 //  Markdown処理用のライブラリ
-require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/Markdown.inc.php");
-
+require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/MarkdownExtra.inc.php");
+use Michelf\MarkdownExtra;
 
 class EditController extends BaseController
 {
@@ -46,7 +46,8 @@ class EditController extends BaseController
         // エラーメッセージを設定
 
         // Markdown形式の文字列を変数に設定
-        $editContent = Michelf\Markdown::defaultTransform($inputParams['edit-content']);
+        $mdInst = new MarkdownExtra();
+        $editContent = $mdInst->transform($inputParams['edit-content']);
 
         // 画面の描画
         $this->render(

@@ -65,6 +65,13 @@
         text-decoration: underline;
         color: aqua;
     }
+
+    /* リスト関係 */
+    & ul {
+        margin: 1em 0;
+        padding-left: 40px;
+        list-style-type: disc;
+    }
 }
 
 /* ボタン */

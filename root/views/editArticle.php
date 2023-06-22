@@ -11,9 +11,6 @@
     head.appendChild(link);
 </script>
 
-<!-- 個別JSの読み込み -->
-<script type="text/javascript" src="/js/editArticle.js"></script>
-
 <!-- メイン -->
 <main>
     <div class="fadeDown_2" id="edit-form">
@@ -73,3 +70,6 @@
     </div>
 
 </main>
+
+<!-- 個別JSの読み込み -->
+<script type="text/javascript" src="/js/editArticle.js"></script>
