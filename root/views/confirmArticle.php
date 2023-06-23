@@ -58,14 +58,17 @@
                 <li class="button-link-linear">
                     <a href="javascript:editArticleForm.submit()">post</a>
                 </li>
+                <!-- 編集画面に戻るボタンは非表示 -->
+                <!--
                 <li class="button-link-linear">
                     <a href="javascript:editArticleForm.submit()">back</a>
                 </li>
+                -->
             </ul>
         </form>
 
         <div class="button-back button-link-linear">
-            <a class="button-under-line" href="/about">
+            <a class="button-under-line" href="/edit">
                 Back
             </a>
         </div>
