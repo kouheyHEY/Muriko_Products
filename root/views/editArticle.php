@@ -14,12 +14,14 @@
 <!-- メイン -->
 <main>
     <div class="fadeDown_2" id="edit-form">
-        <?php if (!isset($title)): ?>
-            <!-- 注意メッセージ表示 -->
-            <!-- <div class="msg_alert">
-                    <?= "* is requied item." ?>
-                </div> -->
 
+        <!-- 注意メッセージ表示 -->
+        <?php if (isset($errorList)) : ?>
+            <?php foreach ($errorList as $error) : ?>
+                <div class="msg_alert">
+                    <?= $error ?>
+                </div>
+            <?php endforeach; ?>
         <?php endif; ?>
 
         <!-- 入力内容送信フォーム -->
@@ -30,7 +32,7 @@
                 <div class="content-title">
                     <span>Title</span>
                 </div>
-                <input id="edit-title" name="edit-title" type="text" placeholder="【PHP】入力フォームの改良" />
+                <input id="edit-title" name="edit-title" type="text" placeholder="【PHP】入力フォームの改良" <?php if (isset($_SESSION['edit-title'])) : ?> value="<?= $_SESSION['edit-title'] ?>" <?php endif; ?> />
             </div>
 
             <!-- タグ入力欄 -->
@@ -38,7 +40,7 @@
                 <div class="content-title">
                     <span>Tag</span>
                 </div>
-                <input id="edit-tag" name="edit-tag" type="text" placeholder="#PHP,#備忘録,#CSS" />
+                <input id="edit-tag" name="edit-tag" type="text" placeholder="#PHP,#備忘録,#CSS" <?php if (isset($_SESSION['edit-tag'])) : ?> value="<?= $_SESSION['edit-tag'] ?>" <?php endif; ?> />
             </div>
 
             <!-- 本文入力欄 -->
@@ -46,8 +48,11 @@
                 <div class="content-title">
                     <span>Content</span>
                 </div>
-                <textarea id="edit-content" name="edit-content" type="textarea"
-                    placeholder="ここに記事内容をMarkDown形式で記載"></textarea>
+                <textarea id="edit-content" name="edit-content" type="textarea" placeholder="ここに記事内容をMarkDown形式で記載">
+                <?php if (isset($_SESSION['edit-content'])) : ?>
+                <?= $_SESSION['edit-content'] ?>
+                <?php endif; ?>
+                </textarea>
             </div>
 
             <!-- 各種ボタン -->

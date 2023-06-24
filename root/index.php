@@ -72,25 +72,62 @@ if ($parameters[1] === 'about') {
 } elseif ($parameters[1] === 'edit') {
     // ~/edit にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
+    $action_name = 'index';
+
+    // 入力済みパラメータ
+    $editInput = array();
 
     if (isset($parameters[2])) {
         // ~/edit/confirm にアクセスした場合
-        $action_name = 'confirm';
-
-        // 入力済みパラメータ
-        $editInput = array();
+        // 確認画面遷移用フラグ
+        $flg_confirm = true;
 
         // タイトルが入力済の場合
         if (isset($_POST['edit-title'])) {
             $editInput['edit-title'] = $_POST['edit-title'];
+            // セッション変数に入力値を保存
+            $_SESSION['edit-title'] = $_POST['edit-title'];
+        } else {
+            $flg_confirm = false;
         }
+
         // タグが入力済の場合
         if (isset($_POST['edit-tag'])) {
             $editInput['edit-tag'] = $_POST['edit-tag'];
+            // セッション変数に入力値を保存
+            $_SESSION['edit-tag'] = $_POST['edit-tag'];
+        } else {
+            $flg_confirm = false;
         }
+
         // 記事内容が入力済の場合
         if (isset($_POST['edit-content'])) {
             $editInput['edit-content'] = $_POST['edit-content'];
+            // セッション変数に入力値を保存
+            $_SESSION['edit-content'] = $_POST['edit-content'];
+        } else {
+            $flg_confirm = false;
+        }
+
+        // 入力確認が正常の場合
+        if ($flg_confirm) {
+            // 入力確認画面に遷移
+            $action_name = 'confirm';
+        }
+
+        // パラメータの最後に、入力項目の値を設定
+        array_push($parameters, $editInput);
+
+    } else {
+        // 入力値が保存されている場合
+        if (isset($_SESSION['edit-title'])) {
+            $editInput['edit-title'] = $_SESSION['edit-title'];
+        }
+        if (isset($_SESSION['edit-tag'])) {
+            $editInput['edit-tag'] = $_SESSION['edit-tag'];
+        }
+        if (isset($_SESSION['edit-content'])) {
+            $editInput['edit-content'] = $_SESSION['edit-content'];
         }
 
         // パラメータの最後に、入力項目の値を設定
@@ -107,5 +144,3 @@ $controller = new $controller_name();
 
 // アクションを実行する
 $controller->$action_name($parameters);
-
-?>
