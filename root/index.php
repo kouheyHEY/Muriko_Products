@@ -26,18 +26,15 @@ if ($parameters[1] === 'about') {
     // ~/about にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
     $action_name = 'index';
-
 } elseif ($parameters[1] === 'product') {
     // ~/product にアクセスした場合
     $controller_name = ucfirst($parameters[1]) . 'Controller';
     if (isset($parameters[2]) && isset($parameters[3])) {
         // ~/product/[文字列]/[数字] にアクセスした場合
         $action_name = 'detail';
-
     } elseif (isset($parameters[2])) {
         // ~/product/[文字列] にアクセスした場合
         $action_name = 'index';
-
     }
 } elseif ($parameters[1] === 'article') {
     // ~/article にアクセスした場合
@@ -51,7 +48,6 @@ if ($parameters[1] === 'about') {
             // ~/article/[文字列]/[数字] にアクセスした場合
             $action_name = 'index';
         }
-
     } elseif (isset($parameters[2])) {
         // ~/article/[文字列] にアクセスした場合
         $action_name = 'index';
@@ -83,29 +79,32 @@ if ($parameters[1] === 'about') {
         $flg_confirm = true;
 
         // タイトルが入力済の場合
-        if (isset($_POST['edit-title'])) {
+        if (isset($_POST['edit-title']) && !empty($_POST['edit-title'])) {
             $editInput['edit-title'] = $_POST['edit-title'];
             // セッション変数に入力値を保存
             $_SESSION['edit-title'] = $_POST['edit-title'];
         } else {
+            $_SESSION['edit-title'] = "";
             $flg_confirm = false;
         }
 
         // タグが入力済の場合
-        if (isset($_POST['edit-tag'])) {
+        if (isset($_POST['edit-tag']) && !empty($_POST['edit-tag'])) {
             $editInput['edit-tag'] = $_POST['edit-tag'];
             // セッション変数に入力値を保存
             $_SESSION['edit-tag'] = $_POST['edit-tag'];
         } else {
+            $_SESSION['edit-tag'] = "";
             $flg_confirm = false;
         }
 
         // 記事内容が入力済の場合
-        if (isset($_POST['edit-content'])) {
+        if (isset($_POST['edit-content']) && !empty($_POST['edit-content'])) {
             $editInput['edit-content'] = $_POST['edit-content'];
             // セッション変数に入力値を保存
             $_SESSION['edit-content'] = $_POST['edit-content'];
         } else {
+            $_SESSION['edit-content'] = "";
             $flg_confirm = false;
         }
 
@@ -117,7 +116,6 @@ if ($parameters[1] === 'about') {
 
         // パラメータの最後に、入力項目の値を設定
         array_push($parameters, $editInput);
-
     } else {
         // 入力値が保存されている場合
         if (isset($_SESSION['edit-title'])) {
@@ -133,7 +131,6 @@ if ($parameters[1] === 'about') {
         // パラメータの最後に、入力項目の値を設定
         array_push($parameters, $editInput);
     }
-
 }
 
 // コントローラのファイルを読み込む

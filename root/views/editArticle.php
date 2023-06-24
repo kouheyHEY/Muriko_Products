@@ -17,15 +17,16 @@
 
         <!-- 注意メッセージ表示 -->
         <?php if (isset($errorList)) : ?>
-            <?php foreach ($errorList as $error) : ?>
-                <div class="msg_alert">
+            <div class="msg_alert">
+                <?php foreach ($errorList as $error) : ?>
                     <?= $error ?>
-                </div>
-            <?php endforeach; ?>
+                    <br>
+                <?php endforeach; ?>
+            </div>
         <?php endif; ?>
 
         <!-- 入力内容送信フォーム -->
-        <form method="POST" name="postArticleForm" action="/edit/post">
+        <form method="POST" name="postArticleForm" action="/edit/confirm">
 
             <!-- タイトル入力欄 -->
             <div class="edit-title">
@@ -48,11 +49,11 @@
                 <div class="content-title">
                     <span>Content</span>
                 </div>
-                <textarea id="edit-content" name="edit-content" type="textarea" placeholder="ここに記事内容をMarkDown形式で記載">
-                <?php if (isset($_SESSION['edit-content'])) : ?>
-                <?= $_SESSION['edit-content'] ?>
-                <?php endif; ?>
-                </textarea>
+
+                <textarea id="edit-content" name="edit-content" type="textarea"
+                placeholder="ここに記事内容をMarkDown形式で記載"><?php if (!empty($_SESSION['edit-content'])) {
+                    echo (trim($_SESSION['edit-content']));
+                } ?></textarea>
             </div>
 
             <!-- 各種ボタン -->

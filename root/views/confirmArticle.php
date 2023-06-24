@@ -20,10 +20,10 @@
 
 <!-- メイン -->
 <main>
-    <div class="fadeDown_2" id="edit-form">
+    <div class="fadeDown_2" id="post-form">
 
         <!-- 入力内容送信フォーム -->
-        <form method="POST" name="editArticleForm" action="/edit/confirm">
+        <form method="POST" name="postArticleForm" action="/edit/post">
 
             <!-- タイトル表示欄 -->
             <div class="edit-title">
@@ -42,7 +42,7 @@
                             <?= $tag ?>
                         </span>
                     </div>
-                <?php endforeach ?>
+                <?php endforeach; ?>
 
             </div>
 
@@ -53,22 +53,21 @@
                 </div>
             </div>
 
+            <!-- 各変数のセット -->
+            <input type="hidden" name="post-title" value="<?=  $editTitle ?>"/>
+            <input type="hidden" name="post-tag" value="<?=  $editTag ?>"/>
+            <input type="hidden" name="post-content" value="<?=  $editContent ?>"/>
+
             <!-- 各種ボタン -->
-            <ul class="product-navbar" id="edit-button">
+            <ul class="product-navbar" id="post-button">
                 <li class="button-link-linear">
-                    <a href="javascript:editArticleForm.submit()">post</a>
+                    <a href="javascript:postArticleForm.submit()">post</a>
                 </li>
-                <!-- 編集画面に戻るボタンは非表示 -->
-                <!--
-                <li class="button-link-linear">
-                    <a href="javascript:editArticleForm.submit()">back</a>
-                </li>
-                -->
             </ul>
         </form>
 
         <div class="button-back button-link-linear">
-            <a class="button-under-line" href="/edit">
+            <a class="button-under-line" href="/edit/post">
                 Back
             </a>
         </div>

@@ -21,7 +21,7 @@ class EditController extends BaseController
         $inputParams = $params[array_key_last($params)];
 
         // 入力パラメータが文字列でない場合
-        if (!is_string($inputParams)) {
+        if (!is_string($inputParams) && !empty($inputParams)) {
             // タイトルが未入力の場合
             if (
                 !isset($inputParams['edit-title'])
@@ -86,7 +86,8 @@ class EditController extends BaseController
                 'currentContent' => $exParams['currentContent'],
                 'editTitle' => $editTitle,
                 'editTag' => $editTag,
-                'editContent' => $editContent
+                'editContent' => $editContent,
+                'editContentMd' => $inputParams['edit-content']
             ]
         );
     }

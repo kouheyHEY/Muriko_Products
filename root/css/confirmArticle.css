@@ -1,11 +1,18 @@
 /* マークダウン形式の記事の表示用CSS */
 
 /* タイトル */
-.edit-title {
+
+
+/* タグ */
+.edit-tag {
+    display: flex;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
     position: relative;
 }
 
-.edit-title::after {
+.edit-tag::after {
     content: "";
     position: absolute;
 
@@ -17,12 +24,6 @@
 
     background-color: #ffffff;
     transition: width 0.3s ease-out;
-}
-
-/* タグ */
-.edit-tag {
-    display: flex;
-    padding-top: 10px;
 }
 
 .edit-tag-block {
@@ -74,13 +75,34 @@
     }
 }
 
+/* タイトル */
+.edit-content {
+    position: relative;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.edit-content::after {
+    content: "";
+    position: absolute;
+
+    left: 0px;
+    bottom: -5px;
+
+    width: 100%;
+    height: 2px;
+
+    background-color: #ffffff;
+    transition: width 0.3s ease-out;
+}
+
 /* ボタン */
-#edit-button {
+#post-button {
     margin: 0;
     justify-content: flex-start;
 }
 
-#edit-button li {
+#post-button li {
     width: fit-content;
     margin: 5px 0;
     padding: 5px 0;
