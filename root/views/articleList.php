@@ -1,23 +1,22 @@
-<!-- メイン -->
-<main>
-
-    <!-- コンテンツタイトル -->
-    <div class="menu-category">
-        <div class="content-title fadeDown">
-            <span>Service</span>
-        </div>
-
-        <!-- ナビゲーションバー -->
-        <ul class="product-navbar fadeDown">
-            <?php foreach (Config::getMasterData("SERVICES") as $service): ?>
-                <?php $selectService = (strtolower($service) === $currentService) ? '-selected' : '' ?>
-                <li class="button-link-linear<?= $selectService ?>">
-                    <a href="/article/<?= strtolower($service) ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
-                </li>
-            <?php endforeach ?>
-        </ul>
+<!-- コンテンツタイトル -->
+<div class="menu-category">
+    <div class="content-title fadeDown">
+        <span>Service</span>
     </div>
 
+    <!-- ナビゲーションバー -->
+    <ul class="product-navbar fadeDown">
+        <?php foreach (Config::getMasterData("SERVICES") as $service): ?>
+            <?php $selectService = (strtolower($service) === $currentService) ? '-selected' : '' ?>
+            <li class="button-link-linear<?= $selectService ?>">
+                <a href="/article/<?= strtolower($service) ?>" value="<?= $service ?>"><?= Config::getMasterData("SERVICE_ALIAS")[$service] ?></a>
+            </li>
+        <?php endforeach ?>
+    </ul>
+</div>
+
+<!-- メイン -->
+<main>
     <!-- コンテンツタイトル -->
     <div class="content-title fadeDown_2">
         <span>

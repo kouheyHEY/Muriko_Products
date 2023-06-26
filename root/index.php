@@ -74,48 +74,62 @@ if ($parameters[1] === 'about') {
     $editInput = array();
 
     if (isset($parameters[2])) {
-        // ~/edit/confirm にアクセスした場合
-        // 確認画面遷移用フラグ
-        $flg_confirm = true;
+        if($parameters[2] === 'comfirm'){
+            // ~/edit/confirm にアクセスした場合
+            // 確認画面遷移用フラグ
+            $flg_confirm = true;
 
-        // タイトルが入力済の場合
-        if (isset($_POST['edit-title']) && !empty($_POST['edit-title'])) {
-            $editInput['edit-title'] = $_POST['edit-title'];
-            // セッション変数に入力値を保存
-            $_SESSION['edit-title'] = $_POST['edit-title'];
-        } else {
-            $_SESSION['edit-title'] = "";
-            $flg_confirm = false;
+            // タイトルが入力済の場合
+            if (isset($_POST['edit-title']) && !empty($_POST['edit-title'])) {
+                $editInput['edit-title'] = $_POST['edit-title'];
+                // セッション変数に入力値を保存
+                $_SESSION['edit-title'] = $_POST['edit-title'];
+            } else {
+                $_SESSION['edit-title'] = "";
+                $flg_confirm = false;
+            }
+
+            // タグが入力済の場合
+            if (isset($_POST['edit-tag']) && !empty($_POST['edit-tag'])) {
+                $editInput['edit-tag'] = $_POST['edit-tag'];
+                // セッション変数に入力値を保存
+                $_SESSION['edit-tag'] = $_POST['edit-tag'];
+            } else {
+                $_SESSION['edit-tag'] = "";
+                $flg_confirm = false;
+            }
+
+            // 記事内容が入力済の場合
+            if (isset($_POST['edit-content']) && !empty($_POST['edit-content'])) {
+                $editInput['edit-content'] = $_POST['edit-content'];
+                // セッション変数に入力値を保存
+                $_SESSION['edit-content'] = $_POST['edit-content'];
+            } else {
+                $_SESSION['edit-content'] = "";
+                $flg_confirm = false;
+            }
+
+            // 入力確認が正常の場合
+            if ($flg_confirm) {
+                // 入力確認画面に遷移
+                $action_name = 'confirm';
+            }
+            
+            // パラメータの最後に、入力項目の値を設定
+            array_push($parameters, $editInput);
+
+        }else if($parameters[2] === 'post'){
+            // ~/edit/post にアクセスした場合
+            // 各値を変数にセット
+            $postInput['post-title'] = $_POST['post-title'];
+            $postInput['post-tag'] = $_POST['post-tag'];
+            $postInput['post-content'] = $_POST['post-content'];
+
+            
+            // パラメータの最後に、入力項目の値を設定
+            array_push($parameters, $postInput);
         }
 
-        // タグが入力済の場合
-        if (isset($_POST['edit-tag']) && !empty($_POST['edit-tag'])) {
-            $editInput['edit-tag'] = $_POST['edit-tag'];
-            // セッション変数に入力値を保存
-            $_SESSION['edit-tag'] = $_POST['edit-tag'];
-        } else {
-            $_SESSION['edit-tag'] = "";
-            $flg_confirm = false;
-        }
-
-        // 記事内容が入力済の場合
-        if (isset($_POST['edit-content']) && !empty($_POST['edit-content'])) {
-            $editInput['edit-content'] = $_POST['edit-content'];
-            // セッション変数に入力値を保存
-            $_SESSION['edit-content'] = $_POST['edit-content'];
-        } else {
-            $_SESSION['edit-content'] = "";
-            $flg_confirm = false;
-        }
-
-        // 入力確認が正常の場合
-        if ($flg_confirm) {
-            // 入力確認画面に遷移
-            $action_name = 'confirm';
-        }
-
-        // パラメータの最後に、入力項目の値を設定
-        array_push($parameters, $editInput);
     } else {
         // 入力値が保存されている場合
         if (isset($_SESSION['edit-title'])) {
