@@ -124,10 +124,12 @@ if ($parameters[1] === 'about') {
             $postInput['post-title'] = $_POST['post-title'];
             $postInput['post-tag'] = $_POST['post-tag'];
             $postInput['post-content'] = $_POST['post-content'];
-
             
             // パラメータの最後に、入力項目の値を設定
             array_push($parameters, $postInput);
+
+            // 記事投稿完了画面に遷移
+            $action_name = 'post';
         }
 
     } else {
@@ -144,6 +146,7 @@ if ($parameters[1] === 'about') {
 
         // パラメータの最後に、入力項目の値を設定
         array_push($parameters, $editInput);
+
     }
 }
 
