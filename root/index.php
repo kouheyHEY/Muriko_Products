@@ -114,20 +114,35 @@ if ($parameters[1] === 'about') {
                 // 入力確認画面に遷移
                 $action_name = 'confirm';
             }
-            
+
             // パラメータの最後に、入力項目の値を設定
             array_push($parameters, $editInput);
 
         }else if($parameters[2] === 'post'){
             // ~/edit/post にアクセスした場合
             // 各値を変数にセット
-            $postInput['post-title'] = $_POST['post-title'];
-            $postInput['post-tag'] = $_POST['post-tag'];
-            $postInput['post-content'] = $_POST['post-content'];
-            
+            $postInput['post-title'] = '';
+            $postInput['post-tag'] = '';
+            $postInput['post-content'] = '';
+
+            // 存在チェック用の配列キー文字列のリスト
+            $postValueKey = array(
+                'post-title',
+                'post-tag',
+                'post-content'
+            );
+
+            foreach($postValueKey as $key){
+                // キーが存在する場合
+                if(array_key_exists($key, $_POST)){
+                    // キーとセットの入力値を変数に設定する
+                    $postInput[$key] = $_POST[$key];
+                }
+            }
+
             // パラメータの最後に、入力項目の値を設定
             array_push($parameters, $postInput);
-
+            
             // 記事投稿完了画面に遷移
             $action_name = 'post';
         }

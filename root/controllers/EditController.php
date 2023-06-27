@@ -91,4 +91,38 @@ class EditController extends BaseController
             ]
         );
     }
+
+    public function post($params)
+    {
+        // エラー用フラグ
+        $postErrorFlg = false;
+
+        $postTitle = '';
+        $postTag = '';
+        $postContent = '';
+
+        // 各項目の入力値を取得
+        $postParams = $params[array_key_last($params)];
+
+        // 入力値が設定されており、かつ空ではない場合
+        if(isset($postParams) && !empty($postParams)){
+            // エラー表示用フラグを設定する
+            $postErrorFlg = true;
+        }else{
+            $postTitle = $postParams['post-title'];
+            $postTag = $postParams['post-tag'];
+            $postContent = $postParams['post-content'];
+        }
+
+        // 画面の描画
+        $this->render(
+            'postArticle',
+            [
+                'currentContent' => 'POST',
+                'pageTitle' => 'Post Article',
+                'postTitle' => $postTitle,
+                'postErrorFlg' => $postErrorFlg
+            ]
+        );
+    }
 }
