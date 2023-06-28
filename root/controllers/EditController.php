@@ -104,16 +104,6 @@ class EditController extends BaseController
         // 各項目の入力値を取得
         $postParams = $params[array_key_last($params)];
 
-        // 入力値が設定されており、かつ空ではない場合
-        if(isset($postParams) && !empty($postParams)){
-            $postTitle = $postParams['post-title'];
-            $postTag = $postParams['post-tag'];
-            $postContent = $postParams['post-content'];
-        }else{
-            // エラー表示用フラグを設定する
-            $postErrorFlg = true;
-        }
-
         // 入力値が設定されていない、または空の場合
         if(!isset($postParams) || empty($postParams)){
             // エラー表示用フラグを設定する
@@ -126,6 +116,19 @@ class EditController extends BaseController
             }else{
                 $postTitle = $postParams['post-title'];
             }
+
+            if(empty($postParams['post-tag'])){
+                $postErrorFlg = true;
+            }else{
+                $postTag = $postParams['post-tag'];
+            }
+
+            if(empty($postParams['post-content'])){
+                $postErrorFlg = true;
+            }else{
+                $postContent = $postParams['post-content'];
+            }
+
         }
 
         // 画面の描画
