@@ -114,6 +114,20 @@ class EditController extends BaseController
             $postErrorFlg = true;
         }
 
+        // 入力値が設定されていない、または空の場合
+        if(!isset($postParams) || empty($postParams)){
+            // エラー表示用フラグを設定する
+            $postErrorFlg = true;
+
+        }else{
+            // 各入力値が空の場合、エラー表示用フラグを設定する
+            if(empty($postParams['post-title'])){
+                $postErrorFlg = true;
+            }else{
+                $postTitle = $postParams['post-title'];
+            }
+        }
+
         // 画面の描画
         $this->render(
             'postArticle',
