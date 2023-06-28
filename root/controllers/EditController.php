@@ -106,12 +106,12 @@ class EditController extends BaseController
 
         // 入力値が設定されており、かつ空ではない場合
         if(isset($postParams) && !empty($postParams)){
-            // エラー表示用フラグを設定する
-            $postErrorFlg = true;
-        }else{
             $postTitle = $postParams['post-title'];
             $postTag = $postParams['post-tag'];
             $postContent = $postParams['post-content'];
+        }else{
+            // エラー表示用フラグを設定する
+            $postErrorFlg = true;
         }
 
         // 画面の描画
