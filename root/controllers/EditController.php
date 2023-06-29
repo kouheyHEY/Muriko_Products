@@ -129,6 +129,9 @@ class EditController extends BaseController
                 $postContent = $postParams['post-content'];
             }
 
+            // 記事投稿用の連想配列を作成する
+            
+
         }
 
         // 画面の描画
