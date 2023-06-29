@@ -130,7 +130,9 @@ class EditController extends BaseController
             }
 
             // 記事投稿用の連想配列を作成する
-            
+            $articleData = array();
+
+            $articleData[]
 
         }
 
