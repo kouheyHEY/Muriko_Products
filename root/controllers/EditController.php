@@ -3,6 +3,10 @@
 //  Markdown処理用のライブラリ
 require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/MarkdownExtra.inc.php");
 
+// ロジック
+require_once($_SERVER['DOCUMENT_ROOT'] . "/Logics/EditLogic.php");
+
+
 use Michelf\MarkdownExtra;
 
 class EditController extends BaseController
@@ -132,7 +136,12 @@ class EditController extends BaseController
             // 記事投稿用の連想配列を作成する
             $articleData = array();
 
-            $articleData[]
+            // 記事を投稿する
+            $result = postArticleJson($postTitle, $postTag, $postContent);
+
+            if(!$result){
+                $postErrorFlg = true;
+            }
 
         }
 
