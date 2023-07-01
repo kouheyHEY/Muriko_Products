@@ -50,3 +50,6 @@
 
     </div>
 </main>
+
+<!-- 3秒後にリダイレクト -->
+<meta http-equiv="refresh" content="3;url=/product">
