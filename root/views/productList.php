@@ -49,6 +49,8 @@
         <!-- カテゴリが「ACTIVITY」の場合 -->
         <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/views/partials/github-info.php"); ?>
 
+        <!-- メンバー専用ページ(ログインフォーム)へのリンク -->
+
     <?php endif; ?>
 
 </main>
