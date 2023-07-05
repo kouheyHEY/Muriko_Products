@@ -4,7 +4,7 @@
 require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/MarkdownExtra.inc.php");
 
 // ロジック
-require_once($_SERVER['DOCUMENT_ROOT'] . "/Logics/EditLogic.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/logics/EditLogic.php");
 
 
 use Michelf\MarkdownExtra;
