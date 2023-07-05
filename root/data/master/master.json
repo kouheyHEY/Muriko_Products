@@ -38,7 +38,8 @@
         "MURIPRO"
     ],
     "SERVICES": [
-        "ZENN"
+        "ZENN",
+        "MURIPRO"
     ],
     "SERVICE_ALIAS": {
         "ZENN": "Zenn.dev",
