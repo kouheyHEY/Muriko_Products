@@ -147,6 +147,11 @@ if ($parameters[1] === 'about') {
             $action_name = 'post';
         }
 
+    } elseif ($parameters[1] === 'login') { 
+        // ~/login にアクセスした場合 
+        $controller_name = ucfirst($parameters[1]) . 'Controller'; 
+    $action_name = 'index';
+
     } else {
         // 入力値が保存されている場合
         if (isset($_SESSION['edit-title'])) {
