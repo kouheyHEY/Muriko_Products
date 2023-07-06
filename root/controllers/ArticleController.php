@@ -12,7 +12,7 @@ class ArticleController extends BaseController
 
         // 記事取得
         $articleData =
-            $this->model->getProductById($service, $articleId);
+            $this->model->getArticleById($service, $articleId);
         // 画面の描画
         $this->render(
             'article',
@@ -43,16 +43,26 @@ class ArticleController extends BaseController
         // 記事一覧取得
         $articleListTmp = $this->model->getArticlesByService($service);
 
-        // サービスが「zenn」の場合、かつ記事一覧が取得されていない場合
-        if ($service === 'zenn' && !isset($articleListTmp)) {
+        // 記事一覧が取得されていない場合
+        if (!isset($articleListTmp)) {
+
+            // サービスが「zenn」の場合
+            if ($service === 'zenn') {
+
             // 記事一覧取得用のphpを実行
-            $this->render(
-                'getArticleList',
-                [
-                    'currentService' => strtolower($service),
-                    'currentContent' => 'NOTES',
-                ]
-            );
+                $this->render(
+                    'getArticleList',
+                    [
+                        'currentService' => strtolower($service),
+                        'currentContent' => 'NOTES',
+                    ]
+                );
+            // サービスが本サイトの場合
+            } else if ($service === 'muripro') {
+
+
+            }
+
         } else {
             // 記事数
             $totalCount = count($articleListTmp);
