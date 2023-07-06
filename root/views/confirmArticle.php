@@ -55,8 +55,8 @@
 
             <!-- 各変数のセット（記事本体はマークダウンのままセット） -->
             <input type="hidden" name="post-title" value="<?=  $editTitle ?>"/>
-            <input type="hidden" name="post-tag" value="<?=  $editTag ?>"/>
-            <input type="hidden" name="post-content" value="<?=  $editContentMd ?>"/>
+            <input type="hidden" name="post-tag" value="<?= $editTag ?>"/>
+            <input type="hidden" name="post-content" value="<?=  $editContent ?>"/>
 
             <!-- 各種ボタン -->
             <ul class="product-navbar" id="post-button">

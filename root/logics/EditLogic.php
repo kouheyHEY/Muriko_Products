@@ -27,18 +27,23 @@ function postArticleJson(string $_title, string $_tag, string $_content){
         // 投稿ファイルのフォルダ名
         $articleDirMonth = $currentTimeStamp->format('Ymd');
         $articleDir = DIRPATH_ARTICLE_JSON . "/" . $articleDirMonth;
-        // TODO: フォルダが既に存在するかを確認
+
+        // フォルダが既に存在するかを確認
+        if (!is_dir($articleDir)) {
+            // 無ければ作成
+            mkdir($articleDir, 0777, true);
+        }
 
         // updUserを設定
         $updUser = 'Muriko';
         $articleData['updUser'] = $updUser;
 
         // json形式に変換
-        $articleDataJson = json_encode($articleData);
+        $articleDataJson = json_encode($articleData, JSON_UNESCAPED_UNICODE);
 
         // 記事の書き出し
         $filePath = $articleDir . "/" . $id . ".json";
-        file_put_contents($filePath, $fileDataJson);
+        file_put_contents($filePath, $articleDataJson);
 
         // trueを返す
         return true;
