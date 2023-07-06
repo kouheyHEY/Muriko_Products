@@ -49,7 +49,7 @@ class ArticleController extends BaseController
             // サービスが「zenn」の場合
             if ($service === 'zenn') {
 
-            // 記事一覧取得用のphpを実行
+                // 記事一覧取得用のphpを実行
                 $this->render(
                     'getArticleList',
                     [
@@ -57,9 +57,9 @@ class ArticleController extends BaseController
                         'currentContent' => 'NOTES',
                     ]
                 );
-            // サービスが本サイトの場合
+            // サービスが「muripro」の場合
             } else if ($service === 'muripro') {
-
+                // 記事一覧取得用のロジックを実行
 
             }
 
