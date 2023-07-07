@@ -8,5 +8,5 @@ RewriteBase /
 # RewriteRule ^article/([^/]+)$ /index.php?service=$1 [L]
 
 RewriteRule ^(about|product|article|edit|login)/([^/]+)/([^/]+)$ /index.php?param1=$1&param2=$2&param3=$3 [L]
-RewriteRule ^(about|product|article|edit|login)/([^/]+)$ /index.php?param1=$1&param2=$2 [L]
-RewriteRule ^(about|product|article|edit|login)$ /index.php?param1=$1 [L]
+RewriteRule ^(about|product|article|edit|signin)/([^/]+)$ /index.php?param1=$1&param2=$2 [L]
+RewriteRule ^(about|product|article|edit|signin)$ /index.php?param1=$1 [L]
