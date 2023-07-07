@@ -147,11 +147,6 @@ if ($parameters[1] === 'about') {
             $action_name = 'post';
         }
 
-    } elseif ($parameters[1] === 'login') { 
-        // ~/login にアクセスした場合 
-        $controller_name = ucfirst($parameters[1]) . 'Controller'; 
-        $action_name = 'index';
-
     } else {
         // 入力値が保存されている場合
         if (isset($_SESSION['edit-title'])) {
@@ -168,7 +163,13 @@ if ($parameters[1] === 'about') {
         array_push($parameters, $editInput);
 
     }
+
+} elseif ($parameters[1] === 'signin') { 
+    // ~/signin にアクセスした場合 
+    $controller_name = ucfirst($parameters[1]) . 'Controller'; 
+    $action_name = 'index';
 }
+
 
 // コントローラのファイルを読み込む
 require_once('controllers/' . $controller_name . '.php');
