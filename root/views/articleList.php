@@ -27,13 +27,24 @@
     <!-- 記事一覧 -->
     <ul class="article-list fadeDown_2">
         <!-- 記事ブロック -->
-        <!-- 「Zenn.dev」の場合 -->
-        <?php if ($currentService === "zenn"): ?>
+        <!-- 記事が投稿されていない場合 -->
+        <?php if (!empty($articleList)): ?>
 
-            <?php foreach ($articleList as $article): ?>
+            <?php foreach (
+                array_map(null, $articleList, $articleDispInfoList)
+                as [$article, $dispInfo]
+            ): ?>
                 <li class="article-block button-link-linear">
-                    <a class="button-under-line"
-                        href="<?= Config::getMasterData('SERVICE_URL')[strtoupper($currentService)] . $article['path'] ?>">
+                    <!-- 記事のURLを設定 -->
+                    <!-- <?php
+                        if (strtolower($currentService) === "zenn"){
+                            $url = Config::getMasterData('SERVICE_URL')[strtoupper($currentService)] . $article['path'];
+                        }else{
+                            $url = "/article/muripro/" . $article["id"];
+                        }
+                    ?> -->
+
+                    <a class="button-under-line" href="<?= $dispInfo["url"] ?>">
 
                         <!-- タイトルを出力 -->
                         <span class="block-title">
@@ -42,14 +53,15 @@
 
                         <span class="block-updtime">
                             <?php
-                            // 投稿日時と最終更新日を取得
-                            $updTime = $article["body_updated_at"];
-                            $postTime = $article["published_at"];
-                            // 最終更新日を決定
-                            $lastUpdTime = $updTime ?? $postTime;
-                            $lastUpdTime = (new DateTime($lastUpdTime))->format('Y-m-d');
-                            // 最終更新日を出力
-                            echo ($lastUpdTime);
+
+                                // // 投稿日時と最終更新日を取得
+                                // $updTime = $article["body_updated_at"];
+                                // $postTime = $article["published_at"];
+                                // // 最終更新日を決定
+                                // $lastUpdTime = $updTime ?? $postTime;
+                                // $lastUpdTime = (new DateTime($lastUpdTime))->format('Y-m-d');
+                                // // 最終更新日を出力
+                                echo ($dispInfo["lastUpdTime"]);
                             ?>
                         </span>
                     </a>
