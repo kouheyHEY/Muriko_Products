@@ -60,7 +60,7 @@ class ArticleController extends BaseController
             // サービスが「muripro」の場合
             } else if ($service === 'muripro') {
                 // 記事一覧取得用のロジックを実行
-
+                
             }
 
         } else {

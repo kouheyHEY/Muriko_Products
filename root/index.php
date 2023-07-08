@@ -54,15 +54,18 @@ if ($parameters[1] === 'about') {
 
         // 記事一覧をPOSTメソッドで取得後の場合
         if (isset($_POST['articleList'])) {
+            // zennの場合
             if ($parameters[2] === 'zenn') {
                 $articles_tmp = json_decode($_POST['articleList'], true);
                 $articles = sortObjAryZenn($articles_tmp['articles'], false);
-
-                ConfigArticle::setArticleData(
-                    $parameters[2],
-                    $articles
-                );
             }
+
+            // セッションにサービスごとの記事リストを保存する
+            ConfigArticle::setArticleData(
+                $parameters[2],
+                $articles
+            );
+
         }
     }
 } elseif ($parameters[1] === 'edit') {
