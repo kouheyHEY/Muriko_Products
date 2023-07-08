@@ -13,9 +13,16 @@ class ArticleController extends BaseController
         // 記事ID
         $articleId = $params[3];
 
-        // 記事取得
-        $articleData =
-            $this->model->getArticleById($service, $articleId);
+        // リストから特定のidの記事を検索し取得
+        $articleIdx = array_search(
+            $articleId, 
+            array_column(
+                ConfigArticle::getArticleData($service),
+                'id'
+            )
+        );
+        $articleData = ConfigArticle::getArticleData($service)[$articleIdx];
+
         // 画面の描画
         $this->render(
             'article',
@@ -60,6 +67,9 @@ class ArticleController extends BaseController
                         'currentContent' => 'NOTES',
                     ]
                 );
+
+                return;
+                
             // サービスが「muripro」の場合
             } else if ($service === 'muripro') {
 
@@ -102,6 +112,7 @@ class ArticleController extends BaseController
                 $dispInfo["lastUpdTime"] = (new DateTime($dispInfo["lastUpdTime"]))->format('Y-m-d');
 
             }else{
+
                 // urlを設定
                 $dispInfo["url"] = "/article/muripro/" . $article["id"];
                 

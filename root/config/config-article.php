@@ -15,7 +15,7 @@ class ConfigArticle
 
     public static function setArticleData($service, $article)
     {
-        if (!isset($_SESSION['articles'][$service])) {
+        if (empty($_SESSION['articles'][$service])) {
             $_SESSION['articles'][$service] = $article;
         }
 

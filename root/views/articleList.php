@@ -27,7 +27,7 @@
     <!-- 記事一覧 -->
     <ul class="article-list fadeDown_2">
         <!-- 記事ブロック -->
-        <!-- 記事が投稿されていない場合 -->
+        <!-- 記事が投稿されている場合 -->
         <?php if (!empty($articleList)): ?>
 
             <?php foreach (
@@ -35,34 +35,15 @@
                 as [$article, $dispInfo]
             ): ?>
                 <li class="article-block button-link-linear">
-                    <!-- 記事のURLを設定 -->
-                    <!-- <?php
-                        if (strtolower($currentService) === "zenn"){
-                            $url = Config::getMasterData('SERVICE_URL')[strtoupper($currentService)] . $article['path'];
-                        }else{
-                            $url = "/article/muripro/" . $article["id"];
-                        }
-                    ?> -->
-
                     <a class="button-under-line" href="<?= $dispInfo["url"] ?>">
 
                         <!-- タイトルを出力 -->
                         <span class="block-title">
-                            <?php echo ($article["title"]); ?>
+                            <?= $article["title"]; ?>
                         </span>
 
                         <span class="block-updtime">
-                            <?php
-
-                                // // 投稿日時と最終更新日を取得
-                                // $updTime = $article["body_updated_at"];
-                                // $postTime = $article["published_at"];
-                                // // 最終更新日を決定
-                                // $lastUpdTime = $updTime ?? $postTime;
-                                // $lastUpdTime = (new DateTime($lastUpdTime))->format('Y-m-d');
-                                // // 最終更新日を出力
-                                echo ($dispInfo["lastUpdTime"]);
-                            ?>
+                            <?= $dispInfo["lastUpdTime"]; ?>
                         </span>
                     </a>
                 </li>
@@ -70,10 +51,11 @@
 
         <?php else: ?>
 
-            <!-- 「Zenn.dev」以外の場合 -->
+            <!-- 記事の投稿がない場合 -->
             <div class="msg_alert">
                 <?= MSG_NO_ARTICLE ?>
             </div>
+            
         <?php endif; ?>
     </ul>
 
