@@ -1,6 +1,3 @@
-<!-- 個別PHPの読み込み -->
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/Markdown.inc.php"); ?>
-
 <!-- 個別CSSの読み込み -->
 <script type="text/javascript">
     let link = document.createElement('link');
@@ -51,7 +48,7 @@
                 </div>
 
                 <textarea id="edit-content" name="edit-content" type="textarea"
-                placeholder="ここに記事内容をMarkDown形式で記載"><?php if (!empty($_SESSION['edit-content'])) {
+                placeholder="ここに記事内容を記載"><?php if (!empty($_SESSION['edit-content'])) {
                     echo (trim($_SESSION['edit-content']));
                 } ?></textarea>
             </div>

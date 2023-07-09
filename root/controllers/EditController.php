@@ -1,13 +1,13 @@
 <?php
 
 //  Markdown処理用のライブラリ
-require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/MarkdownExtra.inc.php");
+// require_once($_SERVER['DOCUMENT_ROOT'] . "/libraries/PHPMarkdownLib/Michelf/MarkdownExtra.inc.php");
 
 // ロジック
 require_once($_SERVER['DOCUMENT_ROOT'] . "/logics/EditLogic.php");
 
 
-use Michelf\MarkdownExtra;
+// use Michelf\MarkdownExtra;
 
 class EditController extends BaseController
 {
@@ -22,7 +22,7 @@ class EditController extends BaseController
         $errorList = array();
 
         // 入力パラメータがある場合は取得
-        $inputParams = $params[array_key_last($params)];
+        $inputParams = $params[count($params) - 1];
 
         // 入力パラメータが文字列でない場合
         if (!is_string($inputParams) && !empty($inputParams)) {
@@ -71,7 +71,7 @@ class EditController extends BaseController
         $exParams['currentContent'] = 'CONFIRM';
 
         // 各項目の入力値を設定
-        $inputParams = $params[array_key_last($params)];
+        $inputParams = $params[count($params) - 1];
 
         // タイトルを変数に設定
         $editTitle = $inputParams['edit-title'];
@@ -80,8 +80,10 @@ class EditController extends BaseController
         $editTag = explode(",", $inputParams['edit-tag']);
 
         // Markdown形式の文字列を変数に設定
-        $mdInst = new MarkdownExtra();
-        $editContent = $mdInst->transform($inputParams['edit-content']);
+        // $mdInst = new MarkdownExtra();
+        // $editContent = $mdInst->transform($inputParams['edit-content']);
+        // マークダウンライブラリが使用不可の場合の処理
+        $editContent = $inputParams['edit-content'];
 
         // 画面の描画
         $this->render(
@@ -106,7 +108,7 @@ class EditController extends BaseController
         $postContent = '';
 
         // 各項目の入力値を取得
-        $postParams = $params[array_key_last($params)];
+        $postParams = $params[count($params) - 1];
 
         // 入力値が設定されていない、または空の場合
         if(!isset($postParams) || empty($postParams)){
