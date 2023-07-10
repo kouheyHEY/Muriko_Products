@@ -10,7 +10,7 @@ class SigninController extends BaseController
         // 現在の表示コンテンツを設定
         $exParams['currentContent'] = 'SIGN IN';
         // タイトルを設定
-        $contentTitle = "Sign in";
+        $exParams['contentTitle'] = "Sign in";
         // 画面の描画
         $this->render('signin', array_merge($exParams, $params));
     }
