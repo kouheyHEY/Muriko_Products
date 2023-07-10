@@ -10,12 +10,11 @@
             </span>
         </div>
 
-        <!-- 当サイト説明 -->
-        <div class="product-exp">
-            <p>
-                <?= $exp ?>
-            </p>
-        </div>
+        <!-- サインインフォーム -->
+
+        <form method="POST" name="signinForm" action="/signin">
+
+        </form>
 
     </div>
 
