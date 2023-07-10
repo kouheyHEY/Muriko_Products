@@ -6,7 +6,7 @@
         <!-- コンテンツタイトル -->
         <div class="content-title">
             <span>
-                <?= $title ?>
+                <?= $contentTitle ?>
             </span>
         </div>
 
