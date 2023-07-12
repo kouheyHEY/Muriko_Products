@@ -175,6 +175,9 @@ if ($parameters[1] === 'about') {
     if (isset($parameters[2])) {
         if($parameters[2] === 'auth'){
         // TODO: 認証システムを作る
+        if(array_key_exists('user-name', $_POST)){
+            
+        }
     }
 }
 
