@@ -4,7 +4,7 @@
     <div class="fadeDown_2">
 
         <!-- サインインフォーム -->
-        <form method="POST" name="signinForm" action="/signin">
+        <form method="POST" name="signinForm" action="/signin/auth">
 
             <!-- ユーザ名入力欄 --> 
             <div class="user-name"> 
