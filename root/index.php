@@ -171,6 +171,11 @@ if ($parameters[1] === 'about') {
     // ~/signin にアクセスした場合 
     $controller_name = ucfirst($parameters[1]) . 'Controller'; 
     $action_name = 'index';
+
+    if (isset($parameters[2])) {
+        if($parameters[2] === 'auth'){
+        // TODO: 認証システムを作る
+    }
 }
 
 
