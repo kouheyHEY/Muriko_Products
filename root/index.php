@@ -89,35 +89,17 @@ if ($parameters[1] === 'about') {
             // 確認画面遷移用フラグ
             $flg_confirm = true;
 
-            // タイトルが入力済の場合
-            if (isset($_POST['edit-title']) && !empty($_POST['edit-title'])) {
-                $editInput['edit-title'] = $_POST['edit-title'];
-                // セッション変数に入力値を保存
-                $_SESSION['edit-title'] = $_POST['edit-title'];
-            } else {
-                $_SESSION['edit-title'] = "";
-                $flg_confirm = false;
-            }
-
-            // タグが入力済の場合
-            if (isset($_POST['edit-tag']) && !empty($_POST['edit-tag'])) {
-                $editInput['edit-tag'] = $_POST['edit-tag'];
-                // セッション変数に入力値を保存
-                $_SESSION['edit-tag'] = $_POST['edit-tag'];
-            } else {
-                $_SESSION['edit-tag'] = "";
-                $flg_confirm = false;
-            }
-
-            // 記事内容が入力済の場合
-            if (isset($_POST['edit-content']) && !empty($_POST['edit-content'])) {
-                $editInput['edit-content'] = $_POST['edit-content'];
-                // セッション変数に入力値を保存
-                $_SESSION['edit-content'] = $_POST['edit-content'];
-            } else {
-                $_SESSION['edit-content'] = "";
-                $flg_confirm = false;
-            }
+            foreach($postValueKey as $key){ 
+                 // キーが存在する場合 
+                 if(!empty($_POST[$key])){ 
+                     // キーとセットの入力値を変数に設定する 
+                     $editInput[$key] = $_POST[$key];
+                     $_SESSION[$key] = $_POST[$key]; 
+                 } else { 
+                     $_SESSION[$key] = '';
+                     $flg_confirm = false;
+                 } 
+             }
 
             // 入力確認が正常の場合
             if ($flg_confirm) {
@@ -133,7 +115,7 @@ if ($parameters[1] === 'about') {
 
             foreach($postValueKey as $key){
                 // キーが存在する場合
-                if(isset($key, $_POST)){
+                if(!empty($_POST[$key])){
                     // キーとセットの入力値を変数に設定する
                     $postInput[$key] = $_POST[$key];
                 } else {
@@ -149,15 +131,11 @@ if ($parameters[1] === 'about') {
         }
 
     } else {
-        // 入力値が保存されている場合
-        if (isset($_SESSION['edit-title'])) {
-            $editInput['edit-title'] = $_SESSION['edit-title'];
-        }
-        if (isset($_SESSION['edit-tag'])) {
-            $editInput['edit-tag'] = $_SESSION['edit-tag'];
-        }
-        if (isset($_SESSION['edit-content'])) {
-            $editInput['edit-content'] = $_SESSION['edit-content'];
+        foreach($postValueKey as $key){ 
+            // 入力値が保存されている場合
+            if (isset($_SESSION[$key])) {
+                $editInput[$key] = $_SESSION[$key];
+            }
         }
 
         // パラメータの最後に、入力項目の値を設定
@@ -182,7 +160,7 @@ if ($parameters[1] === 'about') {
 
         foreach($postValueKey as $key){
             // キーが存在する場合
-            if(isset($key, $_POST)){
+            if(!empty($_POST[$key])){
                 // キーとセットの入力値を変数に設定する
                 $parameters[3][$key] = $_POST[$key];
             } else {
