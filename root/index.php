@@ -76,6 +76,13 @@ if ($parameters[1] === 'about') {
     // 入力済みパラメータ
     $editInput = array();
 
+    // 存在チェック用の配列キー文字列のリスト
+    $postValueKey = array(
+        'post-title',
+        'post-tag',
+        'post-content'
+    );
+
     if (isset($parameters[2])) {
         if($parameters[2] === 'confirm'){
             // ~/edit/confirm にアクセスした場合
@@ -123,23 +130,14 @@ if ($parameters[1] === 'about') {
 
         }else if($parameters[2] === 'post'){
             // ~/edit/post にアクセスした場合
-            // 各値を変数にセット
-            $postInput['post-title'] = '';
-            $postInput['post-tag'] = '';
-            $postInput['post-content'] = '';
-
-            // 存在チェック用の配列キー文字列のリスト
-            $postValueKey = array(
-                'post-title',
-                'post-tag',
-                'post-content'
-            );
 
             foreach($postValueKey as $key){
                 // キーが存在する場合
-                if(array_key_exists($key, $_POST)){
+                if(isset($key, $_POST)){
                     // キーとセットの入力値を変数に設定する
                     $postInput[$key] = $_POST[$key];
+                } else {
+                    $postInput[$key] = '';
                 }
             }
 
@@ -175,9 +173,22 @@ if ($parameters[1] === 'about') {
     if (isset($parameters[2])) {
         if($parameters[2] === 'auth'){
         // TODO: 認証システムを作る
-        if(array_key_exists('user-name', $_POST)){
-            $parameters[3] = $_POST['user-name'];
-        }
+
+        // 存在チェック用の配列キー文字列のリスト
+        $postValueKey = array(
+            'user-name',
+            'password',
+        );
+
+        foreach($postValueKey as $key){
+            // キーが存在する場合
+            if(isset($key, $_POST)){
+                // キーとセットの入力値を変数に設定する
+                $parameters[3][$key] = $_POST[$key];
+            } else {
+                $parameters[3][$key] = '';                
+            }
+        }        
     }
 }
 
