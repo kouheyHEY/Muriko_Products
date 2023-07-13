@@ -1,0 +1,18 @@
+{
+    "USER": [
+        {
+            "ID": "0",
+            "USERNAME": "muriko",
+            "DISPNAME": "Muriko",
+            "PASSWORD": "Murikobbb",
+            "PERMISSIONS": "1"
+        },
+        {
+            "ID": "1",
+            "USERNAME": "minami",
+            "DISPNAME": "SASAMI",
+            "PASSWORD": "Sasaminami",
+            "PERMISSIONS": "2"
+        }
+    ]
+}

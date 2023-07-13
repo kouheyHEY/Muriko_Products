@@ -150,23 +150,24 @@ if ($parameters[1] === 'about') {
 
     if (isset($parameters[2])) {
         if($parameters[2] === 'auth'){
-        // TODO: 認証システムを作る
+            // TODO: 認証システムを作る
 
-        // 存在チェック用の配列キー文字列のリスト
-        $postValueKey = array(
-            'user-name',
-            'password',
-        );
+            // 存在チェック用の配列キー文字列のリスト
+            $postValueKey = array(
+                'user-name',
+                'password',
+            );
 
-        foreach($postValueKey as $key){
-            // キーが存在する場合
-            if(!empty($_POST[$key])){
-                // キーとセットの入力値を変数に設定する
-                $parameters[3][$key] = $_POST[$key];
-            } else {
-                $parameters[3][$key] = '';                
+            foreach($postValueKey as $key){
+                // キーが存在する場合
+                if(!empty($_POST[$key])){
+                    // キーとセットの入力値を変数に設定する
+                    $parameters[3][$key] = $_POST[$key];
+                } else {
+                    $parameters[3][$key] = '';                
+                }
             }
-        }        
+        }     
     }
 }
 
