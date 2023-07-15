@@ -16,9 +16,9 @@ function postArticleJson(string $_title, string $_tag, string $_content){
         // 現在時刻を取得
         $currentTimeStamp = new DateTime('now');
 
-        // idを設定
+        // idを設定（YYYYmmdd＋'a'）
         $id = $currentTimeStamp->format('YmdHis');
-        $articleData['id'] = dechex($id);
+        $articleData['id'] = $id . 'a';
 
         // updDateを設定
         $updDate = $currentTimeStamp->format('Y-m-d');

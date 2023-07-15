@@ -77,10 +77,10 @@ if ($parameters[1] === 'about') {
     $editInput = array();
 
     // 存在チェック用の配列キー文字列のリスト
-    $postValueKey = array(
-        'post-title',
-        'post-tag',
-        'post-content'
+    $editValueKey = array(
+        'edit-title',
+        'edit-tag',
+        'edit-content'
     );
 
     if (isset($parameters[2])) {
@@ -89,17 +89,17 @@ if ($parameters[1] === 'about') {
             // 確認画面遷移用フラグ
             $flg_confirm = true;
 
-            foreach($postValueKey as $key){ 
-                 // キーが存在する場合 
-                 if(!empty($_POST[$key])){ 
-                     // キーとセットの入力値を変数に設定する 
-                     $editInput[$key] = $_POST[$key];
-                     $_SESSION[$key] = $_POST[$key]; 
-                 } else { 
-                     $_SESSION[$key] = '';
-                     $flg_confirm = false;
-                 } 
-             }
+            foreach($editValueKey as $key){
+                // キーが存在する場合 
+                if(!empty($_POST[$key])){ 
+                    // キーとセットの入力値を変数に設定する 
+                    $editInput[$key] = $_POST[$key];
+                    $_SESSION[$key] = $_POST[$key]; 
+                } else { 
+                    $_SESSION[$key] = '';
+                    $flg_confirm = false;
+                } 
+            }
 
             // 入力確認が正常の場合
             if ($flg_confirm) {
@@ -112,6 +112,13 @@ if ($parameters[1] === 'about') {
 
         }else if($parameters[2] === 'post'){
             // ~/edit/post にアクセスした場合
+
+            $postInput = array();
+            $postValueKey = array(
+                'post-title',
+                'post-tag',
+                'post-content'
+            );
 
             foreach($postValueKey as $key){
                 // キーが存在する場合
