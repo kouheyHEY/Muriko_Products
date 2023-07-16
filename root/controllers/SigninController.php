@@ -14,5 +14,16 @@ class SigninController extends BaseController
         // 画面の描画
         $this->render('signin', array_merge($exParams, $params));
     }
+
+    public function signin($params)
+    {
+        // モデルを取得
+        $this->loadModel('SigninModel');
+        $exParams = $this->model->getSignin();
+
+        // TODO: 入力チェック
+        // 画面の描画
+        $this->render('signin', array_merge($exParams, $params));
+    }
 }
 ?>
