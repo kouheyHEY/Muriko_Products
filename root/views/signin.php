@@ -16,19 +16,21 @@
         <!-- サインインフォーム -->
         <form method="POST" name="signinForm" action="/signin/auth">
 
-            <?php foreach($errMsgList as $error) : ?>
-                <!-- エラーメッセージを表示 -->
-                <div class="msg_alert">
-                    <?= $error ?>
-                    <br>    
-                </div>
-            <?php endforeach; ?>
+            <!-- エラーメッセージを表示 -->
+            <div class="msg_alert">
+                <?php foreach($errMsgList as $error) : ?>
+                    <?php if(!empty($error)): ?>
+                        <?= $error ?>
+                        <br>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </div>
 
             <!-- ユーザ名入力欄 --> 
             <div class="user-name"> 
                 <div class="content-title"> 
                     <span>UserName</span> 
-                </div> 
+                </div>
                 <input id="" name="user-name" type="text" placeholder="ユーザ名" <?php if (isset($_SESSION['user-name'])) : ?> value="<?= $_SESSION['user-name'] ?>" <?php endif; ?> /> 
             </div>
 
