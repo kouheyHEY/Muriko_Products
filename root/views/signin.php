@@ -16,6 +16,14 @@
         <!-- サインインフォーム -->
         <form method="POST" name="signinForm" action="/signin/auth">
 
+            <?php foreach($errMsgList as $error) : ?>
+                <!-- エラーメッセージを表示 -->
+                <div class="msg_alert">
+                    <?= $error ?>
+                    <br>    
+                </div>
+            <?php endforeach; ?>
+
             <!-- ユーザ名入力欄 --> 
             <div class="user-name"> 
                 <div class="content-title"> 

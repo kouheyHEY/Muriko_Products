@@ -1,5 +1,8 @@
 <?php
 
+// ロジック
+require_once($_SERVER['DOCUMENT_ROOT'] . "/logics/SigninLogic.php");
+
 class SigninController extends BaseController
 {
     public function index($params)
@@ -21,9 +24,38 @@ class SigninController extends BaseController
         $this->loadModel('SigninModel');
         $exParams = $this->model->getSignin();
 
-        // TODO: 入力チェック
+        // 入力値
+        $userName = $params[count($params) - 1]['user-name'];
+        $password = $params[count($params) - 1]['password'];
+        // エラー情報
+        $errMsgList = array(
+            'userName' => '',
+            'password' => ''
+        );
+        
+        // ユーザ名チェック
+        if(empty($errMsg['user-name']) && empty($userName)){
+            $errMsgList['user-name'] = 'userName is required item.';
+        }
+        
+        //　パスワードチェック
+        if(empty($errMsgList['password']) && empty($password)){
+            $errMsgList['password'] = 'password is required item.';
+        }
+
+        //
+
         // 画面の描画
-        $this->render('signin', array_merge($exParams, $params));
+        $this->render(
+            'signin',
+            [
+                'currentContent' => 'SIGN IN',
+                'contentTitle' => 'Sign in',
+                'userName' => $userName,
+                'password' => $password,
+                'errMsgList' => $errMsgList
+            ]
+        );
     }
 }
 ?>
