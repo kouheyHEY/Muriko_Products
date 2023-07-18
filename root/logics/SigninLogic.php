@@ -17,8 +17,20 @@ function checkSignin(string $_userName, string $_password){
     );
 
     // ユーザ名存在チェック
-    $errMsg = sprintf('「%s」 is unregistered user.', $_userName) ;
+    $errFlg = true;
+    foreach ($userList as $userInfo) {
+        if ($userInfo['userName'] === $_userName) {
+            $errFlg = false;
+            break;
+        }
+    }
 
+    // ユーザが存在しない場合
+    if ($errFlg) {
+       $errMsg = sprintf('「%s」 is unregistered user.', $_userName) ;
+        return $errMsg;
+    }
+ 
     // パスワードチェック
     $errMsg = 'password is invalid.' ;
 
