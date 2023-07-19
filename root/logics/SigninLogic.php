@@ -17,22 +17,24 @@ function checkSignin(string $_userName, string $_password){
     );
 
     // ユーザ名存在チェック
-    $errFlg = true;
+    $matchUserInfo = null;
     foreach ($userList as $userInfo) {
         if ($userInfo['userName'] === $_userName) {
-            $errFlg = false;
+            $matchUserInfo = $userInfo;
             break;
         }
     }
 
     // ユーザが存在しない場合
-    if ($errFlg) {
+    if (empty($matchUserInfo)) {
        $errMsg = sprintf('「%s」 is unregistered user.', $_userName) ;
         return $errMsg;
     }
  
     // パスワードチェック
-    $errMsg = 'password is invalid.' ;
+    if($matchUserInfo['password'] !== $_password){
+        $errMsg = 'password is invalid.' ;
+    }
 
     return $errMsg;
 
