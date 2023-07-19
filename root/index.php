@@ -172,6 +172,7 @@ if ($parameters[1] === 'about') {
                     $parameters[3][$key] = '';
                 }
             }
+            
         }
         $action_name = 'signin';
     }

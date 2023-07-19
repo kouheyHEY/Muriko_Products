@@ -14,6 +14,14 @@ class SigninController extends BaseController
         $exParams['currentContent'] = 'SIGN IN';
         // タイトルを設定
         $exParams['contentTitle'] = "Sign in";
+        
+
+        // エラー情報
+        $exParams['errMsgList'] = array(
+            'userName' => '',
+            'password' => ''
+        );
+
         // 画面の描画
         $this->render('signin', array_merge($exParams, $params));
     }
@@ -24,38 +32,50 @@ class SigninController extends BaseController
         $this->loadModel('SigninModel');
         $exParams = $this->model->getSignin();
 
+        $signinSuccess = true;
+
         // 入力値
         $userName = $params[count($params) - 1]['user-name'];
         $password = $params[count($params) - 1]['password'];
+
         // エラー情報
-        $errMsgList = array(
-            'userName' => '',
-            'password' => ''
-        );
+        $errMsgList = array();
         
         // ユーザ名チェック
-        if(empty($errMsg['user-name']) && empty($userName)){
-            $errMsgList['user-name'] = 'userName is required item.';
+        if(empty($userName)){
+            array_push($errMsgList, 'userName is required item.');
+            $signinSuccess = false;
         }
         
         //　パスワードチェック
-        if(empty($errMsgList['password']) && empty($password)){
-            $errMsgList['password'] = 'password is required item.';
+        if(empty($password)){
+            array_push($errMsgList, 'password is required item.');
+            $signinSuccess = false;
         }
 
-        //
+        // チェックロジックの実行
+        if($signinSuccess){
+            $signinSuccess = checkSignin($userName, $password, $errMsgList);
+        }
 
-        // 画面の描画
-        $this->render(
-            'signin',
-            [
-                'currentContent' => 'SIGN IN',
-                'contentTitle' => 'Sign in',
-                'userName' => $userName,
-                'password' => $password,
-                'errMsgList' => $errMsgList
-            ]
-        );
+        if($signinSuccess){
+
+            // 初期ページにリダイレクト
+            header('Location: /about');
+
+        }else{            
+            // 画面の描画（ログイン失敗）
+            $this->render(
+                'signin',
+                [
+                    'currentContent' => 'SIGN IN',
+                    'contentTitle' => 'Sign in',
+                    'userName' => $userName,
+                    'password' => $password,
+                    'errMsgList' => $errMsgList
+                ]
+            );
+        }
     }
 }
 ?>

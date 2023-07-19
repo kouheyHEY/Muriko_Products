@@ -31,7 +31,7 @@
                 <div class="content-title"> 
                     <span>UserName</span> 
                 </div>
-                <input id="" name="user-name" type="text" placeholder="ユーザ名" <?php if (isset($_SESSION['user-name'])) : ?> value="<?= $_SESSION['user-name'] ?>" <?php endif; ?> /> 
+                <input id="user-name" name="user-name" type="text" placeholder="ユーザ名" <?php if (isset($_SESSION['user-name'])) : ?> value="<?= $_SESSION['user-name'] ?>" <?php endif; ?> /> 
             </div>
 
             <!-- パスワード入力欄 --> 
@@ -39,7 +39,7 @@
                 <div class="content-title"> 
                     <span>Password</span> 
                 </div> 
-                <input id="" name="password" type="password" /> 
+                <input id="password" name="password" type="password" /> 
             </div>
 
             <!-- 各種ボタン --> 
