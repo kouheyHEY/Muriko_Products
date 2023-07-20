@@ -70,8 +70,15 @@ if ($parameters[1] === 'about') {
     }
 } elseif ($parameters[1] === 'edit') {
     // ~/edit にアクセスした場合
-    $controller_name = ucfirst($parameters[1]) . 'Controller';
-    $action_name = 'index';
+    
+    // ログインしていなければ、ログインページに遷移
+    if (empty($_SESSION['signin-user'])){
+        $controller_name = 'SigninController'; 
+        $action_name = 'index';
+    }else{
+        $controller_name = ucfirst($parameters[1]) . 'Controller';
+        $action_name = 'index';
+    }
 
     // 入力済みパラメータ
     $editInput = array();
@@ -138,6 +145,12 @@ if ($parameters[1] === 'about') {
         }
 
     } else {
+        $postValueKey = array(
+            'post-title',
+            'post-tag',
+            'post-content'
+        );
+        
         foreach($postValueKey as $key){ 
             // 入力値が保存されている場合
             if (isset($_SESSION[$key])) {
@@ -152,6 +165,7 @@ if ($parameters[1] === 'about') {
 
 } elseif ($parameters[1] === 'signin') { 
     // ~/signin にアクセスした場合 
+
     $controller_name = ucfirst($parameters[1]) . 'Controller'; 
     $action_name = 'index';
 

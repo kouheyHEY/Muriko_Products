@@ -13,6 +13,13 @@
             "DISPNAME": "SASAMI",
             "PASSWORD": "Sasaminami",
             "PERMISSIONS": "2"
+        },
+        {
+            "ID": "3",
+            "USERNAME": "vbbeat",
+            "DISPNAME": "びびびーと",
+            "PASSWORD": "vbbeatbbb",
+            "PERMISSIONS": "2"
         }
     ]
 }

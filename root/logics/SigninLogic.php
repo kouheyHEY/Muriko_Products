@@ -40,7 +40,7 @@ function checkSignin(string $_userName, string $_password, array &$_errMsgList){
 
 
     // セッションにユーザ情報を追加
-    $_SESSION['signin-user'] = $matchUserInfo
+    $_SESSION['signin-user'] = $matchUserInfo;
 
     return true;
 
