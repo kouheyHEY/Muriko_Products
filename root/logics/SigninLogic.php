@@ -38,6 +38,10 @@ function checkSignin(string $_userName, string $_password, array &$_errMsgList){
         return false;
     }
 
+
+    // セッションにユーザ情報を追加
+    $_SESSION['signin-user'] = $matchUserInfo
+
     return true;
 
 }
