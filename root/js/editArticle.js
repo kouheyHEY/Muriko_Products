@@ -1,4 +1,5 @@
 // 入力をクリアする
+
 function clearInput() {
     $("#edit-title").val("");
     $("#edit-tag").val("");
