@@ -2,23 +2,23 @@
     "SYSTEM_TITLE": "Muriko Products",
     "SYSTEM_VERSION": "2.0.0",
     "CONTENTS": [
-        "ABOUT",
+        "PRODUCTS",
         "NOTES",
-        "PRODUCTS"
+        "ABOUT"
     ],
     "CONTENTS_NOTUSE": [
         "CONTACT"
     ],
     "CONTENT_DISP_NAME": {
-        "ABOUT": "About",
         "PRODUCTS": "Product",
-        "NOTES": "Notes"
+        "NOTES": "Notes",
+        "ABOUT": "About"
     },
     "CONTENT_DISP_NAME_NOTUSE": {},
     "CONTENT_URL_NAME": {
-        "ABOUT": "about",
         "PRODUCTS": "product",
-        "NOTES": "article"
+        "NOTES": "article",
+        "ABOUT": "about"
     },
     "CONTENT_URL_NAME_NOTUSE": {},
     "CATEGORIES": [

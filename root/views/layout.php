@@ -3,8 +3,7 @@
 
 <!-- コンテンツメニュー -->
 <!-- タイトル -->
-<div class="menu-content">
-
+<div>
     <!-- ナビゲーションバー -->
     <ul class="product-navbar fadeDown">
         <?php foreach (Config::getMasterData("CONTENTS") as $content): ?>
@@ -13,6 +12,17 @@
                 <a href="/<?= Config::getMasterData("CONTENT_URL_NAME")[$content] ?>"><?= $content ?></a>
             </li>
         <?php endforeach ?>
+    </ul>
+</div>
+
+<!-- インフォメーション -->
+<div class="information fadeDown">
+    <div class="content-title">
+        <span>Information</span>
+    </div>
+
+    <ul class="info-list">
+        <li>2024-01-01 サイトのリニューアルを開始しました。</li>
     </ul>
 </div>
 

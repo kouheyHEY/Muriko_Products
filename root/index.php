@@ -18,7 +18,7 @@ $query_string = $_SERVER['QUERY_STRING'];
 $parameters = explode('/', $request_uri);
 
 // コントローラとアクションの初期値を設定する
-$controller_name = 'AboutController';
+$controller_name = 'ProductController';
 $action_name = 'index';
 
 // URLパラメータの1項目目に応じて、コントローラとアクションを設定する

@@ -1,0 +1,33 @@
+.information {
+
+    max-width: 960px;
+    min-width: 170px;
+    margin: 0 auto;
+    padding: 0 4%;
+
+    .info-list {
+
+        margin: 10px 2% 0;
+
+        display: flex;
+        flex-wrap: wrap;
+        list-style: disc;
+        list-style-type: disc;
+
+        li {
+            width: 100%;
+            margin-bottom: 2%;
+
+            background: none;
+            border: none;
+
+            position: relative;
+
+            display: block;
+            padding: 5px 10px;
+            font-size: 1.0rem;
+            font-family: 'Ubuntu-Regular';
+            font-weight: 600;
+        }
+    }
+}
