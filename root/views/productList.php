@@ -1,3 +1,15 @@
+<!-- インフォメーション -->
+<div class="information fadeDown">
+    <div class="content-title">
+        <span>Information</span>
+    </div>
+
+    <ul class="info-list">
+        <li>2024-01-01 サイトのリニューアルを開始しました。</li>
+    </ul>
+</div>
+
+
 <!-- コンテンツタイトル -->
 <div class="menu-category">
     <div class="content-title fadeDown">

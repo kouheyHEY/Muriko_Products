@@ -8,6 +8,7 @@
     .info-list {
 
         margin: 10px 2% 0;
+        padding-left: 30px;
 
         display: flex;
         flex-wrap: wrap;
@@ -23,8 +24,9 @@
 
             position: relative;
 
-            display: block;
-            padding: 5px 10px;
+            display: list-item;
+
+            padding: 5px 0px;
             font-size: 1.0rem;
             font-family: 'Ubuntu-Regular';
             font-weight: 600;
