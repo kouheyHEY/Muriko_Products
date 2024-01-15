@@ -46,12 +46,15 @@
                 <li class="product-block button-link-linear">
                     <a class="button-under-line aline-left"
                         href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
+                        <img class="block-thumbneil" src="/img/product/test.png" alt="サムネイルなし">
                         <span class="block-title">
                             <?= $product["title"] ?>
                         </span>
+                        <!--                         
                         <span class="block-updtime">
                             <?= $product["updDate"] ?>
                         </span>
+                         -->
                     </a>
                 </li>
             <?php endforeach ?>
