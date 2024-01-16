@@ -46,7 +46,12 @@
                 <li class="product-block button-link-linear">
                     <a class="button-under-line aline-left"
                         href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
-                        <img class="block-thumbneil" src="/img/product/test.png" alt="サムネイルなし">
+                        <div class="thumbneil">
+                            <img class="block-thumbneil"
+                                src="/img/product/<?= strtoupper($currentCategory) . "/" . $product["id"] ?>/thumbneil.png"
+                                alt="サムネイルなし">
+                        </div>
+
                         <span class="block-title">
                             <?= $product["title"] ?>
                         </span>

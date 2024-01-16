@@ -7,7 +7,7 @@
 	
 	// デッキ詳細ファイルの読みこみ
 	if(isset($_GET["deckId"]) && $_GET["deckId"] != ""){
-		$deckFilePath = $_SERVER["DOCUMENT_ROOT"] . "/userData/deckData/" . $_GET["deckId"] . ".csv";
+		$deckFilePath = "./userData/deckData/" . $_GET["deckId"] . ".csv";
 		$handle = fopen($deckFilePath, 'r');
 		$idx = 0;
 		while($deckCardInfoList = fgetcsv($handle)){
@@ -27,7 +27,7 @@
 <head>
     <link rel="stylesheet" href="css/PokeCaManager.css" type="text/css">
     <link rel="stylesheet" href="../common.css" type="text/css">
-	<script type="text/javascript" src=$_SERVER["DOCUMENT_ROOT"] . "/script/commonUtil.js"></script>
+	<script type="text/javascript" src="./script/commonUtil.js"></script>
     <meta charset="utf-8" http-equiv="content-type">
 </head>
 
