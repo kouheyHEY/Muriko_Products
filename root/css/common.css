@@ -64,10 +64,14 @@ html:after {
     content: "";
 
     /* シンプル背景 */
-    background:
+    /* background:
         linear-gradient(to bottom,
             #003020,
-            #000c0c);
+            #000c0c); */
+    background:
+        linear-gradient(to bottom,
+            #009060,
+            #004040);
     z-index: -1;
 }
 
