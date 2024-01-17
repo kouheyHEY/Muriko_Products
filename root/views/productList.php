@@ -46,8 +46,8 @@
                 <li class="product-block button-link-linear">
                     <a class="button-under-line aline-left"
                         href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
-                        <div class="thumbneil">
-                            <img class="block-thumbneil"
+                        <div class="block-thumbneil">
+                            <img class="thumbneil-img"
                                 src="/img/product/<?= strtoupper($currentCategory) . "/" . $product["id"] ?>/thumbneil.png"
                                 alt="サムネイルなし">
                         </div>
@@ -67,7 +67,17 @@
 
     <?php else: ?>
         <!-- カテゴリが「ACTIVITY」の場合 -->
-        <?php include_once($_SERVER["DOCUMENT_ROOT"] . "/views/partials/github-info.php"); ?>
+        <!-- コンテンツタイトル -->
+        <div class="content-title fadeDown_2">
+            <span>
+                <?= ucfirst($currentCategory) ?>
+            </span>
+        </div>
+
+        <!-- 記事の投稿がない場合 -->
+        <div class="msg_alert fadeDown_2">
+            <p>　<?= MSG_NO_ACTIVITY ?></p>
+        </div>
 
     <?php endif; ?>
 

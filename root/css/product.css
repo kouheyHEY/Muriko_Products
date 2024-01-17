@@ -12,6 +12,27 @@
     display: inline-block;
 }
 
+.product-thumbneil {
+    width: 100%;
+
+    margin: auto;
+    display: block;
+    text-align: center;
+}
+
+.product-thumbneil-img {
+    max-width: 100%;
+    height: auto;
+    max-height: 24rem;
+
+    font-size: 1rem;
+    border: none;
+
+    display: block;
+    margin: auto;
+    padding-bottom: 5px;
+}
+
 .button-back {
     width: fit-content;
     margin: 0px auto 30px;

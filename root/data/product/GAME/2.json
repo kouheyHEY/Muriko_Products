@@ -4,7 +4,7 @@
     "exp": "3×3のパズルをひっくり返して全パネルを同じ色にすればクリアです。<br>難しさや反転モードを変更できます。",
     "links": {
         "site": "https://kouheyhey.github.io/RevPuzzle_Phaser3/",
-        "git": ""
+        "git": "https://github.com/kouheyHEY/RevPuzzle_Phaser3"
     },
     "updDate": "2023-01-07",
     "updUser": "Muriko"
