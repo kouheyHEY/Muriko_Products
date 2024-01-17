@@ -19,7 +19,7 @@
             "updUser": "Muriko"
         }
     ],
-    "TOOL":[
+    "TOOL": [
         {
             "title": "カードゲームデッキマネージャ",
             "id": "0",
@@ -45,15 +45,6 @@
             "updUser": "Muriko"
         }
     ],
-    "OTHER": [
-        {
-            "title": "技術系ブログ「Zenn」",
-            "id": "0",
-            "updDate": "2022-07-25",
-            "updUser": "Muriko"
-        }
-    ],
-    "ACTIVITY": [
-        
-    ]
+    "OTHER": [],
+    "ACTIVITY": []
 }

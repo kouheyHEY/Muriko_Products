@@ -31,7 +31,7 @@
 <main>
     <?php if ($currentCategory != "activity"): ?>
         <!-- カテゴリが「ACTIVITY」以外の場合 -->
-
+        
         <!-- コンテンツタイトル -->
         <div class="content-title fadeDown_2">
             <span>
@@ -39,31 +39,42 @@
             </span>
         </div>
 
-        <!-- プロダクト一覧 -->
-        <ul class="product-list fadeDown_2">
-            <!-- プロダクトブロック -->
-            <?php foreach (sortObjAry($productList, false) as $product): ?>
-                <li class="product-block button-link-linear">
-                    <a class="button-under-line aline-left"
-                        href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
-                        <div class="block-thumbneil">
-                            <img class="thumbneil-img"
-                                src="/img/product/<?= strtoupper($currentCategory) . "/" . $product["id"] ?>/thumbneil.png"
-                                alt="サムネイルなし">
-                        </div>
+        <?php if (!empty($productList)): ?>
 
-                        <span class="block-title">
-                            <?= $product["title"] ?>
-                        </span>
-                        <!--                         
-                        <span class="block-updtime">
-                            <?= $product["updDate"] ?>
-                        </span>
-                         -->
-                    </a>
-                </li>
-            <?php endforeach ?>
-        </ul>
+            <!-- プロダクト一覧 -->
+            <ul class="product-list fadeDown_2">
+                <!-- プロダクトブロック -->
+                <?php foreach (sortObjAry($productList, false) as $product): ?>
+                    <li class="product-block button-link-linear">
+                        <a class="button-under-line aline-left"
+                            href="/product/<?= strtolower($currentCategory) . "/" . $product["id"] ?>">
+                            <div class="block-thumbneil">
+                                <img class="thumbneil-img"
+                                    src="/img/product/<?= strtoupper($currentCategory) . "/" . $product["id"] ?>/thumbneil.png"
+                                    alt="サムネイルなし">
+                            </div>
+
+                            <span class="block-title">
+                                <?= $product["title"] ?>
+                            </span>
+                            <!--                         
+                            <span class="block-updtime">
+                                <?= $product["updDate"] ?>
+                            </span>
+                                -->
+                        </a>
+                    </li>
+                <?php endforeach ?>
+            </ul>
+
+        <?php else: ?>
+
+            <!-- 記事の投稿がない場合 -->
+            <div class="msg_alert fadeDown_2">
+                <p>　<?= MSG_NO_PRODUCT ?></p>
+            </div>
+
+        <?php endif; ?>
 
     <?php else: ?>
         <!-- カテゴリが「ACTIVITY」の場合 -->

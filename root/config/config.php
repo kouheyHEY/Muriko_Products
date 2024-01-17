@@ -13,6 +13,7 @@ define('DIRPATH_ARTICLE_JSON', $_SERVER["DOCUMENT_ROOT"] . '/data/article');
 
 // 各メッセージの定義
 define('MSG_NO_PRODUCT_ID', 'product id is not set.');
+define('MSG_NO_PRODUCT', 'there are no products.');
 define('MSG_NO_ACTIVITY', 'there are no recent major activities.');
 define('MSG_NO_ARTICLE_ID', 'article id is not set.');
 define('MSG_NO_ARTICLE', 'article not posted.');
