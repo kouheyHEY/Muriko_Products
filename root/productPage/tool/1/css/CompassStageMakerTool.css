@@ -1,3 +1,9 @@
+/* スクロール禁止 */
+html,
+body {
+    overflow: hidden;
+}
+
 /* ボタン */
 .commonButton {
     margin: 2px;
