@@ -352,20 +352,18 @@ function writeCellDirect(col, row) {
         elaseRange(col, row);
     } else if (writeModeId == MODE_FREE) {
         getHistory();
-        if (mapArray[row + mapOffsetRow][col + mapOffsetCol] == 0) {
-            writeCell(col, row);
+        writeCell(col, row);
+    } else if (writeModeId == MODE_ELASE_FREE) {
+        if (row + mapOffsetRow < CENTER_BLOCK_ROW_TOP ||
+            row + mapOffsetRow >= CENTER_BLOCK_ROW_BOTTOM ||
+            col + mapOffsetCol < CENTER_BLOCK_COL_LEFT ||
+            col + mapOffsetCol >= CENTER_BLOCK_COL_RIGHT
+        ) {
+            document.getElementById(row + "_" + col).style.backgroundColor = CELL_COLOR_BLANK;
         } else {
-            if (row + mapOffsetRow < CENTER_BLOCK_ROW_TOP ||
-                row + mapOffsetRow >= CENTER_BLOCK_ROW_BOTTOM ||
-                col + mapOffsetCol < CENTER_BLOCK_COL_LEFT ||
-                col + mapOffsetCol >= CENTER_BLOCK_COL_RIGHT
-            ) {
-                document.getElementById(row + "_" + col).style.backgroundColor = CELL_COLOR_BLANK;
-            } else {
-                document.getElementById(row + "_" + col).style.backgroundColor = CELL_COLOR_DEFAULT;
-            }
-            elaseCell(col, row);
+            document.getElementById(row + "_" + col).style.backgroundColor = CELL_COLOR_DEFAULT;
         }
+        elaseCell(col, row);
     }
 
     // 描画

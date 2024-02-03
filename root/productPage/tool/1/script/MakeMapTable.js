@@ -19,6 +19,7 @@ for (let i = 0; i < mapCell.length; i++) {
 
     // マウスクリック時またはタッチ時
     mapCell[i][window.ontouchstart === undefined ? 'onclick' : 'ontouchstart'] = e => {
+        console.log("clicked");
         // タッチ時
         if (window.ontouchstart === 'ontouchstart') {
             // デフォルトの動作をキャンセル
@@ -27,6 +28,13 @@ for (let i = 0; i < mapCell.length; i++) {
         // セルの描画
         writeCellDirect(col, row);
     }
+
+    // マウスクリックの瞬間
+    mapCell[i].addEventListener('mousedown', function () {
+        console.log("mousedown");
+        // セルの描画
+        writeCellDirect(col, row);
+    });
 
     // マウスがのっかっている場合
     mapCell[i].addEventListener('mouseover', function () {
@@ -45,6 +53,7 @@ for (let i = 0; i < mapCell.length; i++) {
 
     // マウスが離れた場合
     mapCell[i].addEventListener('mouseleave', function () {
+        console.log("mouseleave");
         let mapColor = CELL_COLOR_BLANK;
 
         if (row + mapOffsetRow >= CENTER_BLOCK_ROW_TOP &&

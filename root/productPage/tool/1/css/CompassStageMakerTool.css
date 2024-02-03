@@ -9,8 +9,8 @@ body {
 /* 各種カスタムプロパティ */
 :root {
     --pageContentWidth: 850px;
-    --mapWidth: 640px;
-    --mapHeight: 640px;
+    --mapWidth: 560px;
+    --mapHeight: 560px;
 }
 
 body {
