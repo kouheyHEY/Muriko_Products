@@ -1,7 +1,29 @@
 /* スクロール禁止 */
+/* 
 html,
 body {
     overflow: hidden;
+}
+*/
+
+/* 各種カスタムプロパティ */
+:root {
+    --pageContentWidth: 850px;
+    --mapWidth: 640px;
+    --mapHeight: 640px;
+}
+
+body {
+    margin-bottom: calc(3rem + 30px);
+}
+
+/* タイトル */
+header h1 {
+    margin: 5px auto;
+}
+
+header #version {
+    font-size: 1rem;
 }
 
 /* ボタン */
@@ -25,22 +47,18 @@ body {
     margin: 10px auto;
     box-sizing: border-box;
     border: 2px dashed #22AA22;
+    padding: 5px;
 }
 
 header * {
     text-align: center;
 }
 
-.ModeButtonArea {
-    width: 800px;
-    margin: 5px auto;
-    table-layout: fixed;
-}
-
 .ModeParamArea,
+.ModeButtonArea,
 .WriteStateArea,
 .MapCodeArea {
-    width: 800px;
+    width: 100%;
     margin: 5px auto;
     table-layout: fixed;
 }
@@ -51,13 +69,14 @@ header * {
 }
 
 .contentArea {
-    width: 950px;
+    width: var(--pageContentWidth);
     margin: 10px auto;
+    padding: 10px;
 }
 
 .MapTable {
-    width: 750px;
-    height: 750px;
+    width: var(--mapWidth);
+    height: var(--mapHeight);
     margin: 5px auto;
 
     border: 1px solid #003300;
@@ -77,8 +96,8 @@ header * {
 }
 
 #MapElm {
-    width: 750px;
-    height: 750px;
+    width: var(--mapWidth);
+    height: var(--mapHeight);
 }
 
 .mapCell {
@@ -93,12 +112,58 @@ header * {
 #leftMap,
 #rightMap {
     width: auto;
-    height: 750px;
+    height: var(--mapHeight);
     justify-content: center;
     align-items: center;
     display: flex;
 }
 
 #mapCode {
-    width: 800px;
+    width: 100%;
+}
+
+/* 入力ボックス */
+input[type="Number"] {
+    width: 50%;
+}
+
+/* 描画メニュー */
+.drawMenuWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.drawMenuContent {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(calc(100% - 3rem - 30px));
+    transition: transform 0.3s ease-in-out;
+
+    width: var(--pageContentWidth);
+
+    .contentArea {
+        width: calc(100%);
+        background-color: #FFFFFF;
+    }
+
+}
+
+.drawMenuBtn {
+    width: 100%;
+    height: 3rem;
+    display: block;
+    margin: 0 auto;
+}
+
+/* 
+.drawMenuBtn:hover {
+    background-color: #22AA22;
+} */
+
+.drawMenuContent.show {
+    transform: translateX(-50%) translateY(0);
+
 }

@@ -1,5 +1,5 @@
-const MAP_COLS = 81;
-const MAP_ROWS = 81;
+const MAP_COLS = 21;
+const MAP_ROWS = 21;
 const MAP_COLS_MAX = 201;
 const MAP_ROWS_MAX = 201;
 const MAP_DEFAULT = 16;

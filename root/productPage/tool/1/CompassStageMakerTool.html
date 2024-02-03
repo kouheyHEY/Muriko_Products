@@ -10,96 +10,9 @@
 
 <body>
     <header>
-        <h1>コ〇パスステージメーカーツール</h1>
-        <h3>ver 3.0</h3>
+        <h1>コ〇パスステージメーカーツール  <span id="version">ver 3.1</span></h1>
+        <h3></h3>
     </header>
-
-    <div class="contentArea">
-        <table class="ModeButtonArea">
-            <tr>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(0)">
-                        円
-                    </div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(1)">
-                        四角形
-                    </div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(2)">
-                        塗りつぶし
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(3)">
-                        自由描画
-                    </div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(4)">
-                        消しゴム（塗りつぶし）
-                    </div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="setMode(5)">
-                        消しゴム（自由描画）
-                    </div>
-                </td>
-            </tr>
-        </table>
-        <table class="ModeParamArea">
-            <tr>
-                <td>幅：</td>
-                <td>高さ：</td>
-                <td>総ブロック数：</td>
-            </tr>
-            <tr>
-                <td>
-                    <input type="number" id="ModeParamValue1">
-                </td>
-                <td>
-                    <input type="number" id="ModeParamValue2">
-                </td>
-                <td>
-                    <input type="number" id="blockNum" readonly>
-                </td>
-            </tr>
-        </table>
-        <table class="WriteStateArea">
-            <tr>
-                <td>
-                    <div class="tac">モード：<span id="modeName">自由描画</span></div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="initMapArray()">初期化</div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="returnHistory()">一つ戻る</div>
-                </td>
-            </tr>
-        </table>
-    </div>
-    <div class="contentArea">
-        <table class="MapCodeArea">
-            <tr>
-                <td>
-                    <div class="commonButton tac" onclick="saveMap()">マップ保存</div>
-                </td>
-                <td>
-                    <div class="commonButton tac" onclick="loadMap()">マップ読込</div>
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <label>マップコード：</label><input type="text" id="mapCode" readonly>
-                </td>
-            </tr>
-        </table>
-    </div>
 
     <div class="contentArea">
         <table id="MapArea">
@@ -117,7 +30,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <div class="commonButton tac" id="upMap" onclick="setMapOffset(-200, 0)">↑↑</div>
+                    <div class="commonButton tac" id="upMap" onclick="setMapOffset(-200, 0)">一番上へ</div>
                 </td>
                 <td></td>
                 <td></td>
@@ -128,20 +41,20 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <div class="commonButton tac" id="upMap" onclick="setMapOffset(-1, 0)">↑</div>
+                    <div class="commonButton tac" id="upMap" onclick="setMapOffset(-1, 0)">少し上へ</div>
                 </td>
                 <td></td>
                 <td></td>
                 <td></td>
             </tr>
             <tr>
-                <td class="assistText">右</td>
+                <td class="assistText">左</td>
                 <td>
-                    <div class="commonButton tac" id="leftMap" onclick="setMapOffset(0, -200)">←<br>←</div>
+                    <div class="commonButton tac" id="leftMap" onclick="setMapOffset(0, -200)">一番<br>左へ</div>
                 </td>
                 <td>
                     <div class="commonButton tac" id="leftMap" onclick="setMapOffset(0, -1)">
-                        <div class="tac">←</div>
+                        <div class="tac">少し<br>左へ</div>
                     </div>
                 </td>
                 <td id="MapElm">
@@ -149,20 +62,20 @@
                 </td>
                 <td>
                     <div class="commonButton tac" id="rightMap" onclick="setMapOffset(0, 1)">
-                        <div class="tac">→</div>
+                        <div class="tac">少し<br>右へ</div>
                     </div>
                 </td>
                 <td>
-                    <div class="commonButton tac" id="rightMap" onclick="setMapOffset(0, 200)">→<br>→</div>
+                    <div class="commonButton tac" id="rightMap" onclick="setMapOffset(0, 200)">一番<br>右へ</div>
                 </td>
-                <td class="assistText">左</td>
+                <td class="assistText">右</td>
             </tr>
             <tr>
                 <td></td>
                 <td></td>
                 <td></td>
                 <td>
-                    <div class="commonButton tac" id="downMap" onclick="setMapOffset(1, 0)">↓</div>
+                    <div class="commonButton tac" id="downMap" onclick="setMapOffset(1, 0)">少し下へ</div>
                 </td>
                 <td></td>
                 <td></td>
@@ -173,7 +86,7 @@
                 <td></td>
                 <td></td>
                 <td>
-                    <div class="commonButton tac" id="downMap" onclick="setMapOffset(200, 0)">↓↓</div>
+                    <div class="commonButton tac" id="downMap" onclick="setMapOffset(200, 0)">一番下へ</div>
                 </td>
                 <td></td>
                 <td></td>
@@ -190,11 +103,85 @@
             </tr>
         </table>
     </div>
-
+    <div class="drawMenuWrapper">
+        <div class="drawMenuContent">
+            <div class="contentArea">
+                <button class="drawMenuBtn commonButton" type="button" onclick="toggleDrawMenu()">描画メニューを開く</button>
+                <table class="WriteStateArea">
+                    <tr>
+                        <td>
+                            <div class="tac">モード：<span id="modeName">自由描画</span></div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="initMapArray()">初期化</div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="returnHistory()">一つ戻る</div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="ModeParamArea">
+                    <tr>
+                        <td>幅：<input type="number" id="ModeParamValue1"></td>
+                        <td>高さ：<input type="number" id="ModeParamValue2"></td>
+                        <td>総ブロック数：<input type="number" id="blockNum" readonly></td>
+                    </tr>
+                </table>
+                <table class="ModeButtonArea">
+                    <tr>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(0)">
+                                円
+                            </div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(1)">
+                                四角形
+                            </div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(2)">
+                                塗りつぶし
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(3)">
+                                自由描画
+                            </div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(4)">
+                                消しゴム（塗りつぶし）
+                            </div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="setMode(5)">
+                                消しゴム（自由描画）
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <div>～～以下試用機能～～</div>
+                <table class="MapCodeArea">
+                    <tr>
+                        <td>
+                            <div class="commonButton tac" onclick="saveMap()">マップ保存</div>
+                        </td>
+                        <td>
+                            <div class="commonButton tac" onclick="loadMap()">マップ読込</div>
+                        </td>
+                    </tr>
+                </table>
+                <label>マップコード：</label><input type="text" id="mapCode" readonly>
+            </div>
+        </div>
     </div>
 </body>
 
 <script type="text/javascript" src="script/CompassStageMakerTool.js"></script>
+<script type="text/javascript" src="script/drawMenu.js"></script>
 
 
 </html>
