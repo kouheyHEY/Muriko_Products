@@ -57,8 +57,7 @@ class ArticleController extends BaseController
             )
         );
         $articleData = ConfigArticle::getArticleData($service)[$articleIdx];
-
-        var_dump($articleData);
+        
         // OGPの設定
         $_SESSION['OG_TITLE'] = $articleData['title'];
         $_SESSION['OG_DESCRIPTION'] = $articleData['content'];
