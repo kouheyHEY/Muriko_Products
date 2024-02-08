@@ -10,10 +10,10 @@
     <script type="text/javascript" src="/js/commonScript.js"></script>
 
     <!-- OGPの設定 -->
-    <meta property="og:url" content="http://vbbeat.php.xdomain.jp/index.php" />
-    <meta property="og:title" content="Muriko Products" />
+    <meta property="og:url" content="<?= $_SERVER['REQUEST_URI'] ?>" />
+    <meta property="og:title" content="Muriko Products | <?= $_SESSION['OG_TITLE'] ?>" />
     <meta property="og:type" content="website" />
-    <meta property="og:description" content="Murikoが制作したプロダクトを紹介しています。" />
+    <meta property="og:description" content="<?= $_SESSION['OG_DESCRIPTION'] ?>" />
     <meta property="og:site_name" content="Muriko Products" />
     <meta property="og:image" content="http://vbbeat.php.xdomain.jp/img/other/eyecatch1.png" />
     <meta name="twitter:card" content="summary" />

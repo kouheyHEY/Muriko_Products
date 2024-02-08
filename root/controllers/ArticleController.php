@@ -23,6 +23,10 @@ class ArticleController extends BaseController
         );
         $articleData = ConfigArticle::getArticleData($service)[$articleIdx];
 
+        // OGPの設定
+        $_SESSION['OG_TITLE'] = $articleData['title'];
+        $_SESSION['OG_DESCRIPTION'] = $articleData['content'];
+
         // 画面の描画
         $this->render(
             'article',
@@ -49,6 +53,9 @@ class ArticleController extends BaseController
         if (isset($params[3])) {
             $currentPage = $params[3];
         }
+
+        // OGPの設定
+        $_SESSION['OG_TITLE'] = 'NOTES';
 
         // 記事一覧取得
         $articleListTmp = $this->model->getArticlesByService($service);

@@ -21,6 +21,10 @@ $parameters = explode('/', $request_uri);
 $controller_name = 'ProductController';
 $action_name = 'index';
 
+// OGPの初期値
+$_SESSION['OG_TITLE'] = 'Muriko Products';
+$_SESSION['OG_DESCRIPTION'] = 'Murikoが制作したツールやゲームを紹介しています。';
+
 // URLパラメータの1項目目に応じて、コントローラとアクションを設定する
 if ($parameters[1] === 'about') {
     // ~/about にアクセスした場合

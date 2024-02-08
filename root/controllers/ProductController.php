@@ -12,6 +12,11 @@ class ProductController extends BaseController
 
         // プロダクト取得
         $productData = $this->model->getProductById($category, $productId);
+        
+        // OGPの設定
+        $_SESSION['OG_TITLE'] = $productData['title'];
+        $_SESSION['OG_DESCRIPTION'] = $productData['exp'];
+
         // 画面の描画
         $this->render(
             'product',
@@ -37,6 +42,10 @@ class ProductController extends BaseController
 
         // プロダクト一覧取得
         $productList = $this->model->getProductsByCategory($category);
+        
+        // OGPの設定
+        $_SESSION['OG_TITLE'] = 'PRODUCTS';
+
         // 画面の描画
         $this->render(
             'productList',
