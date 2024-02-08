@@ -13,6 +13,41 @@ class ArticleController extends BaseController
         // 記事ID
         $articleId = $params[3];
 
+        // 記事一覧取得
+        $articleListTmp = $this->model->getArticlesByService($service);
+
+        // 記事一覧が取得されていない場合
+        if (empty($articleListTmp)) {
+
+            // サービスが「zenn」の場合
+            if ($service === 'zenn') {
+
+                // 記事一覧取得用のphpを実行
+                $this->render(
+                    'getArticleList',
+                    [
+                        'currentService' => strtolower($service),
+                        'currentContent' => 'NOTES',
+                    ]
+                );
+
+                return;
+                
+            // サービスが「muripro」の場合
+            } else if ($service === 'muripro') {
+
+                // 記事一覧取得用のロジックを実行
+                $articleListTmp = getArticleListByService($service);
+
+                // 取得した記事一覧をセッションに保存
+                ConfigArticle::setArticleData(
+                    $service,
+                    $articleListTmp
+                );
+            }
+
+        }
+
         // リストから特定のidの記事を検索し取得
         $articleIdx = array_search(
             $articleId, 
@@ -23,6 +58,7 @@ class ArticleController extends BaseController
         );
         $articleData = ConfigArticle::getArticleData($service)[$articleIdx];
 
+        var_dump($articleData);
         // OGPの設定
         $_SESSION['OG_TITLE'] = $articleData['title'];
         $_SESSION['OG_DESCRIPTION'] = $articleData['content'];
